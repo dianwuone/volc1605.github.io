@@ -108,7 +108,7 @@
 <meta property="og:image" content="https://volc1605.github.io/images/Hexo之NexT主题搭建博客详细过程/d.png">
 <meta property="og:image" content="https://volc1605.github.io/images/Hexo之NexT主题搭建博客详细过程/git.png">
 <meta property="og:image" content="https://volc1605.github.io/images/Hexo之NexT主题搭建博客详细过程/vendors.png">
-<meta property="og:updated_time" content="2016-11-19T02:50:28.929Z">
+<meta property="og:updated_time" content="2016-11-19T07:14:41.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo之NexT主题搭建博客详细过程">
 <meta name="twitter:description" content="本站是用hexo来搭建的，使用的是next主题。这里记录一下搭建的整个过程，仅供参考！有什么问题请留言通知，谢谢支持！
@@ -435,63 +435,59 @@
 <blockquote>
 <p>安装Express开发框架  </p>
 </blockquote>
-<p>以管理员打开cmd命令窗口，执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -g express</div><div class="line">npm install -g express-generator</div></pre></td></tr></table></figure></p>
+<p>以管理员打开cmd命令窗口，执行命令<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> install -g express</div><div class="line"><span class="attribute">npm</span> install -g express-generator</div></pre></td></tr></table></figure></p>
 <p>在C:\Program Files\nodejs\node_modules中会生成express和express-generator两个文件夹表示安装好了</p>
 <blockquote>
 <p>新建项目  </p>
 </blockquote>
-<p>进入C:\Program Files\nodejs，新建名称为newproject的项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd C:\Program Files\nodejs</div><div class="line">express -t ejs newsproject</div></pre></td></tr></table></figure></p>
+<p>进入C:\Program Files\nodejs，新建名称为newproject的项目<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">cd</span> C:\Program Files\nodejs</div><div class="line"><span class="attribute">express</span> -t ejs newsproject</div></pre></td></tr></table></figure></p>
 <p>新建成功在nodesj目录下会生成newproject目录，其目录下大致有以下文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">bin          相关运行脚本</div><div class="line">public       静态资源</div><div class="line">routes       路由表</div><div class="line">views        试图模板  </div><div class="line">app.js       视图文件夹  </div><div class="line">packge.json  项目依赖说明</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>关于执行npm install -g express命令的出现错误的解决方式  </p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config list # 查看以前修改过的命令，针对错误的地方删除掉。</div></pre></td></tr></table></figure>
-<p>删除代理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config delete proxy</div></pre></td></tr></table></figure></p>
-<p>删除注册的目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config delete registry</div></pre></td></tr></table></figure></p>
-<p>npm仓库是国外服务器，经常连接不上或安装慢，这里推荐使用 淘宝 NPM 镜像 来安装，设置镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config set registry https://registry.npm.taobao.org</div></pre></td></tr></table></figure></p>
-<p>查看是否修成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config list</div></pre></td></tr></table></figure></p>
-<p>再重新安装express模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g express</div></pre></td></tr></table></figure></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> config list # 查看以前修改过的命令，针对错误的地方删除掉。</div></pre></td></tr></table></figure>
+<p>删除代理<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">npm config delete proxy</div><div class="line">```apache</div><div class="line">删除注册的目录</div><div class="line">```apache</div><div class="line">npm config delete registry</div><div class="line">```apache</div><div class="line">npm仓库是国外服务器，经常连接不上或安装慢，这里推荐使用 淘宝 NPM 镜像 来安装，设置镜像</div><div class="line">```apache</div><div class="line">npm config set registry https://registry.npm.taobao.org </div><div class="line">```apache</div><div class="line">查看是否修成功</div><div class="line">```apache</div><div class="line">npm config list</div><div class="line">```apache</div><div class="line">再重新安装express模块</div><div class="line">```apache</div><div class="line">npm install -g express</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>安装模块  </p>
 </blockquote>
-<p>进入newproject目录, 安装模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd newsproject</div><div class="line">npm install</div></pre></td></tr></table></figure></p>
+<p>进入newproject目录, 安装模块<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">cd</span> newsproject</div><div class="line"><span class="attribute">npm</span> install</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>启动项目  </p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm start</div></pre></td></tr></table></figure>
-<p>在浏览器访问<a href="http://127.0.0.1:3000/" target="_blank" rel="external">http://127.0.0.1:3000/</a> 测试出现下面图视表示nodejs安装成功，并可以正常部署项目<br><img src="https://volc1605.github.io/images/Hexo之NexT主题搭建博客详细过程/result.png" alt="测试"><br>可输入以下命令查看版本号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> start</div></pre></td></tr></table></figure>
+<p>在浏览器访问<a href="http://127.0.0.1:3000/" target="_blank" rel="external">http://127.0.0.1:3000/</a> 测试出现下面图视表示nodejs安装成功，并可以正常部署项目<br><img src="https://volc1605.github.io/images/Hexo之NexT主题搭建博客详细过程/result.png" alt="测试"><br>可输入以下命令查看版本号<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">node</span> -v</div><div class="line"><span class="attribute">npm</span> -v</div></pre></td></tr></table></figure></p>
 <h2 id="1-2-git安装"><a href="#1-2-git安装" class="headerlink" title="1.2.git安装"></a>1.2.git安装</h2><p>官网下载地址：<a href="https://git-scm.com/downloads/" target="_blank" rel="external">https://git-scm.com/downloads/</a> 这个就不多说了</p>
 <h1 id="2-安装Hexo"><a href="#2-安装Hexo" class="headerlink" title="2.安装Hexo"></a>2.安装Hexo</h1><p>git安装成功后在桌面右击选择git bash here, 命令窗口<br><img src="https://volc1605.github.io/images/Hexo之NexT主题搭建博客详细过程/desktop.png" alt="desktop"></p>
 <blockquote>
 <p>安装hexo  </p>
 </blockquote>
 <p>执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm -g hexo-cli  # g代表全局,npm默认为当前项目安装</div></pre></td></tr></table></figure>
-<p>在D盘新建blog文件夹，这个文件夹就是博客的根目录，打开blog空白处右击选择git bash here执行以下命令。首先对blog文件夹进行hexo初始化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> -g hexo-cli  # g代表全局,npm默认为当前项目安装</div></pre></td></tr></table></figure>
+<p>在D盘新建blog文件夹，这个文件夹就是博客的根目录，打开blog空白处右击选择git bash here执行以下命令。首先对blog文件夹进行hexo初始化<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> init</div></pre></td></tr></table></figure></p>
 <p>会生成一些文件</p>
 <blockquote>
 <p>安装依赖包</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
-<p>可能会遇到的错误<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm ERR! registry error parsing json # 错误</div></pre></td></tr></table></figure></p>
-<p>可能需要设置npm代理,执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config set registry http://registry.cnpmjs.org</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo:command not found</div></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> install</div></pre></td></tr></table></figure>
+<p>可能会遇到的错误<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> ERR! registry error parsing json # 错误</div></pre></td></tr></table></figure></p>
+<p>可能需要设置npm代理,执行命令<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> config set registry http://registry.cnpmjs.org</div></pre></td></tr></table></figure></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span>:command not found</div></pre></td></tr></table></figure>
 <p>删除刚刚安装的C:\Users\Administrator\AppData\Roaming\npm目录，重新执行命令npm install -g hexo安装hexo</p>
 <blockquote>
 <p>生成静态资源</p>
 </blockquote>
-<p>生成public文件夹(浏览器访问资源)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure></p>
+<p>生成public文件夹(浏览器访问资源)<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> g</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>启动服务</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> s</div></pre></td></tr></table></figure>
 <p>在浏览器访问：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 便可查看hexo默认的主题<br><img src="https://volc1605.github.io/images/Hexo之NexT主题搭建博客详细过程/h.png" alt="hexo"><br><a id="more"></a></p>
 <blockquote>
 <p>clone NexT主题</p>
 </blockquote>
-<p>在blog根目录执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure></p>
+<p>在blog根目录执行命令<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure></p>
 <p>clone完成后打开blog下的themes文件夹就可以看到有两个主题，一个是默认的，一个是刚刚clone的NexT主题<br>站点配置文件D:\blog\_config.yml<br>主题配置文件D:\blog\themes\next\_config.yml<br>在站点配置文件_config.yml中进行搜索key为’theme’，如果没有theme就添加key为theme，其值为next<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">## Plugins: https://hexo.io/plugins/</div><div class="line">## Themes: https://hexo.io/themes/</div><div class="line"># theme: landscape</div><div class="line"># 设置主题为next</div><div class="line">theme: next</div></pre></td></tr></table></figure></p>
-<p>需要注意的是冒号后面有一个空格<br>在blog目录中右击选择git bash here 分别执行清除静态资源，生成静态资源，启动服务命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure></p>
+<p>需要注意的是冒号后面有一个空格<br>在blog目录中右击选择git bash here 分别执行清除静态资源，生成静态资源，启动服务命令<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> clean</div><div class="line"><span class="attribute">hexo</span> g</div><div class="line"><span class="attribute">hexo</span> s</div></pre></td></tr></table></figure></p>
 <p>在浏览器中访问<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 便可看到效果</p>
 <p>打开主题配置文件_config.yml找到Schemes，如下所示有三种方案可选，只需将#去掉就可以了，可以都尝试一下，选择喜欢的风格，修改之后不用重启服务直接刷新浏览器就能看到效果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 切换样式</div><div class="line"># Schemes</div><div class="line">#scheme: Muse</div><div class="line">#scheme: Mist</div><div class="line">scheme: Pisces</div></pre></td></tr></table></figure></p>
 <p>到此本地资源基本上完成了，下面贴出站点配置_config.yml和主题配置_config.yml里面注释了信息可以参考</p>
@@ -510,7 +506,7 @@
 <h2 id="3-3-新增留言功能"><a href="#3-3-新增留言功能" class="headerlink" title="3.3.新增留言功能"></a>3.3.新增留言功能</h2><p>主题配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  categories: /categories</div><div class="line">  archives: /archives</div><div class="line">  tags: /tags</div><div class="line">  message: /message       # 新增 message</div><div class="line">  about: /about</div><div class="line">  #commonweal: /404.html</div></pre></td></tr></table></figure></p>
 <p>配置图标<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">menu_icons:</div><div class="line">  enable: true</div><div class="line">  home: home</div><div class="line">  categories: th</div><div class="line">  tags: tags</div><div class="line">  archives: archive</div><div class="line">  commonweal: heartbeat</div><div class="line">  message: external-link  # 新增 message</div><div class="line">  about: user</div></pre></td></tr></table></figure></p>
 <p>配置对应的中文名称，在themes\next\languages\zh-Hans.yml文件中修改如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: 首页</div><div class="line">  archives: 归档</div><div class="line">  categories: 分类</div><div class="line">  tags: 标签</div><div class="line">  about: 关于</div><div class="line">  search: 搜索</div><div class="line">  message: 留言            # 新增 留言</div><div class="line">  commonweal: 公益404</div><div class="line">  udpate: 更新</div></pre></td></tr></table></figure></p>
-<p>然后执行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo n page &quot;message&quot;</div></pre></td></tr></table></figure></p>
+<p>然后执行如下命令<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> n page <span class="string">"message"</span></div></pre></td></tr></table></figure></p>
 <p>重新清除，生成和启动便可看到效果，只不过留言功能什么也没有</p>
 <h3 id="3-3-1-引入多说评论功能"><a href="#3-3-1-引入多说评论功能" class="headerlink" title="3.3.1.引入多说评论功能"></a>3.3.1.引入多说评论功能</h3><p>进入官网<a href="http://duoshuo.com/" target="_blank" rel="external">http://duoshuo.com/</a> 进行登录，建议不要使用微信进行登录，容易出现Scope 参数错误或没有 Scope 权限的问题。登录完成在首页进入后台管理，在设置里面包含：域名：zhangsan.duoshuo.com<br>在主题配置文件中<br>修改如下, duoshuo_shortname的值就是域名中的zhangsan<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">duoshuo_shortname: zhangsan  # 开启多说评论功能</div><div class="line"># Share</div><div class="line">duoshuo_share: true          # 开启多说的文章分享功能</div></pre></td></tr></table></figure></p>
 <p>留言功能已完成<br>去掉分类和其他的选项的留言功能，只需修改index.md<br>在source\categories\index.md 中修改如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: categories</div><div class="line">type: categories</div><div class="line">comments: false       # 去掉评论功能</div><div class="line">date: 2016-10-01 21:07:35</div><div class="line">---</div></pre></td></tr></table></figure></p>
@@ -628,7 +624,7 @@
 <blockquote>
 <p>安装 hexo-generator-search，在站点的根目录下执行以下命令:</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-search --save</div></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> install hexo-generator-search --save</div></pre></td></tr></table></figure>
 <blockquote>
 <p>编辑 站点配置文件，新增以下内容到任意位置：</p>
 </blockquote>
@@ -650,7 +646,7 @@
 <blockquote>
 <p>配置sshkey</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;注册git的邮箱&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">ssh</span>-keygen -t rsa -C <span class="string">"注册git的邮箱"</span></div></pre></td></tr></table></figure>
 <p>连续几个按回车，密码为空，然后在在C:\Users\Administrator.ssh下，得到两个文件id_rsa和id_rsa.pub<br>复制id_rsa.pub中的所有内容</p>
 <blockquote>
 <p>GitHub上添加SSH密钥</p>
@@ -659,14 +655,14 @@
 <blockquote>
 <p>验证是否能否连接到github</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure>
-<p>如果提示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">The authenticity of host &apos;github.com (192.30.253.112)&apos; can&apos;t be established.</div><div class="line">RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.</div><div class="line">Are you sure you want to continue connecting (yes/no)? y</div><div class="line">Please type &apos;yes&apos; or &apos;no&apos;: yes</div></pre></td></tr></table></figure></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure>
+<p>如果提示<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">The</span> authenticity of host 'github.com (192.30.253.112)' can't be established.</div><div class="line"><span class="attribute">RSA</span> key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.</div><div class="line"><span class="attribute">Are</span> you sure you want to continue connecting (yes/no)? y</div><div class="line"><span class="attribute">Please</span> type 'yes' or 'no': yes</div></pre></td></tr></table></figure></p>
 <p>或者提示覆盖原来的文件，选择yes回车，只要能看到，如下提示就能成功连接到github</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi zhangsan! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Hi</span> zhangsan! You've successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
 <h1 id="11-百度-google收录你的站点"><a href="#11-百度-google收录你的站点" class="headerlink" title="11.百度/google收录你的站点"></a>11.百度/google收录你的站点</h1><blockquote>
 <p>安装sitemap插件</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-sitemap --save        # google</div><div class="line">npm install hexo-generator-baidu-sitemap --save  # 百度</div></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> install hexo-generator-sitemap --save        # google</div><div class="line"><span class="attribute">npm</span> install hexo-generator-baidu-sitemap --save  # 百度</div></pre></td></tr></table></figure>
 <blockquote>
 <p>在站点配置文件_config.yml中添加如下代码：</p>
 </blockquote>
@@ -675,11 +671,11 @@
 <blockquote>
 <p>安装hexo-deployer-git插件</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> install hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <blockquote>
 <p>部署到github</p>
 </blockquote>
-<p>在blog目录下执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean # 清除资源</div><div class="line">hexo g     # 生成静态资源</div><div class="line">hexo d     # 部署</div></pre></td></tr></table></figure></p>
+<p>在blog目录下执行命令<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> clean # 清除资源</div><div class="line"><span class="attribute">hexo</span> g     # 生成静态资源</div><div class="line"><span class="attribute">hexo</span> d     # 部署</div></pre></td></tr></table></figure></p>
 <p>登录在github打开存放博客资源的仓库，就能看到部署的资源文件<br><img src="https://volc1605.github.io/images/Hexo之NexT主题搭建博客详细过程/git.png" alt=""></p>
 <blockquote>
 <p>分别向google,baidu提交站点地图sitemap.xml,baidusitmap.xml</p>
