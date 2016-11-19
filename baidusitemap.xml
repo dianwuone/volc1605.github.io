@@ -4,36 +4,6 @@
 
     
   <url>
-    <loc>https://volc1605.github.io/2016/11/18/teee/</loc>
-    <lastmod>2016-11-17T16:56:23.545Z</lastmod>
-    <data>
-        <display>
-        <title>teee</title>
-        <pubTime>2016-11-17T16:56:23.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://volc1605.github.io/2016/11/18/test/</loc>
-    <lastmod>2016-11-17T16:48:27.654Z</lastmod>
-    <data>
-        <display>
-        <title>test</title>
-        <pubTime>2016-11-17T16:48:27.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://volc1605.github.io/2016/10/04/%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2016-11-17T14:33:32.381Z</lastmod>
     <data>
@@ -49,8 +19,116 @@
 
     
   <url>
+    <loc>https://volc1605.github.io/2016/10/18/Java/</loc>
+    <lastmod>2016-11-16T15:16:43.772Z</lastmod>
+    <data>
+        <display>
+        <title>Java</title>
+        <pubTime>2016-10-18T13:43:06.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>正则替换</tag>
+         
+         
+           
+             
+              <breadCrumb title="work" url="https://volc1605.github.io/categories/work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://volc1605.github.io/2016/11/01/notes/</loc>
+    <lastmod>2016-11-01T14:50:48.324Z</lastmod>
+    <data>
+        <display>
+        <title>Notes</title>
+        <pubTime>2016-11-01T14:28:20.000Z</pubTime>
+        
+        <tag>Terminal</tag>
+         
+        <tag>Command</tag>
+         
+         
+           
+             
+              <breadCrumb title="notes" url="https://volc1605.github.io/categories/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://volc1605.github.io/2016/10/18/MyBatis/</loc>
+    <lastmod>2016-11-01T14:50:27.825Z</lastmod>
+    <data>
+        <display>
+        <title>MyBatis</title>
+        <pubTime>2016-10-18T13:41:21.000Z</pubTime>
+        
+        <tag>MyBatis</tag>
+         
+        <tag>SQL</tag>
+         
+         
+           
+             
+              <breadCrumb title="work" url="https://volc1605.github.io/categories/work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://volc1605.github.io/2016/11/01/JS/</loc>
+    <lastmod>2016-11-01T14:50:07.241Z</lastmod>
+    <data>
+        <display>
+        <title>JS</title>
+        <pubTime>2016-11-01T14:05:27.000Z</pubTime>
+        
+        <tag>JS</tag>
+         
+         
+           
+             
+              <breadCrumb title="work" url="https://volc1605.github.io/categories/work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://volc1605.github.io/2016/10/18/HTML/</loc>
+    <lastmod>2016-11-01T14:45:25.254Z</lastmod>
+    <data>
+        <display>
+        <title>HTML</title>
+        <pubTime>2016-10-18T14:03:22.000Z</pubTime>
+        
+        <tag>HTML</tag>
+         
+        <tag>UEditor</tag>
+         
+         
+           
+             
+              <breadCrumb title="work" url="https://volc1605.github.io/categories/work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://volc1605.github.io/2016/10/03/Hexo%E4%B9%8BNexT%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E8%BF%87%E7%A8%8B/</loc>
-    <lastmod>2016-10-07T06:30:59.876Z</lastmod>
+    <lastmod>2016-10-07T06:30:59.000Z</lastmod>
     <data>
         <display>
         <title>Hexo之NexT主题搭建博客详细过程</title>
