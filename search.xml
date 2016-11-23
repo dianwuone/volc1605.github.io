@@ -25,7 +25,7 @@
 <blockquote>
 <p>mv命令                                            </p>
 </blockquote>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">mv</span> file1.txt file2.txt                            # 重命名</div><div class="line"><span class="attribute">mv</span> folder1 tmp folder2                            # 移动folder1文件夹(包含folder1)到folder2文件夹</div></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">mv</span> file1.txt file2.txt                            # 重命名</div><div class="line"><span class="attribute">mv</span> folder1 folder2                                # 移动folder1文件夹(包含folder1)到folder2文件夹</div></pre></td></tr></table></figure>
 <blockquote>
 <p>vi命令  </p>
 </blockquote>
