@@ -310,6 +310,159 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/23/linux/" itemprop="url">
+                  linux
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-23T16:11:36+08:00" content="2016-11-23">
+              2016-11-23
+            </time>
+          </span>
+
+
+
+
+
+              <span>
+                  |
+                <span>更新于</span>
+                <time>
+                  2016-11-23
+                  16:11:36
+                </time>
+              </span>
+
+
+
+
+
+
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                |
+                <a href="/2016/11/23/linux/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/23/linux/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+            
+               <span id="/2016/11/23/linux/" class="leancloud_visitors" data-flag-title="linux">
+                 |
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 <span class="post-meta-item-text">阅读量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                
+                  |
+                  <span class="post-meta-item-text">最近 </span>
+                  <span class="leancloud-updated-at"></span>
+                  </span>
+                
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="LINUX��������"><a href="#LINUX��������" class="headerlink" title="LINUX��������"></a>LINUX��������</h1><p>ls����<br>ls -l                                             # Ŀ¼��ϸ�ṹ</p>
+<p>mkdir����<br>mkdir folder1                                     # ����folder1�ļ���</p>
+<p>rm����<br>rm folder1                                        # ɾ��folder1�ļ���<br>rm file                                           # ɾ���ļ�</p>
+<p>cp����<br>cp file1 file2                                    # ����file1�ļ�file2</p>
+<p>mv����<br>mv file1.txt file2.txt                            # ������<br>mv folder1 tmp folder2                            # �ƶ�folder1�ļ���(����folder1)��folder2�ļ���</p>
+<p>vi����<br>vi file1.txt                                      # �鿴file1.txt�ļ���һҳ(command mode),trl + f���з�ҳ</p>
+<pre><code># ��i�������༭ģʽ(insert mode)
+# �˳�vi���
+# Esc����(command mode) ����&apos;:q&apos;�س��˳�
+                               &apos;:wq&apos;�����˳�
+                               &apos;:q!&apos;ǿ���˳�
+# ����&apos;:/str&apos;�س�����str�ַ�������n�鿴��һ��
+</code></pre><p>cat����<br>cat file1.txt                                     # �鿴file1.txt������Ϣ<br>cat file1.txt | grep ‘info’                       # �鿴file1.txt��ƥ��’info’��������Ϣ,������’info’�ַ���<br>cat file1 file2 &gt; file                            # file1��file2�ϲ���file�ʼ۲���ʾ<br>cat must.txt | tail -n +10 | head -n 10           # �鿴must.txt�ļ����ӵ�10������ʾ10�У���’10-19’��</p>
+<p>tail����<br>tailf catalina.out | grep ‘countTime’             # ֻʵʱ��ʾ����’countTime’�����е���Ϣ<br>tail -f file1                                     # ʵʱ��ʾfile1�ļ���ʮ���������༭ģʽ<br>tail -n 200 -f file1                              # ʵʱ��ʾfile1��200�б仯��Ϣ��������������Ч������<br>tail -n 200 file1 | grep ‘test’                   # �鿴file1�ļ���200�У�����’test’(���)<br>tail -n 200 -f file1 | grep ‘INFO*’               # ʵʱ��ʾfile1��200�б仯��Ϣ�������Ǵ�’INFO’�ַ���(���)</p>
+<p>find����<br>find folder1 -type f -name “<em>.txt”                # ��ѯ��ǰĿ¼�µ�folder1�ļ�����ƥ��’</em>.txt’���ļ����ļ���<br>find folder1 -name ‘must.txt’ -ls                 # ��ѯ��ǰĿ¼�µ�folder1�ļ�����ƥ��’<em>.txt’���ļ����ļ��У�����ʾ��Ϣ<br>find -type f -name ‘must.txt’|xargs grep ‘str’    # ��ѯ��ǰĿ¼�µ�must.txt�ļ���ƥ��’str’�����е���Ϣ<br>grep -rn “str” </em>                                  # ��ѯ��ǰĿ¼�µ�must.txt�ļ���ƥ��’str’�����е���Ϣ</p>
+<pre><code>* : ��ʾ��ǰĿ¼�����ļ���Ҳ������ĳ���ļ���
+-r �ǵݹ�����
+-n ����ʾ�к�
+-R ���������ļ�������Ŀ¼
+-i ���Դ�Сд
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/19/MySQL/" itemprop="url">
                   MySQL
                 </a>
@@ -1488,7 +1641,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
