@@ -9,6 +9,7 @@
       <content type="html"><![CDATA[<h1 id="Maven项目不显示-Maven-Dependencies"><a href="#Maven项目不显示-Maven-Dependencies" class="headerlink" title="Maven项目不显示 Maven Dependencies"></a>Maven项目不显示 Maven Dependencies</h1><p>从别目录结构正确的项目中复制.classpath文件，覆盖不显示Maven Dependencies的项目目录中的.classpath</p>
 <h1 id="去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构"><a href="#去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构" class="headerlink" title="去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构"></a>去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构</h1><p><img src="https://volc1605.github.io/images/Maven/mavenConstruction.png" alt="maven"></p>
 <p>解决方法：<br>项目properties中maven-&gt;javaee integration去掉勾选<br>去除maven项目中javascript resources引用jar包<br>properties中project facets只选择java，去掉javascript<br>去除maven项目结构目录中含有web app 2.3<br>properties中project facets只选择java 去掉dynamic web module</p>
+<h1 id="解决maven项目名称出现个红叉报错"><a href="#解决maven项目名称出现个红叉报错" class="headerlink" title="解决maven项目名称出现个红叉报错"></a>解决maven项目名称出现个红叉报错</h1><p>properties中project facets的java版本号选择不当</p>
 ]]></content>
     </entry>
     
