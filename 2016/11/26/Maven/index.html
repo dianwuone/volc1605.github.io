@@ -84,23 +84,23 @@
 
 
 
-<meta name="description" content="Maven��Ŀ����ʾ Maven Dependencies�ӱ�Ŀ¼�ṹ��ȷ����Ŀ�и���.classpath�ļ������ǲ���ʾMaven Dependencies����ĿĿ¼�е�.classpath
-ȥ��dynamic web module��ѡ����ÿ�θ���maven��Ŀ�����������½ṹ
-������������Ŀproperties��maven">
+<meta name="description" content="Maven项目不显示 Maven Dependencies从别目录结构正确的项目中复制.classpath文件，覆盖不显示Maven Dependencies的项目目录中的.classpath
+去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构
+解决方法：项目properties中maven-&amp;gt;javaee integration去掉勾选去除maven项目">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Maven">
 <meta property="og:url" content="https://volc1605.github.io/2016/11/26/Maven/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="Maven��Ŀ����ʾ Maven Dependencies�ӱ�Ŀ¼�ṹ��ȷ����Ŀ�и���.classpath�ļ������ǲ���ʾMaven Dependencies����ĿĿ¼�е�.classpath
-ȥ��dynamic web module��ѡ����ÿ�θ���maven��Ŀ�����������½ṹ
-������������Ŀproperties��maven">
+<meta property="og:description" content="Maven项目不显示 Maven Dependencies从别目录结构正确的项目中复制.classpath文件，覆盖不显示Maven Dependencies的项目目录中的.classpath
+去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构
+解决方法：项目properties中maven-&amp;gt;javaee integration去掉勾选去除maven项目">
 <meta property="og:image" content="https://volc1605.github.io/images/Maven/mavenConstruction.png">
-<meta property="og:updated_time" content="2016-11-26T05:46:04.486Z">
+<meta property="og:updated_time" content="2016-11-26T05:47:01.897Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Maven">
-<meta name="twitter:description" content="Maven��Ŀ����ʾ Maven Dependencies�ӱ�Ŀ¼�ṹ��ȷ����Ŀ�и���.classpath�ļ������ǲ���ʾMaven Dependencies����ĿĿ¼�е�.classpath
-ȥ��dynamic web module��ѡ����ÿ�θ���maven��Ŀ�����������½ṹ
-������������Ŀproperties��maven">
+<meta name="twitter:description" content="Maven项目不显示 Maven Dependencies从别目录结构正确的项目中复制.classpath文件，覆盖不显示Maven Dependencies的项目目录中的.classpath
+去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构
+解决方法：项目properties中maven-&amp;gt;javaee integration去掉勾选去除maven项目">
 <meta name="twitter:image" content="https://volc1605.github.io/images/Maven/mavenConstruction.png">
 
 
@@ -410,9 +410,9 @@
       
 
       
-        <h1 id="Maven��L����ʾ-Maven-Dependencies"><a href="#Maven��L����ʾ-Maven-Dependencies" class="headerlink" title="Maven��Ŀ����ʾ Maven Dependencies"></a>Maven��Ŀ����ʾ Maven Dependencies</h1><p>�ӱ�Ŀ¼�ṹ��ȷ����Ŀ�и���.classpath�ļ������ǲ���ʾMaven Dependencies����ĿĿ¼�е�.classpath</p>
-<h1 id="z��dynamic-web-module��ѡ����y�θ���maven��L�����������½u"><a href="#z��dynamic-web-module��ѡ����y�θ���maven��L�����������½u" class="headerlink" title="ȥ��dynamic web module��ѡ����ÿ�θ���maven��Ŀ�����������½ṹ"></a>ȥ��dynamic web module��ѡ����ÿ�θ���maven��Ŀ�����������½ṹ</h1><p><img src="https://volc1605.github.io/images/Maven/mavenConstruction.png" alt="maven"></p>
-<p>����������<br>��Ŀproperties��maven-&gt;javaee integrationȥ����ѡ<br>ȥ��maven��Ŀ��javascript resources����jar��<br>properties��project facetsֻѡ��java��ȥ��javascript<br>ȥ��maven��Ŀ�ṹĿ¼�к���web app 2.3<br>properties��project facetsֻѡ��java ȥ��dynamic web module</p>
+        <h1 id="Maven项目不显示-Maven-Dependencies"><a href="#Maven项目不显示-Maven-Dependencies" class="headerlink" title="Maven项目不显示 Maven Dependencies"></a>Maven项目不显示 Maven Dependencies</h1><p>从别目录结构正确的项目中复制.classpath文件，覆盖不显示Maven Dependencies的项目目录中的.classpath</p>
+<h1 id="去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构"><a href="#去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构" class="headerlink" title="去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构"></a>去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构</h1><p><img src="https://volc1605.github.io/images/Maven/mavenConstruction.png" alt="maven"></p>
+<p>解决方法：<br>项目properties中maven-&gt;javaee integration去掉勾选<br>去除maven项目中javascript resources引用jar包<br>properties中project facets只选择java，去掉javascript<br>去除maven项目结构目录中含有web app 2.3<br>properties中project facets只选择java 去掉dynamic web module</p>
 
       
     </div>
@@ -664,7 +664,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven��L����ʾ-Maven-Dependencies"><span class="nav-number">1.</span> <span class="nav-text">Maven��Ŀ����ʾ Maven Dependencies</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#z��dynamic-web-module��ѡ����y�θ���maven��L�����������½u"><span class="nav-number">2.</span> <span class="nav-text">ȥ��dynamic web module��ѡ����ÿ�θ���maven��Ŀ�����������½ṹ</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven项目不显示-Maven-Dependencies"><span class="nav-number">1.</span> <span class="nav-text">Maven项目不显示 Maven Dependencies</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构"><span class="nav-number">2.</span> <span class="nav-text">去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构</span></a></li></ol></div>
             
           </div>
         </section>
