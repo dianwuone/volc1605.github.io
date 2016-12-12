@@ -310,6 +310,888 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/12/memcache/" itemprop="url">
+                  memcache
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-12T11:48:44+08:00" content="2016-12-12">
+              2016-12-12
+            </time>
+          </span>
+
+
+
+
+
+              <span>
+                  |
+                <span>更新于</span>
+                <time>
+                  2016-12-12
+                  11:48:44
+                </time>
+              </span>
+
+
+
+
+
+
+
+          
+            <span class="post-category" >
+              |
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Memcache/" itemprop="url" rel="index">
+                    <span itemprop="name">Memcache</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                |
+                <a href="/2016/12/12/memcache/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/12/memcache/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+            
+               <span id="/2016/12/12/memcache/" class="leancloud_visitors" data-flag-title="memcache">
+                 |
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 <span class="post-meta-item-text">阅读量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                
+                  |
+                  <span class="post-meta-item-text">最近 </span>
+                  <span class="leancloud-updated-at"></span>
+                  </span>
+                
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="��װ"><a href="#��װ" class="headerlink" title="��װ"></a>��װ</h1><p>1.����memcached�ǻ���libevent�ģ�������Ҫ��װlibevent��libevent-devel<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">yum</span> install  libevent libevent-devel -y</div></pre></td></tr></table></figure></p>
+<pre><code>���أ�  
+    http://www.monkey.org/~provos/libevent-2.0.10-stable.tar.gz  
+</code></pre><p>2.��ѹ<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># tar zxvf libevent-2.0.10-stable.tar.gz</span></div></pre></td></tr></table></figure></p>
+<p>3.����Ŀ¼<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># cd libevent-2.0.10-stable</span></div></pre></td></tr></table></figure></p>
+<ol>
+<li>�л���root  <figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># su</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>5.��װgcc<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># yum install gcc</span></div></pre></td></tr></table></figure></p>
+<p>6.���ð�װ·��<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ./configure -prefix=/usr</span></div></pre></td></tr></table></figure></p>
+<p>7.����<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># make</span></div></pre></td></tr></table></figure></p>
+<p>8.��װ<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># make install</span></div></pre></td></tr></table></figure></p>
+<p>9.����libevent�Ƿ���װ�ɹ�<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># ls -al /usr/lib | grep libevent</div><div class="line">lrwxrwxrwx 1 root root 21 11?? 12 17:38 libevent-1.2.so.1 -&gt; libevent-1.2.so.1.0.3</div><div class="line">-rwxr-xr-x 1 root root 263546 11?? 12 17:38 libevent-1.2.so.1.0.3</div><div class="line">-rw-r�Cr�C 1 root root 454156 11?? 12 17:38 libevent.a</div><div class="line">-rwxr-xr-x 1 root root 811 11?? 12 17:38 libevent.la</div><div class="line">lrwxrwxrwx 1 root root 21 11?? 12 17:38 libevent.so -&gt; libevent-1.2.so.1.0.3</div></pre></td></tr></table></figure></p>
+<p>������������װ���ˡ�<br>��װlibevent�ο���<br>    <a href="http://blog.csdn.net/zhangm168/article/details/6272801" target="_blank" rel="external">http://blog.csdn.net/zhangm168/article/details/6272801</a></p>
+<p>10.��װgcc<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">yum</span> install gcc* make*</div></pre></td></tr></table></figure></p>
+<p>11.����memcache<br>    ��ַ:<a href="http://www.danga.com/memcached/dist/memcached-1.2.0.tar.gz" target="_blank" rel="external">http://www.danga.com/memcached/dist/memcached-1.2.0.tar.gz</a><br>12.��/tmp��ѹmemcache<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">tar</span> zxvf memcached-1.4.33.tar.gz</div></pre></td></tr></table></figure></p>
+<pre><code>��װmemcached��ͬʱ��Ҫ��װ��ָ��libevent�İ�װλ�ã�  
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">cd /tmp</div><div class="line">tar zxvf memcached-1.4.33.tar.gz</div><div class="line">cd memcached-1.4.33.tar.gz</div><div class="line">./configure �Cwith-libevent=/usr</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
+<pre><code>�����м����ֱ���������ϸ����������Ϣ�����մ�����Ϣ�����û���������Ӧ�Ŀ�����·����  
+��װ���ɺ�����memcached�ŵ� /usr/local/bin/memcached ��  
+�����Ƿ��ɹ���װmemcached��  
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">	ls -al /usr/local/bin/mem*</div><div class="line">	-rwxr-xr-x 1 root root 137986 11?? 12 17:39 /usr/local/bin/memcached</div><div class="line">	-rwxr-xr-x 1 root root 140179 11?? 12 17:39 /usr/local/bin/memcached-debug</div><div class="line">``` </div><div class="line">13.����memcache   </div><div class="line">```apache</div><div class="line">	/usr/local/bin/memcached -d -m 10 -u root -l 116.62.29.229 -p 12000 -c 256 -P /tmp/memcached.pid</div></pre></td></tr></table></figure>
+<p>����memcache<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">kill</span> cat /tmp/memcached.pid</div></pre></td></tr></table></figure></p>
+<p>���ԣ�<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[root@localhost /]# telnet 192.168.141.64 12000</div><div class="line">Trying 192.168.141.64...</div><div class="line">Connected to 192.168.141.64 (192.168.141.64).</div><div class="line">Escape character is '^]'.</div><div class="line">set key1 0 60 4</div><div class="line">zhou</div><div class="line">STORED</div><div class="line">get key1</div><div class="line">VALUE key1 0 4</div><div class="line">zhou</div><div class="line">END</div></pre></td></tr></table></figure></p>
+<p>�˳���quit����ctrl + ] Ȼ���ڰ�q�����ˡ�  </p>
+<pre><code>��Memcached�������ص�Linux����������.��һ�����ϵ�ϵͳ����.��ôMemcached�ͻ��Զ�������.  
+��������Memcache�ķ������˵�����Ϊ��  
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/bin/memcached -d -m 10 -u root -l 192.168.141.64 -p 12000 -c 256 -P</div></pre></td></tr></table></figure>
+<pre><code>/tmp/memcached.pid������17jquery
+</code></pre><p>�뿪���Զ������Ļ���ֻ����/etc/rc.d/rc.local�м���һ�У���������  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/memcached/bin/memcached -d -m 10 -p 12000 -u apache -c 256</div></pre></td></tr></table></figure>
+<pre><code>������Щ�������Բο�һ�£�����ip��ָ��ʱ��Ĭ���Ǳ������û�:����ѡ���ǣ�apache �� deamon  
+������Ҳ���������ĸ��û��ķ��������ĸ��û�������  
+</code></pre><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">kill</span> -9 <span class="string">"���̺�"</span></div></pre></td></tr></table></figure>
+<p>����  </p>
+<p>Error occurred during initialization of VM<br>Could not reserve enough space for object heap  </p>
+<p>��������<br>    ��tomcat��binĿ¼�£�catalina.sh�ļ���tomcat�ڴ��������ù��󣬳������������ڴ��������ɣ��޸ĵ��ʵ���ֵ���ɣ��޸ĵĲ���   Ϊ��JAVA_OPTS=”-Xms50m -Xmx60m”</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/12/linux安装JDK/" itemprop="url">
+                  linux安装JDK
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-12T11:46:46+08:00" content="2016-12-12">
+              2016-12-12
+            </time>
+          </span>
+
+
+
+
+
+              <span>
+                  |
+                <span>更新于</span>
+                <time>
+                  2016-12-12
+                  11:46:46
+                </time>
+              </span>
+
+
+
+
+
+
+
+          
+            <span class="post-category" >
+              |
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JDK/" itemprop="url" rel="index">
+                    <span itemprop="name">JDK</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                |
+                <a href="/2016/12/12/linux安装JDK/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/12/linux安装JDK/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+            
+               <span id="/2016/12/12/linux安装JDK/" class="leancloud_visitors" data-flag-title="linux安装JDK">
+                 |
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 <span class="post-meta-item-text">阅读量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                
+                  |
+                  <span class="post-meta-item-text">最近 </span>
+                  <span class="leancloud-updated-at"></span>
+                  </span>
+                
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="jdk安装"><a href="#jdk安装" class="headerlink" title="jdk安装"></a>jdk安装</h1><p>下载地址:<br>    <a href="http://www.oracle.com/technetwork/cn/java/javase/downloads/jdk8-downloads-2133151-zhs.html" target="_blank" rel="external">http://www.oracle.com/technetwork/cn/java/javase/downloads/jdk8-downloads-2133151-zhs.html</a><br>chmod [who] [opt] [mode] 文件/目录名<br>chmod a+rwx java<br>1.修改etc/profile文件，追加一下jdk配置并保存<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">export</span> JAVA_HOME=/usr/java/jdk1.6.0_45  </div><div class="line"><span class="attribute">export</span> JAVA_BIN=/usr/java/jdk1.6.0_45/bin  </div><div class="line"><span class="attribute">export</span> PATH=$PATH:$JAVA_HOME/bin  </div><div class="line"><span class="attribute">export</span> CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar  </div><div class="line"><span class="attribute">export</span> JAVA_HOME JAVA_BIN PATH CLASSPATH</div></pre></td></tr></table></figure></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">source</span> /etc/profile</div></pre></td></tr></table></figure>
+<pre><code>命令：source /etc/profile  # 刷新系统配置文件
+</code></pre><p>2.在这个目录下/usr/local/java/jdk1.7.0_71/bin/修改java文件权限<br>  命令：chmod  777 java<br>  命令：java -version </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/12/DUBBO+ZOOKEEPER/" itemprop="url">
+                  Dubbo+zookeeper
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-12T11:19:29+08:00" content="2016-12-12">
+              2016-12-12
+            </time>
+          </span>
+
+
+
+
+
+              <span>
+                  |
+                <span>更新于</span>
+                <time>
+                  2016-12-12
+                  11:19:29
+                </time>
+              </span>
+
+
+
+
+
+
+
+          
+            <span class="post-category" >
+              |
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/DUBBO/" itemprop="url" rel="index">
+                    <span itemprop="name">DUBBO</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                |
+                <a href="/2016/12/12/DUBBO+ZOOKEEPER/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/12/DUBBO+ZOOKEEPER/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+            
+               <span id="/2016/12/12/DUBBO+ZOOKEEPER/" class="leancloud_visitors" data-flag-title="Dubbo+zookeeper">
+                 |
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 <span class="post-meta-item-text">阅读量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                
+                  |
+                  <span class="post-meta-item-text">最近 </span>
+                  <span class="leancloud-updated-at"></span>
+                  </span>
+                
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="��װzookeeper"><a href="#��װzookeeper" class="headerlink" title="��װzookeeper"></a>��װzookeeper</h1><p>1.���ذ�װ��<br>���ص�ַ��<a href="http://mirrors.hust.edu.cn/apache/zookeeper/zookeeper-3.4.6/" target="_blank" rel="external">http://mirrors.hust.edu.cn/apache/zookeeper/zookeeper-3.4.6/</a></p>
+<pre><code>����
+��/webapp�½�ѹ��װ�ļ�
+tar -xzvf zookeeper-3.4.5.tar.gz
+/webapp/zookeeper-3.4.5�´���logs�ļ���
+</code></pre><p>2.zookeeper�Ļ�������������  </p>
+<pre><code>��/etc/profile�ļ��м������µ����ݣ�
+</code></pre><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#set zookeeper environment</span></div><div class="line"></div><div class="line"><span class="attribute">export</span> ZOOKEEPER_HOME=/home/haduser/zookeeper/zookeeper-3.4.5</div><div class="line"><span class="attribute">export</span> PATH=$PATH:$ZOOKEEPER_HOME/bin:$ZOOKEEPER_HOME/conf</div></pre></td></tr></table></figure>
+<p>3.��Ⱥ����<br>    ��Zookeeper��Ⱥ������ֻҪһ�����ϵĻ������������ˣ���ôZookeeper�������ǿ��õġ����ˣ���Ⱥ�ϲ���Zookeeper����ʹ������̨����������������5̨������ֻҪ3̨��������������������ʹ�á�</p>
+<pre><code>�������ǽ���Zookeeper�������ļ��Ĳ����������ã�
+
+����zookeeper-3.4.5/conf��
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$:cp zoo_sample.cfg zoo.cfg</div><div class="line">$:vim zoo.cfg</div></pre></td></tr></table></figure>
+<p><img src="https://volc1605.github.io/images/DUBBO+ZOOKEEPER/1.png" alt="1">   </p>
+<p>ע����ͼ��������master��slave1�ֱ�Ϊ�������������Ķ�Ӧ�������ɲμ�֮ǰ��Hadoop�İ�װ�����õĲ���<br>�������������ļ���”server.id=host:port:port”�еĵ�һ��port�Ǵӻ�����follower�����ӵ���������leader���Ķ˿ںţ��ڶ���port�ǽ���leadershipѡ�ٵĶ˿ںš�  </p>
+<p>��������dataDir��ָ����Ŀ¼�´���һ���ļ���Ϊmyid���ļ����ļ��е�����ֻ��һ�У�Ϊ��������Ӧ��idֵ��Ҳ������ͼ��server.id�е�id�����磺�ڷ�����1�е�myid������Ӧ��д��1��</p>
+<p>4.Զ�̸��Ʒַ���װ�ļ�  </p>
+<pre><code>�������������İ�װ�ļ���������Ⱥ�е����������϶�Ӧ��Ŀ¼�£�  
+
+haduser@master:~/zookeeper$ scp -r zookeeper-3.4.5/ slave1:/home/haduser/zookeeper/zookeeper-3.4.5  
+
+haduser@master:~/zookeeper$ scp -r zookeeper-3.4.5/ slave2:/home/haduser/zookeeper/zookeeper-3.4.5  
+
+
+�������ɺ��޸Ķ�Ӧ�Ļ����ϵ�myid�������޸�slave1�е�myid���£�  
+
+haduser@slave1:~/zookeeper/zookeeper-3.4.5$ echo &quot;2&quot; &gt; data/myid  
+haduser@slave1:~/zookeeper/zookeeper-3.4.5$ cat data/myid  
+����Ϊ��2    
+</code></pre><p>5.����ZooKeeper��Ⱥ<br>    ��ZooKeeper��Ⱥ��ÿ�������ϣ�ִ������ZooKeeper�����Ľű���������ʾ��<br>      haduser@master:~/zookeeper/zookeeper-3.4.5$ bin/zkServer.sh start<br>      haduser@slave1:~/zookeeper/zookeeper-3.4.5$ bin/zkServer.sh start<br>      haduser@slave2:~/zookeeper/zookeeper-3.4.5$ bin/zkServer.sh start<br><img src="https://volc1605.github.io/images/DUBBO+ZOOKEEPER/2.png" alt="2"><br>���У�QuorumPeerMain��zookeeper���̣�����������<br>�����������������л����ϵ�Zookeeper֮������ͨ��ZooKeeper�Ľű����鿴����״̬��������Ⱥ�и��������Ľ�ɫ������Leader������Follower����������ʾ������ZooKeeper��Ⱥ�е�ÿ�������ϲ�ѯ�Ľ�����</p>
+<p><img src="https://volc1605.github.io/images/DUBBO+ZOOKEEPER/3.png" alt="3"><br>ͨ������״̬��ѯ�����ɼ���slave1�Ǽ�Ⱥ��Leader������������������Follower��  </p>
+<p>���⣬����ͨ���ͻ��˽ű������ӵ�ZooKeeper��Ⱥ�ϡ����ڿͻ�����˵��ZooKeeper��һ�����壨ensemble�������ӵ�ZooKeeper��Ⱥʵ���ϸо��ڶ���������Ⱥ�ķ��������ԣ����������κ�һ�������Ͻ�����������Ⱥ�����ӣ����磺<br>�鿴�Ƿ���װ�����ɹ�<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">bin</span>/zkCli.sh -server 116.62.2.289:2181</div></pre></td></tr></table></figure></p>
+<p><img src="https://volc1605.github.io/images/DUBBO+ZOOKEEPER/4.png" alt="4"> </p>
+<p>�ű�����<br>�ű����ݣ�<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">aaa</span>=` ps aux| grep <span class="string">"/webapp/zookeeper"</span> | grep -v grep|awk '&#123;print <span class="number">$2</span>&#125;'`</div><div class="line"></div><div class="line"><span class="attribute">if</span><span class="meta"> [ "$aaa" = "" ];</span></div><div class="line">then</div><div class="line">  (/webapp/zookeeper-3.4.5/bin/zkServer.sh start) &amp;&amp; (echo "Start zookeeper  Service  Successful!") || (echo "Start zookeeper Service Fault")</div><div class="line">else</div><div class="line">   echo ""</div><div class="line">   echo "zookeeper is runging"</div><div class="line">   echo ""</div><div class="line"></div><div class="line">fi</div></pre></td></tr></table></figure></p>
+<p>����������<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[root@iZbp199af3f3y8j7fr8kolZ bin]# sh stop_zookeeper.sh </div><div class="line"> zookeeper is not runging </div><div class="line">[root@iZbp199af3f3y8j7fr8kolZ bin]# sh start_zookeeper.sh </div><div class="line">JMX enabled by default</div><div class="line">Using config: /webapp/zookeeper-3.4.5/bin/../conf/zoo.cfg</div><div class="line">Starting zookeeper ... STARTED</div><div class="line">Start zookeeper  Service  Successful!</div></pre></td></tr></table></figure></p>
+<p>���òο���<a href="http://www.cnblogs.com/yuyijq/p/3438829.html" target="_blank" rel="external">http://www.cnblogs.com/yuyijq/p/3438829.html</a><br>���òο���<a href="http://343614597.blog.51cto.com/7056394/1874745" target="_blank" rel="external">http://343614597.blog.51cto.com/7056394/1874745</a><br>����zookeeper<br>    ��zookper-3.3.6/binĿ¼��ִ��<br>    ./zkServer.sh start ����zookeeper<br>��֤zookeeper�Ƿ�����<br>ʹ��netstat -lpn | grep 2181  </p>
+<h1 id="��װDUBBO"><a href="#��װDUBBO" class="headerlink" title="��װDUBBO"></a>��װDUBBO</h1><p>1.����dubbo��װ��  </p>
+<p>2.�ڸ�Ŀ¼������Ӧ�ļ���webapp/deploy/<br>����ѹ��װ�ļ���deploy�ļ�����  </p>
+<p>3.����<br>    /webapp/deploy/dubbo-admin/WEB-INF<br>    �е�dubbo.properties�ļ�<br>    �������£�<br>    dubbo.registry.address=zookeeper://127.0.0.1:2181<br>    dubbo.admin.root.password=root<br>    dubbo.admin.guest.password=guest  </p>
+<p>4.Ȼ������tomcat��������ʾ��½ҳ�棬˵��dubbo-admin�����ɹ�<br>    ����·����<a href="http://������IP:8080/" target="_blank" rel="external">http://������IP:8080/</a><br>    �˺ţ�root<br>    ���룺root  </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/12/Nginx/" itemprop="url">
+                  Nginx
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-12T11:08:48+08:00" content="2016-12-12">
+              2016-12-12
+            </time>
+          </span>
+
+
+
+
+
+              <span>
+                  |
+                <span>更新于</span>
+                <time>
+                  2016-12-12
+                  11:08:48
+                </time>
+              </span>
+
+
+
+
+
+
+
+          
+            <span class="post-category" >
+              |
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Nginx/" itemprop="url" rel="index">
+                    <span itemprop="name">Nginx</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                |
+                <a href="/2016/12/12/Nginx/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/12/Nginx/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+            
+               <span id="/2016/12/12/Nginx/" class="leancloud_visitors" data-flag-title="Nginx">
+                 |
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 <span class="post-meta-item-text">阅读量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                
+                  |
+                  <span class="post-meta-item-text">最近 </span>
+                  <span class="leancloud-updated-at"></span>
+                  </span>
+                
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="��װ"><a href="#��װ" class="headerlink" title="��װ"></a>��װ</h1><p>1.����Ҫ��װ PCRE<br>    Դ�ļ���<a href="http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz" target="_blank" rel="external">http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz</a><br>    �ο���ַ��<a href="http://www.runoob.com/linux/nginx-install-setup.html" target="_blank" rel="external">http://www.runoob.com/linux/nginx-install-setup.html</a></p>
+<p>2.��װnginx<br>    nginx��װ·��/webapp/nginx</p>
+<p>������Ŀ������<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">SEVERE</span>: StandardServer.await: create[8005]: </div><div class="line"><span class="attribute">java</span>.net.BindException: Address already in use</div><div class="line"><span class="attribute">at</span> java.net.PlainSocketImpl.socketBind(Native Method)</div><div class="line"><span class="attribute">at</span> java.net.PlainSocketImpl.bind(PlainSocketImpl.java:383)</div><div class="line"><span class="attribute">at</span> java.net.ServerSocket.bind(ServerSocket.java:328)</div><div class="line"><span class="attribute">at</span> java.net.ServerSocket.&lt;init&gt;(ServerSocket.java:194)</div><div class="line"><span class="attribute">at</span> org.apache.catalina.core.StandardServer.await(StandardServer.java:404)</div><div class="line"><span class="attribute">at</span> org.apache.catalina.startup.Catalina.await(Catalina.java:676)</div><div class="line"><span class="attribute">at</span> org.apache.catalina.startup.Catalina.start(Catalina.java:628)</div><div class="line"><span class="attribute">at</span> sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</div><div class="line"><span class="attribute">at</span> sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)</div><div class="line"><span class="attribute">at</span> sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)</div><div class="line"><span class="attribute">at</span> java.lang.reflect.Method.invoke(Method.java:597)</div><div class="line"><span class="attribute">at</span> org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)</div><div class="line"><span class="attribute">at</span> org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)</div><div class="line"><span class="attribute">Dec</span> 10, 2016 10:14:38 AM org.apache.coyote.http11.Http11Protocol pause</div></pre></td></tr></table></figure></p>
+<p>�����޸ģ�<br>    8005�˿ڱ�ռ����<br>    /webapp/tomcat_bg/conf<br>    �޸�server.xml�ļ��е�8005�˿�<br>    <server port="8007" shutdown="SHUTDOWN"></server></p>
+<p>�������<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/usr/local/webserver/nginx/sbin/nginx -s reload            # �������������ļ�</div><div class="line">/usr/local/webserver/nginx/sbin/nginx -s reopen            # ���� Nginx</div><div class="line">/usr/local/webserver/nginx/sbin/nginx -s stop              # ֹͣ Nginx</div></pre></td></tr></table></figure></p>
+<h1 id="��֤nginx�Ƿ���װ�ɹ�"><a href="#��֤nginx�Ƿ���װ�ɹ�" class="headerlink" title="��֤nginx�Ƿ���װ�ɹ�"></a>��֤nginx�Ƿ���װ�ɹ�</h1><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd  /usr/local/nginx/sbin  </div><div class="line">./nginx -t</div></pre></td></tr></table></figure>
+<p>3.nginx.conf����<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#user  nobody;</div><div class="line">worker_processes  1;</div><div class="line"></div><div class="line">#error_log  logs/error.log;</div><div class="line">#error_log  logs/error.log  notice;</div><div class="line">#error_log  logs/error.log  info;</div><div class="line"></div><div class="line">#pid        logs/nginx.pid;</div><div class="line"></div><div class="line"></div><div class="line">events &#123;</div><div class="line">    worker_connections  1024;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">http &#123;</div><div class="line">    include       mime.types;</div><div class="line">    default_type  application/octet-stream;</div><div class="line"></div><div class="line">    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '</div><div class="line">    #                  '$status $body_bytes_sent "$http_referer" '</div><div class="line">    #                  '"$http_user_agent" "$http_x_forwarded_for"';</div><div class="line"></div><div class="line">    #access_log  logs/access.log  main;</div><div class="line"></div><div class="line">    sendfile        on;</div><div class="line">    #tcp_nopush     on;</div><div class="line"></div><div class="line">    #keepalive_timeout  0;</div><div class="line">    keepalive_timeout  65;</div><div class="line"></div><div class="line">    #gzip  on;</div><div class="line"></div><div class="line">    server &#123;</div><div class="line">        listen       80;</div><div class="line">        server_name  localhost;</div><div class="line"></div><div class="line">        #charset koi8-r;</div><div class="line"></div><div class="line">        #access_log  logs/host.access.log  main;</div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">            root   /webapp/webdir/share;</div><div class="line">            index  index.html index.htm;</div><div class="line">        &#125;</div><div class="line">	location /xx/ &#123;</div><div class="line">	     proxy_pass   http://127.0.0.1:1111/xx/;</div><div class="line">        &#125;</div><div class="line">	location /xx/ &#123;</div><div class="line">	     proxy_pass   http://127.0.0.1:1111/;</div><div class="line">	&#125;</div><div class="line">	location /xx/ &#123;</div><div class="line">	     proxy_pass   http://127.0.0.1:1111/;</div><div class="line">	&#125; </div><div class="line">        #error_page  404              /404.html;</div><div class="line"></div><div class="line">        # redirect server error pages to the static page /50x.html</div><div class="line">        #</div><div class="line">        error_page   500 502 503 504  /50x.html;</div><div class="line">        location = /50x.html &#123;</div><div class="line">            root   html;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        # proxy the PHP scripts to Apache listening on 127.0.0.1:80</div><div class="line">        #</div><div class="line">        #location ~ \.php$ &#123;</div><div class="line">        #    proxy_pass   http://127.0.0.1;</div><div class="line">        #&#125;</div><div class="line"></div><div class="line">        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</div><div class="line">        #</div><div class="line">        #location ~ \.php$ &#123;</div><div class="line">        #    root           html;</div><div class="line">        #    fastcgi_pass   127.0.0.1:9000;</div><div class="line">        #    fastcgi_index  index.php;</div><div class="line">        #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</div><div class="line">        #    include        fastcgi_params;</div><div class="line">        #&#125;</div><div class="line"></div><div class="line">        # deny access to .htaccess files, if Apache's document root</div><div class="line">        # concurs with nginx's one</div><div class="line">        #</div><div class="line">        #location ~ /\.ht &#123;</div><div class="line">        #    deny  all;</div><div class="line">        #&#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    # another virtual host using mix of IP-, name-, and port-based configuration</div><div class="line">    #</div><div class="line">    #server &#123;</div><div class="line">    #    listen       8000;</div><div class="line">    #    listen       somename:8080;</div><div class="line">    #    server_name  somename  alias  another.alias;</div><div class="line"></div><div class="line">    #    location / &#123;</div><div class="line">    #        root   html;</div><div class="line">    #        index  index.html index.htm;</div><div class="line">    #    &#125;</div><div class="line">    #&#125;</div><div class="line"></div><div class="line"></div><div class="line">    # HTTPS server</div><div class="line">    #</div><div class="line">    #server &#123;</div><div class="line">    #    listen       443 ssl;</div><div class="line">    #    server_name  localhost;</div><div class="line"></div><div class="line">    #    ssl_certificate      cert.pem;</div><div class="line">    #    ssl_certificate_key  cert.key;</div><div class="line"></div><div class="line">    #    ssl_session_cache    shared:SSL:1m;</div><div class="line">    #    ssl_session_timeout  5m;</div><div class="line"></div><div class="line">    #    ssl_ciphers  HIGH:!aNULL:!MD5;</div><div class="line">    #    ssl_prefer_server_ciphers  on;</div><div class="line"></div><div class="line">    #    location / &#123;</div><div class="line">    #        root   html;</div><div class="line">    #        index  index.html index.htm;</div><div class="line">    #    &#125;</div><div class="line">    #&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="�鿴tomcat�Ƿ�����"><a href="#�鿴tomcat�Ƿ�����" class="headerlink" title="�鿴tomcat�Ƿ�����"></a>�鿴tomcat�Ƿ�����</h1><pre><code>���ps -ef|grep java ����ps -aux | grep tomcat
+��������һ������˵��tomcat������
+</code></pre><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">root</span> 7010 1 0 Apr19 ? 00:30:13 /usr/local/java/bin/java -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties -Djava.awt.headless=true -Dfile.encoding=UTF-8 -server -Xms1024m -Xmx1024m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:+DisableExplicitGC -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djava.endorsed.dirs=/usr/local/tomcat/endorsed -classpath /usr/local/tomcat/bin/bootstrap.jar -Dcatalina.base=/usr/local/tomcat -Dcatalina.home=/usr/local/tomcat -Djava.io.tmpdir=/usr/local/tomcat/temp org.apache.catalina.startup.Bootstrap start</div></pre></td></tr></table></figure>
+<p>��������һ������˵��tomcat��ͣ��<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">root</span> 7010 1 0 Apr19 ? 00:30:30<span class="meta"> [java]</span></div></pre></td></tr></table></figure></p>
+<p>����  </p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Error</span> occurred during initialization of VM  </div><div class="line"><span class="attribute">Could</span> not reserve enough space for object heap</div></pre></td></tr></table></figure>
+<p>��������<br>    ��tomcat��binĿ¼�£�catalina.sh�ļ���tomcat�ڴ��������ù��󣬳������������ڴ��������ɣ��޸ĵ��ʵ���ֵ���ɣ��޸ĵĲ���   Ϊ��JAVA_OPTS=”-Xms50m -Xmx60m”</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/12/linux操作mysql/" itemprop="url">
+                  linux操作mysql
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-12T10:48:23+08:00" content="2016-12-12">
+              2016-12-12
+            </time>
+          </span>
+
+
+
+
+
+              <span>
+                  |
+                <span>更新于</span>
+                <time>
+                  2016-12-12
+                  10:48:23
+                </time>
+              </span>
+
+
+
+
+
+
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                |
+                <a href="/2016/12/12/linux操作mysql/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/12/linux操作mysql/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+            
+               <span id="/2016/12/12/linux操作mysql/" class="leancloud_visitors" data-flag-title="linux操作mysql">
+                 |
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 <span class="post-meta-item-text">阅读量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                
+                  |
+                  <span class="post-meta-item-text">最近 </span>
+                  <span class="leancloud-updated-at"></span>
+                  </span>
+                
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="linux安装mysql"><a href="#linux安装mysql" class="headerlink" title="linux安装mysql"></a>linux安装mysql</h1><p>1.查看服务器中是否已经安装了mysql  </p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ps -aux | grep "mysql"   # 查看有关mysql进程</span></div><div class="line"><span class="comment"># rpm -qa | grep mysql     # 用于查看linux服务器是否安装了默认的mysql</span></div><div class="line"><span class="comment"># rpm -e mysql　　         # 普通删除模式</span></div><div class="line"><span class="comment"># rpm -e --nodeps mysql　　# 强力删除模式，如果使用上面命令删除时，提示有依赖的其它文件，则用该命令可以对其进行强力删除  </span></div><div class="line"><span class="comment"># rpm -e mysql-5.7.13-linux-glibc2.5-x86_64 --nodeps  # 卸载已经安装的mysql-5.7.13-linux-glibc2.5-x86_64数据库</span></div></pre></td></tr></table></figure>
+<p>2.解压mysql源码文件  </p>
+<pre><code>下载mysql：网址:http://downloads.mysql.com/archives/community/  
+这里下载mysql-5.7.12-linux-glibc2.5-x86_64.tar版本  
+把下载好的mysql安装文件放到/home/mysql中，如果没有mysql文件夹先创建，再放到里面  
+</code></pre><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">cd</span> /home/mysql  # 进入mysql目录准备解压mysql源文件</div><div class="line"><span class="attribute">tar</span> -zxf mysql-5.7.12-linux-glibc2.5-x86_64.tar.gz -C /home/mysql   # 解压到/home/mysql文件夹下</div></pre></td></tr></table></figure>
+<p>3.创建mysql的用户组/用户, data目录及其用户目录<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># userdel mysql                                           # 删除用户</span></div><div class="line"><span class="comment"># groupdel mysql                                          # 删除用户组名</span></div><div class="line"><span class="comment"># mkdir /home/mysql                                       # 在home文件夹下创建文件夹mysql</span></div><div class="line"><span class="comment"># mkdir /home/mysql/data                                  # 在mysql文件夹下创建文件夹data  </span></div><div class="line"><span class="comment"># groupadd mysql                                          # 创建一个名为mysql的用户组       </span></div><div class="line"><span class="comment"># useradd -g mysql -d /home/mysql mysql                   # 在用户组下创建用户</span></div></pre></td></tr></table></figure></p>
+<p>4.初始化mysql数据库<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># cd /home/mysql                                         # 进入安装目录</span></div><div class="line"><span class="comment"># ./bin/mysql_install_db  --user=mysql --basedir=/home/mysql --datadir=/home/mysql/data</span></div></pre></td></tr></table></figure></p>
+<pre><code>mysql5.7新特性：由上面可以看出， mysql_install_db 已经不再推荐使用了，建议改成 mysqld --initialize 完成实例初始化。  
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># ./bin/mysqld --user=mysql --basedir=/home/mysql --datadir=/home/mysql/data --initialize</div><div class="line"># ./mysqld --user=mysql --basedir=/home/mysql --datadir=/home/mysql/data --initialize</div><div class="line">[Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).</div><div class="line">[ERROR] --initialize specified but the data directory has files in it. Aborting. 2016-04-08T01:46:53.155879Z 0</div><div class="line">[ERROR] Aborting</div></pre></td></tr></table></figure>
+<pre><code>出现上面的错误是因为我们没有清空mysql的data目录， 执行清空命令如下：  
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># cd /home/mysql/data                        # 进入安装目录下的data目录</div><div class="line"># rm -fr *                                   # 清空数据</div><div class="line"># cd /home/mysql      </div><div class="line"># ./bin/mysqld --user=mysql --basedir=/home/mysql --datadir=/home/mysql/data --initialize</div><div class="line">[Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details). 2016-04-08T01:47:59.945537Z 0</div><div class="line">[Warning] InnoDB: New log files created, LSN=45790 2016-04-08T01:48:00.333528Z 0 [Warning] InnoDB: Creating foreign key constraint system tables. 2016-04-08T01:48:00.434908Z 0</div><div class="line">[Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: ece26421-fd2b-11e5-a1e3-00163e001e5c. 2016-04-08T01:48:00.440125Z 0</div><div class="line">[Warning] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened. 2016-04-08T01:48:00.440904Z 1</div><div class="line">[Note] A temporary password is generated for root@localhost: 2EC+qfcossJ=</div></pre></td></tr></table></figure>
+<p>牢记上面的随机密码， 如上**mjT,#x_5sW, 下面我们修改密码时需要用到。  </p>
+<p>5.检测下是否能启动mysql服务<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># cd /home/mysql</span></div><div class="line"><span class="comment"># ./support-files/mysql.server start</span></div><div class="line"><span class="attribute">Starting</span> MySQL.. OK!</div></pre></td></tr></table></figure></p>
+<pre><code>正常  
+如果出现以下问题，需要修改/support-files/mysql.server  
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># ./support-files/mysql.server start</div><div class="line">./support-files/mysql.server: line 276: cd: /usr/local/mysql: No such file or directory</div><div class="line">Starting MySQL ERROR! Couldn't find MySQL server (/usr/local/mysql/bin/mysqld_safe)</div></pre></td></tr></table></figure>
+<pre><code>修改/home/mysql/support-files/mysql.server文件中的basedir和datadir路径  
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># vim support-files/mysql.server</div><div class="line">--------------------------</div><div class="line">...</div><div class="line">basedir=/home/mysql</div><div class="line">datadir=/home/mysql/data</div><div class="line">...</div><div class="line">--------------------------</div><div class="line"># ./support-files/mysql.server</div><div class="line">start Starting MySQL.. OK!</div></pre></td></tr></table></figure>
+<p>6.创建软链接<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ln -s /home/mysql/bin/mysql /usr/bin/mysql</span></div></pre></td></tr></table></figure></p>
+<p>7.创建配置文件<br>    1、将默认生成的my.cnf备份<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># mv /etc/my.cnf /etc/my.cnf.bak</span></div></pre></td></tr></table></figure></p>
+<pre><code>如果这一步报错，没有关系，正常情况下是由于/ect文件夹下没有my.cnf锁引起的，创建一下就可以了，或者你不会创建 ， 直接使用 vim   
+/ect/my.cnf 命令编辑 ，然后直接退出编辑就可以，在执行这个命令就不会出错了，退出编辑命令  esc键  -&gt; (shift键+ ：(冒号键) -&gt; wq! ),然后在执行上面的命令就不会报错了。  
+
+2、进入mysql的安装目录支持文件目录  
+</code></pre><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># cd /home/mysql/support-files</span></div></pre></td></tr></table></figure>
+<pre><code>3、拷贝配置文件模板为新的mysql配置文件
+</code></pre><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># cp my-default.cnf /etc/my.cnf</span></div></pre></td></tr></table></figure>
+<pre><code>4、设置编码，可按需修改新的配置文件选项， 不修改配置选项， mysql则按默认配置参数运行  
+如下是我修改配置文件/etc/my.cnf， 设置编码为utf8以防乱码
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">	# vim /etc/my.cnf</div><div class="line">	 </div><div class="line">	[mysqld]</div><div class="line">	 </div><div class="line">	basedir = /home/mysql</div><div class="line">	datadir = /home/mysql/data</div><div class="line">	 </div><div class="line">	character_set_server=utf8</div><div class="line">	init_connect='SET NAMES utf8'</div><div class="line">	 </div><div class="line">	 </div><div class="line">	[client]</div><div class="line">	default-character-set=utf8</div><div class="line">```	有的时候使用这个命令后，前3步有问题的这里可能my.cnf文件是空的，这个不要紧，既然没有生成，那么你就自己编辑喽！具体编辑怎么实现就参照步骤6  </div><div class="line"></div><div class="line">8.配置mysql服务开机自动启动  </div><div class="line">```apache</div><div class="line">		# cp /home/mysql/support-files/mysql.server /etc/init.d/mysqld      # 拷贝启动文件到/etc/init.d/下并重命令为mysqld</div><div class="line">		# chmod 755 /etc/init.d/mysqld                                      # 增加执行权限</div><div class="line">		# chkconfig --list mysqld                                           # 检查自启动项列表中没有mysqld这个，</div><div class="line">		# chkconfig --add mysqld                                            # 如果没有就添加mysqld：</div><div class="line">		# chkconfig mysqld on                                               # 用这个命令设置开机启动：</div></pre></td></tr></table></figure>
+<pre><code>如果在执行第一步就报错，则说明刚刚在第8步中配置出问题了，那你就重新设置一下  
+</code></pre><p><img src="https://volc1605.github.io/images/linux操作mysql/1.png" alt="1"><br>如果后面的操作中出现以下的问题<br><img src="https://volc1605.github.io/images/linux操作mysql/2.png" alt="2"></p>
+<p>这样就是电脑环境的问题了，你就直接把<br><img src="https://volc1605.github.io/images/linux操作mysql/3.png" alt="3"></p>
+<p>9.mysql服务的启动/重启/停止<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># service mysqld start                                               # 启动服务</span></div><div class="line"><span class="comment"># service mysqld restart                                             # 重启服务</span></div><div class="line"><span class="comment"># service mysqld stop                                                # 停止服务</span></div></pre></td></tr></table></figure></p>
+<p>10.修改mysql登录密码<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">mysql</span>&gt; SET PASSWORD = PASSWORD('123456'); # PASSWORD()里面的123456是我设置的新密码，你也可以设置成你的密码</div><div class="line"><span class="attribute">Query</span> OK, 0 rows affected, 1 warning (0.00 sec)</div><div class="line"><span class="attribute">Rows</span> matched: 2 Changed: 0 Warnings: 1</div><div class="line"><span class="attribute">mysql</span>&gt; ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;</div><div class="line"><span class="attribute">Query</span> OK, 0 rows affected, 1 warning (0.00 sec)</div><div class="line"><span class="attribute">Rows</span> matched: 2 Changed: 0 Warnings: 1</div><div class="line"><span class="attribute">mysql</span>&gt; flush privileges;</div><div class="line"><span class="attribute">Query</span> OK, 0 rows affected, 1 warning (0.00 sec)</div><div class="line"><span class="attribute">Rows</span> matched: 2 Changed: 0 Warnings: 1</div></pre></td></tr></table></figure></p>
+<p>11.mysql远程授权<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">[root@testfornss ~]# mysql -u root -p  </div><div class="line">Enter password:</div><div class="line">Welcome to the MySQL monitor. Commands end with ; or \g.</div><div class="line">Your MySQL connection id is 4</div><div class="line">Server version: 5.7.13 MySQL Community Server (GPL)</div><div class="line"> </div><div class="line">Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.</div><div class="line"> </div><div class="line">Oracle is a registered trademark of Oracle Corporation and/or its</div><div class="line">affiliates. Other names may be trademarks of their respective</div><div class="line">owners.</div><div class="line"> </div><div class="line">Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.</div><div class="line"> </div><div class="line">mysql&gt; grant all privileges on *.* to 'root'@'%' identified by '123456';</div><div class="line">Query OK, 0 rows affected, 1 warning (0.00 sec)</div><div class="line"> </div><div class="line">mysql&gt;</div></pre></td></tr></table></figure></p>
+<p>12.设置访问mysql数据库不区分大小写<br>    修改目录下/etc的my.cnf<br>    在[mysqld]配置下追加<br>    lower_case_table_names=1<br>    0代表区别大小写  </p>
+<p>问题：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">mysql</span> -u bg -p # 回车输入密码连不上</div><div class="line"><span class="attribute">mysql</span> -r bg -p # 回车输入密码可以连上</div></pre></td></tr></table></figure></p>
+<pre><code>解决方法：  
+    properties配置数据库properties配置数据库：
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">master.name=csp</div><div class="line">master.url=jdbc:mysql://116.62.29.200:3306/bg?characterEncoding=utf-8&amp;allowMultiQueries=true</div><div class="line">master.driverClassName=com.mysql.jdbc.Driver</div><div class="line"></div><div class="line"># \u5f00\u53d1\u73af\u5883</div><div class="line">master.username=root           # 名称是root，不是bg</div><div class="line">master.password=bmx84185858</div></pre></td></tr></table></figure>
+<p>参考资源：<a href="http://www.cnblogs.com/gaojupeng/p/5727069.html" target="_blank" rel="external">http://www.cnblogs.com/gaojupeng/p/5727069.html</a></p>
+<h1 id="登录mysql"><a href="#登录mysql" class="headerlink" title="登录mysql"></a>登录mysql</h1><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">mysql</span> -u root -p  	# 登录</div><div class="line"><span class="attribute">quit</span>;  				# 退出</div></pre></td></tr></table></figure>
+<h1 id="查看开启日志"><a href="#查看开启日志" class="headerlink" title="查看开启日志"></a>查看开启日志</h1><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">show</span> variables like 'log_%';</div><div class="line"><span class="attribute">show</span> master status;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/26/Maven/" itemprop="url">
                   Maven
                 </a>
@@ -417,6 +1299,10 @@
 <h1 id="去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构"><a href="#去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构" class="headerlink" title="去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构"></a>去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构</h1><p><img src="https://volc1605.github.io/images/Maven/mavenConstruction2.png" alt="maven"></p>
 <p>解决方法：<br>项目properties中maven-&gt;javaee integration去掉勾选<br>去除maven项目中javascript resources引用jar包<br>properties中project facets只选择java，去掉javascript<br>去除maven项目结构目录中含有web app 2.3<br>properties中project facets只选择java 去掉dynamic web module</p>
 <h1 id="解决maven项目名称出现个红叉报错"><a href="#解决maven项目名称出现个红叉报错" class="headerlink" title="解决maven项目名称出现个红叉报错"></a>解决maven项目名称出现个红叉报错</h1><p>properties中project facets的java版本号选择不当</p>
+<h1 id="目录下的创建普通文件夹"><a href="#目录下的创建普通文件夹" class="headerlink" title="目录下的创建普通文件夹"></a>目录下的创建普通文件夹</h1><p>properties中的javabuild path resource-&gt;excluded **</p>
+<h1 id="pom文件war报错"><a href="#pom文件war报错" class="headerlink" title="pom文件war报错"></a>pom文件war报错</h1><p>1.加上webapp中的web.xml文件<br>2.properties中maven deployment assembly(用来配置添加根目录文件夹)不显示<br>    需要在project facets中修改</p>
+<h1 id="项目启动报错"><a href="#项目启动报错" class="headerlink" title="项目启动报错"></a>项目启动报错</h1><p>原因jar包冲突<br>D:\java-tools\apache-maven-3.2.3\repo\org\apache\tomcat\servlet-api\6.0.28\servlet-api-6.0.28.jar</p>
+<h1 id="xsd文件找不到"><a href="#xsd文件找不到" class="headerlink" title="xsd文件找不到"></a>xsd文件找不到</h1><p>报错提示，要引入jar包。或者手动添加xsd文件或者手动指定(参考：<a href="http://www.ibm.com/developerworks/cn/xml/x-1008dubb/" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/xml/x-1008dubb/</a>)</p>
 
           
         
@@ -763,6 +1649,11 @@
 <p>echo命令</p>
 </blockquote>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">echo</span> <span class="string">"hello world"</span> &gt; file.txt                     # 当前目录下创建file.txt文件并添加数据</div></pre></td></tr></table></figure>
+<h1 id="查看服务器外网ip"><a href="#查看服务器外网ip" class="headerlink" title="查看服务器外网ip"></a>查看服务器外网ip</h1><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">curl</span> http://members.3322.org/dyndns/getip</div></pre></td></tr></table></figure>
+<h1 id="查看服务器网络"><a href="#查看服务器网络" class="headerlink" title="查看服务器网络"></a>查看服务器网络</h1><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">1</span>: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN </div><div class="line">    <span class="attribute">link</span>/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</div><div class="line">    <span class="attribute">inet</span> 127.0.0.1/8 scope host lo</div><div class="line"><span class="attribute">2</span>: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP qlen 1000</div><div class="line">    <span class="attribute">link</span>/ether 00:16:3e:01:35:3d brd ff:ff:ff:ff:ff:ff</div><div class="line">    <span class="attribute">inet</span> 10.25.4.139/22 brd 10.25.7.255 scope global eth0</div><div class="line"><span class="attribute">3</span>: eth1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP qlen 1000</div><div class="line">    <span class="attribute">link</span>/ether 00:16:3e:01:59:21 brd ff:ff:ff:ff:ff:ff</div><div class="line">    <span class="attribute">inet</span> 114.55.3.103/22 brd 114.55.3.255 scope global eth1</div></pre></td></tr></table></figure>
+<p>其中2部分显示的就是内网</p>
+<h1 id="更改文件或文件夹权限"><a href="#更改文件或文件夹权限" class="headerlink" title="更改文件或文件夹权限"></a>更改文件或文件夹权限</h1><p>改变一个文件的权限: chmod mode file|dir<br>改变所有子目录的权限: chmod mode dir -R</p>
+<p>mode = 777 or 752 and so on.<br>mode的三个数字，分别表示 owner，group,others所具有的权限。<br>1 = x 执行 2 = w 写 4 = r 读，比如owner具有所有权限，1+2+4=7,<br>又比如 group 具有 读 和 执行 权限 1+4 = 5</p>
 
           
         
@@ -1109,849 +2000,13 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/01/JS/" itemprop="url">
-                  JS
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-01T22:05:27+08:00" content="2016-11-01">
-              2016-11-01
-            </time>
-          </span>
-
-
-
-
-
-              <span>
-                  |
-                <span>更新于</span>
-                <time>
-                  2016-11-01
-                  22:05:27
-                </time>
-              </span>
-
-
-
-
-
-
-
-          
-            <span class="post-category" >
-              |
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/work/" itemprop="url" rel="index">
-                    <span itemprop="name">work</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                |
-                <a href="/2016/11/01/JS/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/01/JS/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-            
-               <span id="/2016/11/01/JS/" class="leancloud_visitors" data-flag-title="JS">
-                 |
-                 <span class="post-meta-item-icon">
-                   <i class="fa fa-eye"></i>
-                 </span>
-                 <span class="post-meta-item-text">阅读量 </span>
-                 <span class="leancloud-visitors-count"></span>
-                
-                  |
-                  <span class="post-meta-item-text">最近 </span>
-                  <span class="leancloud-updated-at"></span>
-                  </span>
-                
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="1-windows对象setTimeOut-用于发送验证码倒计时"><a href="#1-windows对象setTimeOut-用于发送验证码倒计时" class="headerlink" title="1.windows对象setTimeOut()用于发送验证码倒计时"></a>1.windows对象setTimeOut()用于发送验证码倒计时</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//短信验证码倒计时</div><div class="line">var wait = 30;</div><div class="line">function time(o) &#123;</div><div class="line">    if (wait == 0) &#123;</div><div class="line">        o.removeAttribute(&quot;disabled&quot;);</div><div class="line">        o.innerHTML = &quot;发送短信验证码&quot;;</div><div class="line">        wait = 30;</div><div class="line">    &#125; else &#123;</div><div class="line">        o.setAttribute(&quot;disabled&quot;, true);  </div><div class="line">        o.innerHTML = &quot;重新发送(&quot; + wait + &quot;)&quot;;</div><div class="line"></div><div class="line">        wait--;  </div><div class="line">        setTimeout(function()&#123;time(o)&#125;, 2)</div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/01/JS/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/18/HTML/" itemprop="url">
-                  HTML
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-18T22:03:22+08:00" content="2016-10-18">
-              2016-10-18
-            </time>
-          </span>
-
-
-
-
-
-              <span>
-                  |
-                <span>更新于</span>
-                <time>
-                  2016-10-18
-                  22:03:22
-                </time>
-              </span>
-
-
-
-
-
-
-
-          
-            <span class="post-category" >
-              |
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/work/" itemprop="url" rel="index">
-                    <span itemprop="name">work</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                |
-                <a href="/2016/10/18/HTML/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/18/HTML/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-            
-               <span id="/2016/10/18/HTML/" class="leancloud_visitors" data-flag-title="HTML">
-                 |
-                 <span class="post-meta-item-icon">
-                   <i class="fa fa-eye"></i>
-                 </span>
-                 <span class="post-meta-item-text">阅读量 </span>
-                 <span class="leancloud-visitors-count"></span>
-                
-                  |
-                  <span class="post-meta-item-text">最近 </span>
-                  <span class="leancloud-updated-at"></span>
-                  </span>
-                
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="1-input中autocomplete"><a href="#1-input中autocomplete" class="headerlink" title="1.input中autocomplete"></a>1.input中autocomplete</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- autocomplete：为on时返回页面时，input中的值仍然存在 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"user_phone"</span> <span class="attr">id</span>=<span class="string">"user_phone"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"form-control required"</span>   <span class="attr">autocomplete</span>=<span class="string">"off"</span> <span class="attr">placeholder</span>=<span class="string">"请填写您注册的手机号码(登录账号)"</span> <span class="attr">required</span> /&gt;</span></div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/18/HTML/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/18/Java/" itemprop="url">
-                  Java
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-18T21:43:06+08:00" content="2016-10-18">
-              2016-10-18
-            </time>
-          </span>
-
-
-
-
-
-              <span>
-                  |
-                <span>更新于</span>
-                <time>
-                  2016-10-18
-                  21:43:06
-                </time>
-              </span>
-
-
-
-
-
-
-
-          
-            <span class="post-category" >
-              |
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/work/" itemprop="url" rel="index">
-                    <span itemprop="name">work</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                |
-                <a href="/2016/10/18/Java/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/18/Java/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-            
-               <span id="/2016/10/18/Java/" class="leancloud_visitors" data-flag-title="Java">
-                 |
-                 <span class="post-meta-item-icon">
-                   <i class="fa fa-eye"></i>
-                 </span>
-                 <span class="post-meta-item-text">阅读量 </span>
-                 <span class="leancloud-visitors-count"></span>
-                
-                  |
-                  <span class="post-meta-item-text">最近 </span>
-                  <span class="leancloud-updated-at"></span>
-                  </span>
-                
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="1-生成pdf文件"><a href="#1-生成pdf文件" class="headerlink" title="1.生成pdf文件"></a>1.生成pdf文件</h1><p>导包：</p>
-<ul>
-<li>D:\java-tools\apache-maven-3.2.3\repo\com\itextpdf\itextpdf\5.4.3\itextpdf-5.4.3.jar</li>
-<li>D:\java-tools\apache-maven-3.2.3\repo\com\itextpdf\itext-asian\5.2.0\itext-asian-5.2.0.jar</li>
-</ul>
-<p>ReviewInvocation.java<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/18/Java/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/18/MyBatis/" itemprop="url">
-                  MyBatis
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-18T21:41:21+08:00" content="2016-10-18">
-              2016-10-18
-            </time>
-          </span>
-
-
-
-
-
-              <span>
-                  |
-                <span>更新于</span>
-                <time>
-                  2016-10-18
-                  21:41:21
-                </time>
-              </span>
-
-
-
-
-
-
-
-          
-            <span class="post-category" >
-              |
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/work/" itemprop="url" rel="index">
-                    <span itemprop="name">work</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                |
-                <a href="/2016/10/18/MyBatis/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/18/MyBatis/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-            
-               <span id="/2016/10/18/MyBatis/" class="leancloud_visitors" data-flag-title="MyBatis">
-                 |
-                 <span class="post-meta-item-icon">
-                   <i class="fa fa-eye"></i>
-                 </span>
-                 <span class="post-meta-item-text">阅读量 </span>
-                 <span class="leancloud-visitors-count"></span>
-                
-                  |
-                  <span class="post-meta-item-text">最近 </span>
-                  <span class="leancloud-updated-at"></span>
-                  </span>
-                
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="1-判断字段值是否存在并录入数据sql"><a href="#1-判断字段值是否存在并录入数据sql" class="headerlink" title="1.判断字段值是否存在并录入数据sql"></a>1.判断字段值是否存在并录入数据sql</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 录入短信套餐信息 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"addSmsPackage"</span> <span class="attr">parameterType</span>=<span class="string">"java.util.Map"</span>&gt;</span></div><div class="line">	INSERT INTO</div><div class="line">	tp_package_info (</div><div class="line">	f_station_id,</div><div class="line">	f_type,</div><div class="line">	f_buy_count,</div><div class="line">	f_package_count,</div><div class="line">	f_cur_count,</div><div class="line">	f_first_month_count,</div><div class="line">	f_sec_month_count,</div><div class="line">	f_third_month_count,</div><div class="line">	f_first_month_surplus,</div><div class="line">	f_sec_month_surplus,</div><div class="line">	f_is_first_accrued,</div><div class="line">	f_is_sec_accrued,</div><div class="line">	f_every_month,</div><div class="line">	f_package_create_time</div><div class="line">	) SELECT</div><div class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"combo != null and combo != '' and combo == 1"</span>&gt;</span></div><div class="line">		#&#123;userId&#125;,#&#123;combo&#125;,0,50000,5000,5000,3000,3000,0,0,0,0,0,#&#123;currentTime&#125;</div><div class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"combo != null and combo != '' and combo == 2"</span>&gt;</span></div><div class="line">		#&#123;userId&#125;,#&#123;combo&#125;,0,50000,5000,5000,3000,3000,0,0,0,0,0,#&#123;currentTime&#125;</div><div class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"combo != null and combo != '' and combo == 0"</span>&gt;</span></div><div class="line">		#&#123;userId&#125;,#&#123;combo&#125;,0,0,0,0,0,0,0,0,0,0,0,#&#123;currentTime&#125;</div><div class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></div><div class="line">	FROM</div><div class="line">	DUAL</div><div class="line">	WHERE</div><div class="line">	NOT EXISTS (</div><div class="line">	SELECT</div><div class="line">	*</div><div class="line">	FROM</div><div class="line">	tp_package_info st</div><div class="line">	WHERE</div><div class="line">	st.f_station_id = #&#123;userId&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/18/MyBatis/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/03/Hexo之NexT主题搭建博客详细过程/" itemprop="url">
-                  Hexo之NexT主题搭建博客详细过程
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-03T15:39:31+08:00" content="2016-10-03">
-              2016-10-03
-            </time>
-          </span>
-
-
-
-
-
-              <span>
-                  |
-                <span>更新于</span>
-                <time>
-                  2016-11-19
-                  10:30:10
-                </time>
-              </span>
-
-
-
-
-
-
-
-          
-            <span class="post-category" >
-              |
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                |
-                <a href="/2016/10/03/Hexo之NexT主题搭建博客详细过程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/03/Hexo之NexT主题搭建博客详细过程/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-            
-               <span id="/2016/10/03/Hexo之NexT主题搭建博客详细过程/" class="leancloud_visitors" data-flag-title="Hexo之NexT主题搭建博客详细过程">
-                 |
-                 <span class="post-meta-item-icon">
-                   <i class="fa fa-eye"></i>
-                 </span>
-                 <span class="post-meta-item-text">阅读量 </span>
-                 <span class="leancloud-visitors-count"></span>
-                
-                  |
-                  <span class="post-meta-item-text">最近 </span>
-                  <span class="leancloud-updated-at"></span>
-                  </span>
-                
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><div><center><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=33856282&auto=0&height=66"></iframe></center></div><br>本站是用hexo来搭建的，使用的是next主题。这里记录一下搭建的整个过程，仅供参考！有什么问题请留言通知，谢谢支持！</p>
-<h1 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1.环境准备"></a>1.环境准备</h1><p>下载安装nodejs和git(for window)，声明一下我的搭建环境win764</p>
-<h2 id="1-1-nodejs安装"><a href="#1-1-nodejs安装" class="headerlink" title="1.1.nodejs安装"></a>1.1.nodejs安装</h2><p>官网下载地址：<a href="https://nodejs.org/en/">https://nodejs.org/en/</a> 下载v<em>*</em> LTS Recommended For Most Users</p>
-<blockquote>
-<p>设置系统变量      </p>
-</blockquote>
-<p>我把nodejs安装在c盘program files的nodejs目录下<br>编辑系统环境变量path的值，追加C:\Program Files\nodejs</p>
-<blockquote>
-<p>安装Express开发框架  </p>
-</blockquote>
-<p>以管理员打开cmd命令窗口，执行命令<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> install -g express</div><div class="line"><span class="attribute">npm</span> install -g express-generator</div></pre></td></tr></table></figure></p>
-<p>在C:\Program Files\nodejs\node_modules中会生成express和express-generator两个文件夹表示安装好了</p>
-<blockquote>
-<p>新建项目  </p>
-</blockquote>
-<p>进入C:\Program Files\nodejs，新建名称为newproject的项目<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">cd</span> C:\Program Files\nodejs</div><div class="line"><span class="attribute">express</span> -t ejs newsproject</div></pre></td></tr></table></figure></p>
-<p>新建成功在nodesj目录下会生成newproject目录，其目录下大致有以下文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">bin          相关运行脚本</div><div class="line">public       静态资源</div><div class="line">routes       路由表</div><div class="line">views        试图模板  </div><div class="line">app.js       视图文件夹  </div><div class="line">packge.json  项目依赖说明</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>关于执行npm install -g express命令的出现错误的解决方式  </p>
-</blockquote>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> config list # 查看以前修改过的命令，针对错误的地方删除掉。</div></pre></td></tr></table></figure>
-<p>删除代理<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> config delete proxy</div></pre></td></tr></table></figure></p>
-<p>删除注册的目录<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> config delete registry</div></pre></td></tr></table></figure></p>
-<p>npm仓库是国外服务器，经常连接不上或安装慢，这里推荐使用 淘宝 NPM 镜像 来安装，设置镜像<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> config set registry https://registry.npm.taobao.org</div></pre></td></tr></table></figure></p>
-<p>查看是否修改成功<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> config list</div></pre></td></tr></table></figure></p>
-<p>再重新安装express模块<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> install -g express</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>安装模块  </p>
-</blockquote>
-<p>进入newproject目录, 安装模块<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">cd</span> newsproject</div><div class="line"><span class="attribute">npm</span> install</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>启动项目  </p>
-</blockquote>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> start</div></pre></td></tr></table></figure>
-<p>在浏览器访问<a href="http://127.0.0.1:3000/">http://127.0.0.1:3000/</a> 测试出现下面图视表示nodejs安装成功，并可以正常部署项目<br><img src="https://volc1605.github.io/images/Hexo之NexT主题搭建博客详细过程/result.png" alt="测试"><br>可输入以下命令查看版本号<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">node</span> -v</div><div class="line"><span class="attribute">npm</span> -v</div></pre></td></tr></table></figure></p>
-<h2 id="1-2-git安装"><a href="#1-2-git安装" class="headerlink" title="1.2.git安装"></a>1.2.git安装</h2><p>官网下载地址：<a href="https://git-scm.com/downloads/">https://git-scm.com/downloads/</a> 这个就不多说了</p>
-<h1 id="2-安装Hexo"><a href="#2-安装Hexo" class="headerlink" title="2.安装Hexo"></a>2.安装Hexo</h1><p>git安装成功后在桌面右击选择git bash here, 命令窗口<br><img src="https://volc1605.github.io/images/Hexo之NexT主题搭建博客详细过程/desktop.png" alt="desktop"></p>
-<blockquote>
-<p>安装hexo  </p>
-</blockquote>
-<p>执行命令</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> -g hexo-cli  # g代表全局,npm默认为当前项目安装</div></pre></td></tr></table></figure>
-<p>在D盘新建blog文件夹，这个文件夹就是博客的根目录，打开blog空白处右击选择git bash here执行以下命令。首先对blog文件夹进行hexo初始化<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> init</div></pre></td></tr></table></figure></p>
-<p>会生成一些文件</p>
-<blockquote>
-<p>安装依赖包</p>
-</blockquote>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> install</div></pre></td></tr></table></figure>
-<p>可能会遇到的错误<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> ERR! registry error parsing json # 错误</div></pre></td></tr></table></figure></p>
-<p>可能需要设置npm代理,执行命令<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npm</span> config set registry http://registry.cnpmjs.org</div></pre></td></tr></table></figure></p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span>:command not found</div></pre></td></tr></table></figure>
-<p>删除刚刚安装的C:\Users\Administrator\AppData\Roaming\npm目录，重新执行命令npm install -g hexo安装hexo</p>
-<blockquote>
-<p>生成静态资源</p>
-</blockquote>
-<p>生成public文件夹(浏览器访问资源)<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> g</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>启动服务</p>
-</blockquote>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> s</div></pre></td></tr></table></figure>
-<p>在浏览器访问：<a href="http://localhost:4000/">http://localhost:4000/</a> 便可查看hexo默认的主题<br><img src="https://volc1605.github.io/images/Hexo之NexT主题搭建博客详细过程/h.png" alt="hexo"><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/03/Hexo之NexT主题搭建博客详细过程/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1990,7 +2045,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1998,7 +2053,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -2007,7 +2062,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

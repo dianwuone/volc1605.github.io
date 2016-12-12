@@ -95,7 +95,7 @@
 去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构
 解决方法：项目properties中maven-&amp;gt;javaee integration去掉勾选去除maven项目">
 <meta property="og:image" content="https://volc1605.github.io/images/Maven/mavenConstruction2.png">
-<meta property="og:updated_time" content="2016-11-26T11:53:00.922Z">
+<meta property="og:updated_time" content="2016-12-12T03:02:24.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Maven">
 <meta name="twitter:description" content="Maven项目不显示 Maven Dependencies从别目录结构正确的项目中复制.classpath文件，覆盖不显示Maven Dependencies的项目目录中的.classpath
@@ -414,6 +414,10 @@
 <h1 id="去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构"><a href="#去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构" class="headerlink" title="去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构"></a>去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构</h1><p><img src="https://volc1605.github.io/images/Maven/mavenConstruction2.png" alt="maven"></p>
 <p>解决方法：<br>项目properties中maven-&gt;javaee integration去掉勾选<br>去除maven项目中javascript resources引用jar包<br>properties中project facets只选择java，去掉javascript<br>去除maven项目结构目录中含有web app 2.3<br>properties中project facets只选择java 去掉dynamic web module</p>
 <h1 id="解决maven项目名称出现个红叉报错"><a href="#解决maven项目名称出现个红叉报错" class="headerlink" title="解决maven项目名称出现个红叉报错"></a>解决maven项目名称出现个红叉报错</h1><p>properties中project facets的java版本号选择不当</p>
+<h1 id="目录下的创建普通文件夹"><a href="#目录下的创建普通文件夹" class="headerlink" title="目录下的创建普通文件夹"></a>目录下的创建普通文件夹</h1><p>properties中的javabuild path resource-&gt;excluded **</p>
+<h1 id="pom文件war报错"><a href="#pom文件war报错" class="headerlink" title="pom文件war报错"></a>pom文件war报错</h1><p>1.加上webapp中的web.xml文件<br>2.properties中maven deployment assembly(用来配置添加根目录文件夹)不显示<br>    需要在project facets中修改</p>
+<h1 id="项目启动报错"><a href="#项目启动报错" class="headerlink" title="项目启动报错"></a>项目启动报错</h1><p>原因jar包冲突<br>D:\java-tools\apache-maven-3.2.3\repo\org\apache\tomcat\servlet-api\6.0.28\servlet-api-6.0.28.jar</p>
+<h1 id="xsd文件找不到"><a href="#xsd文件找不到" class="headerlink" title="xsd文件找不到"></a>xsd文件找不到</h1><p>报错提示，要引入jar包。或者手动添加xsd文件或者手动指定(参考：<a href="http://www.ibm.com/developerworks/cn/xml/x-1008dubb/" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/xml/x-1008dubb/</a>)</p>
 
       
     </div>
@@ -473,6 +477,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/12/linux操作mysql/" rel="prev" title="linux操作mysql">
+                linux操作mysql <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -567,7 +575,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -575,7 +583,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -584,7 +592,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -665,7 +673,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven项目不显示-Maven-Dependencies"><span class="nav-number">1.</span> <span class="nav-text">Maven项目不显示 Maven Dependencies</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构"><span class="nav-number">2.</span> <span class="nav-text">去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决maven项目名称出现个红叉报错"><span class="nav-number">3.</span> <span class="nav-text">解决maven项目名称出现个红叉报错</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven项目不显示-Maven-Dependencies"><span class="nav-number">1.</span> <span class="nav-text">Maven项目不显示 Maven Dependencies</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构"><span class="nav-number">2.</span> <span class="nav-text">去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决maven项目名称出现个红叉报错"><span class="nav-number">3.</span> <span class="nav-text">解决maven项目名称出现个红叉报错</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录下的创建普通文件夹"><span class="nav-number">4.</span> <span class="nav-text">目录下的创建普通文件夹</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pom文件war报错"><span class="nav-number">5.</span> <span class="nav-text">pom文件war报错</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目启动报错"><span class="nav-number">6.</span> <span class="nav-text">项目启动报错</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xsd文件找不到"><span class="nav-number">7.</span> <span class="nav-text">xsd文件找不到</span></a></li></ol></div>
             
           </div>
         </section>
