@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://volc1605.github.io/2016/12/12/Nginx/</loc>
+    
+    <lastmod>2016-12-12T08:05:50.870Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://volc1605.github.io/2016/12/12/linux%E6%93%8D%E4%BD%9Cmysql/</loc>
     
     <lastmod>2016-12-12T08:04:35.208Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://volc1605.github.io/2016/12/12/linux%E5%AE%89%E8%A3%85JDK/</loc>
     
     <lastmod>2016-12-12T07:54:34.622Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://volc1605.github.io/2016/12/12/Nginx/</loc>
-    
-    <lastmod>2016-12-12T07:53:19.594Z</lastmod>
     
   </url>
   
