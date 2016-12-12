@@ -90,7 +90,7 @@
 <meta property="og:url" content="https://volc1605.github.io/2016/12/12/linux安装JDK/index.html">
 <meta property="og:site_name" content="volc">
 <meta property="og:description" content="jdk安装下载地址:    http://www.oracle.com/technetwork/cn/java/javase/downloads/jdk8-downloads-2133151-zhs.htmlchmod [who] [opt] [mode] 文件/目录名chmod a+rwx java1.修改etc/profile文件，追加一下jdk配置并保存12345export JAVA_HO">
-<meta property="og:updated_time" content="2016-12-12T03:48:07.606Z">
+<meta property="og:updated_time" content="2016-12-12T06:42:01.461Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux安装JDK">
 <meta name="twitter:description" content="jdk安装下载地址:    http://www.oracle.com/technetwork/cn/java/javase/downloads/jdk8-downloads-2133151-zhs.htmlchmod [who] [opt] [mode] 文件/目录名chmod a+rwx java1.修改etc/profile文件，追加一下jdk配置并保存12345export JAVA_HO">
@@ -406,6 +406,10 @@
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">source</span> /etc/profile</div></pre></td></tr></table></figure>
 <pre><code>命令：source /etc/profile  # 刷新系统配置文件
 </code></pre><p>2.在这个目录下/usr/local/java/jdk1.7.0_71/bin/修改java文件权限<br>  命令：chmod  777 java<br>  命令：java -version </p>
+<p>问题  </p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Error</span> occurred during initialization of VM  </div><div class="line"><span class="attribute">Could</span> not reserve enough space for object heap</div></pre></td></tr></table></figure>
+<p>解决方法<br>    在tomcat的bin目录下，catalina.sh文件的tomcat内存参数配置过大，超过机器可用内存总数造成，修改到适当的值即可，修改的参数   为：JAVA_OPTS=”-Xms50m -Xmx60m”</p>
+<p>安装JDK和Tomcat参考<br>配置参考：<a href="http://blog.csdn.net/zhuying_linux/article/details/6583096/" target="_blank" rel="external">http://blog.csdn.net/zhuying_linux/article/details/6583096/</a><br>配置参考：<a href="http://www.jb51.net/article/85478.htm" target="_blank" rel="external">http://www.jb51.net/article/85478.htm</a>  </p>
 
       
     </div>

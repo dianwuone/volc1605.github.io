@@ -84,25 +84,25 @@
 
 
 
-<meta name="description" content="��װ1.����memcached�ǻ���libevent�ģ�������Ҫ��װlibevent��libevent-devel1yum install  libevent libevent-devel -y
-���أ�  
+<meta name="description" content="安装1.由于memcached是基于libevent的，因此需要安装libevent，libevent-devel1yum install  libevent libevent-devel -y
+下载：  
     http://www.monkey.org/~provos/libevent-2.0.10-stable.tar.gz  
-2.��ѹ1# tar zxvf">
+2.解压1# tar zxvf libevent-2.0.1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="memcache">
 <meta property="og:url" content="https://volc1605.github.io/2016/12/12/memcache/index.html">
 <meta property="og:site_name" content="volc">
-<meta property="og:description" content="��װ1.����memcached�ǻ���libevent�ģ�������Ҫ��װlibevent��libevent-devel1yum install  libevent libevent-devel -y
-���أ�  
+<meta property="og:description" content="安装1.由于memcached是基于libevent的，因此需要安装libevent，libevent-devel1yum install  libevent libevent-devel -y
+下载：  
     http://www.monkey.org/~provos/libevent-2.0.10-stable.tar.gz  
-2.��ѹ1# tar zxvf">
-<meta property="og:updated_time" content="2016-12-12T05:26:59.318Z">
+2.解压1# tar zxvf libevent-2.0.1">
+<meta property="og:updated_time" content="2016-12-12T06:43:31.760Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="memcache">
-<meta name="twitter:description" content="��װ1.����memcached�ǻ���libevent�ģ�������Ҫ��װlibevent��libevent-devel1yum install  libevent libevent-devel -y
-���أ�  
+<meta name="twitter:description" content="安装1.由于memcached是基于libevent的，因此需要安装libevent，libevent-devel1yum install  libevent libevent-devel -y
+下载：  
     http://www.monkey.org/~provos/libevent-2.0.10-stable.tar.gz  
-2.��ѹ1# tar zxvf">
+2.解压1# tar zxvf libevent-2.0.1">
 
 
 
@@ -411,44 +411,42 @@
       
 
       
-        <h1 id="��װ"><a href="#��װ" class="headerlink" title="��װ"></a>��װ</h1><p>1.����memcached�ǻ���libevent�ģ�������Ҫ��װlibevent��libevent-devel<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">yum</span> install  libevent libevent-devel -y</div></pre></td></tr></table></figure></p>
-<pre><code>���أ�  
+        <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>1.由于memcached是基于libevent的，因此需要安装libevent，libevent-devel<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">yum</span> install  libevent libevent-devel -y</div></pre></td></tr></table></figure></p>
+<pre><code>下载：  
     http://www.monkey.org/~provos/libevent-2.0.10-stable.tar.gz  
-</code></pre><p>2.��ѹ<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># tar zxvf libevent-2.0.10-stable.tar.gz</span></div></pre></td></tr></table></figure></p>
-<p>3.����Ŀ¼<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># cd libevent-2.0.10-stable</span></div></pre></td></tr></table></figure></p>
+</code></pre><p>2.解压<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># tar zxvf libevent-2.0.10-stable.tar.gz</span></div></pre></td></tr></table></figure></p>
+<p>3.进入目录<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># cd libevent-2.0.10-stable</span></div></pre></td></tr></table></figure></p>
 <ol>
-<li>�л���root  <figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># su</span></div></pre></td></tr></table></figure>
+<li>切换到root  <figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># su</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>5.��װgcc<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># yum install gcc</span></div></pre></td></tr></table></figure></p>
-<p>6.���ð�װ·��<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ./configure -prefix=/usr</span></div></pre></td></tr></table></figure></p>
-<p>7.����<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># make</span></div></pre></td></tr></table></figure></p>
-<p>8.��װ<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># make install</span></div></pre></td></tr></table></figure></p>
-<p>9.����libevent�Ƿ���װ�ɹ�<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># ls -al /usr/lib | grep libevent</div><div class="line">lrwxrwxrwx 1 root root 21 11?? 12 17:38 libevent-1.2.so.1 -&gt; libevent-1.2.so.1.0.3</div><div class="line">-rwxr-xr-x 1 root root 263546 11?? 12 17:38 libevent-1.2.so.1.0.3</div><div class="line">-rw-r�Cr�C 1 root root 454156 11?? 12 17:38 libevent.a</div><div class="line">-rwxr-xr-x 1 root root 811 11?? 12 17:38 libevent.la</div><div class="line">lrwxrwxrwx 1 root root 21 11?? 12 17:38 libevent.so -&gt; libevent-1.2.so.1.0.3</div></pre></td></tr></table></figure></p>
-<p>������������װ���ˡ�<br>��װlibevent�ο���<br>    <a href="http://blog.csdn.net/zhangm168/article/details/6272801" target="_blank" rel="external">http://blog.csdn.net/zhangm168/article/details/6272801</a></p>
-<p>10.��װgcc<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">yum</span> install gcc* make*</div></pre></td></tr></table></figure></p>
-<p>11.����memcache<br>    ��ַ:<a href="http://www.danga.com/memcached/dist/memcached-1.2.0.tar.gz" target="_blank" rel="external">http://www.danga.com/memcached/dist/memcached-1.2.0.tar.gz</a><br>12.��/tmp��ѹmemcache<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">tar</span> zxvf memcached-1.4.33.tar.gz</div></pre></td></tr></table></figure></p>
-<pre><code>��װmemcached��ͬʱ��Ҫ��װ��ָ��libevent�İ�װλ�ã�  
-</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">cd /tmp</div><div class="line">tar zxvf memcached-1.4.33.tar.gz</div><div class="line">cd memcached-1.4.33.tar.gz</div><div class="line">./configure �Cwith-libevent=/usr</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
-<pre><code>�����м����ֱ���������ϸ����������Ϣ�����մ�����Ϣ�����û���������Ӧ�Ŀ�����·����  
-��װ���ɺ�����memcached�ŵ� /usr/local/bin/memcached ��  
-�����Ƿ��ɹ���װmemcached��  
-</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">	ls -al /usr/local/bin/mem*</div><div class="line">	-rwxr-xr-x 1 root root 137986 11?? 12 17:39 /usr/local/bin/memcached</div><div class="line">	-rwxr-xr-x 1 root root 140179 11?? 12 17:39 /usr/local/bin/memcached-debug</div><div class="line">``` </div><div class="line">13.����memcache   </div><div class="line">```apache</div><div class="line">	/usr/local/bin/memcached -d -m 10 -u root -l 116.62.29.229 -p 12000 -c 256 -P /tmp/memcached.pid</div></pre></td></tr></table></figure>
-<p>����memcache<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">kill</span> cat /tmp/memcached.pid</div></pre></td></tr></table></figure></p>
-<p>���ԣ�<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[root@localhost /]# telnet 192.168.141.64 12000</div><div class="line">Trying 192.168.141.64...</div><div class="line">Connected to 192.168.141.64 (192.168.141.64).</div><div class="line">Escape character is '^]'.</div><div class="line">set key1 0 60 4</div><div class="line">zhou</div><div class="line">STORED</div><div class="line">get key1</div><div class="line">VALUE key1 0 4</div><div class="line">zhou</div><div class="line">END</div></pre></td></tr></table></figure></p>
-<p>�˳���quit����ctrl + ] Ȼ���ڰ�q�����ˡ�  </p>
-<pre><code>��Memcached�������ص�Linux����������.��һ�����ϵ�ϵͳ����.��ôMemcached�ͻ��Զ�������.  
-��������Memcache�ķ������˵�����Ϊ��  
+<p>5.安装gcc<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># yum install gcc</span></div></pre></td></tr></table></figure></p>
+<p>6.设置安装路径<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ./configure -prefix=/usr</span></div></pre></td></tr></table></figure></p>
+<p>7.编译<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># make</span></div></pre></td></tr></table></figure></p>
+<p>8.安装<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># make install</span></div></pre></td></tr></table></figure></p>
+<p>9.测试libevent是否安装成功<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># ls -al /usr/lib | grep libevent</div><div class="line">lrwxrwxrwx 1 root root 21 11?? 12 17:38 libevent-1.2.so.1 -&gt; libevent-1.2.so.1.0.3</div><div class="line">-rwxr-xr-x 1 root root 263546 11?? 12 17:38 libevent-1.2.so.1.0.3</div><div class="line">-rw-r–r– 1 root root 454156 11?? 12 17:38 libevent.a</div><div class="line">-rwxr-xr-x 1 root root 811 11?? 12 17:38 libevent.la</div><div class="line">lrwxrwxrwx 1 root root 21 11?? 12 17:38 libevent.so -&gt; libevent-1.2.so.1.0.3</div></pre></td></tr></table></figure></p>
+<p>还不错，都安装上了。<br>安装libevent参考：<br>    <a href="http://blog.csdn.net/zhangm168/article/details/6272801" target="_blank" rel="external">http://blog.csdn.net/zhangm168/article/details/6272801</a></p>
+<p>10.安装gcc<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">yum</span> install gcc* make*</div></pre></td></tr></table></figure></p>
+<p>11.下载memcache<br>    地址:<a href="http://www.danga.com/memcached/dist/memcached-1.2.0.tar.gz" target="_blank" rel="external">http://www.danga.com/memcached/dist/memcached-1.2.0.tar.gz</a><br>12.在/tmp解压memcache<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">tar</span> zxvf memcached-1.4.33.tar.gz</div></pre></td></tr></table></figure></p>
+<pre><code>安装memcached，同时需要安装中指定libevent的安装位置：  
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">cd /tmp</div><div class="line">tar zxvf memcached-1.4.33.tar.gz</div><div class="line">cd memcached-1.4.33.tar.gz</div><div class="line">./configure –with-libevent=/usr</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
+<pre><code>如果中间出现报错，请仔细检查错误信息，按照错误信息来配置或者增加相应的库或者路径。  
+安装完成后会把memcached放到 /usr/local/bin/memcached ，  
+测试是否成功安装memcached：  
+</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">	ls -al /usr/local/bin/mem*</div><div class="line">	-rwxr-xr-x 1 root root 137986 11?? 12 17:39 /usr/local/bin/memcached</div><div class="line">	-rwxr-xr-x 1 root root 140179 11?? 12 17:39 /usr/local/bin/memcached-debug</div><div class="line">``` </div><div class="line">13.启动memcache   </div><div class="line">```apache</div><div class="line">	/usr/local/bin/memcached -d -m 10 -u root -l 116.62.29.229 -p 12000 -c 256 -P /tmp/memcached.pid</div></pre></td></tr></table></figure>
+<p>结束memcache<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">kill</span> cat /tmp/memcached.pid</div></pre></td></tr></table></figure></p>
+<p>测试：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[root@localhost /]# telnet 192.168.141.64 12000</div><div class="line">Trying 192.168.141.64...</div><div class="line">Connected to 192.168.141.64 (192.168.141.64).</div><div class="line">Escape character is '^]'.</div><div class="line">set key1 0 60 4</div><div class="line">zhou</div><div class="line">STORED</div><div class="line">get key1</div><div class="line">VALUE key1 0 4</div><div class="line">zhou</div><div class="line">END</div></pre></td></tr></table></figure></p>
+<p>退出：quit或者ctrl + ] 然后在按q就行了。  </p>
+<pre><code>把Memcached服务加载到Linux的启动项中.万一机器断电系统重启.那么Memcached就会自动启动了.  
+假如启动Memcache的服务器端的命令为：  
 </code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/bin/memcached -d -m 10 -u root -l 192.168.141.64 -p 12000 -c 256 -P</div></pre></td></tr></table></figure>
-<pre><code>/tmp/memcached.pid������17jquery
-</code></pre><p>�뿪���Զ������Ļ���ֻ����/etc/rc.d/rc.local�м���һ�У���������  </p>
+<pre><code>/tmp/memcached.pid容来自17jquery
+</code></pre><p>想开机自动启动的话，只需在/etc/rc.d/rc.local中加入一行，下面命令  </p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/memcached/bin/memcached -d -m 10 -p 12000 -u apache -c 256</div></pre></td></tr></table></figure>
-<pre><code>������Щ�������Բο�һ�£�����ip��ָ��ʱ��Ĭ���Ǳ������û�:����ѡ���ǣ�apache �� deamon  
-������Ҳ���������ĸ��û��ķ��������ĸ��û�������  
-</code></pre><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">kill</span> -9 <span class="string">"���̺�"</span></div></pre></td></tr></table></figure>
-<p>����  </p>
-<p>Error occurred during initialization of VM<br>Could not reserve enough space for object heap  </p>
-<p>��������<br>    ��tomcat��binĿ¼�£�catalina.sh�ļ���tomcat�ڴ��������ù��󣬳������������ڴ��������ɣ��޸ĵ��ʵ���ֵ���ɣ��޸ĵĲ���   Ϊ��JAVA_OPTS=”-Xms50m -Xmx60m”</p>
+<pre><code>上面有些东西可以参考一下：即，ip不指定时，默认是本机，用户:最好选择是：apache 或 deamon  
+这样，也就是属于哪个用户的服务，由哪个用户启动。  
+</code></pre><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">kill</span> -9 <span class="string">"进程号"</span></div></pre></td></tr></table></figure>
+<p>参考<br>配置参考：<a href="http://blog.csdn.net/u013615806/article/details/51461759" target="_blank" rel="external">http://blog.csdn.net/u013615806/article/details/51461759</a><br>配置参考:<a href="http://www.itgo.me/a/x2750105529827921816/memcached" target="_blank" rel="external">http://www.itgo.me/a/x2750105529827921816/memcached</a>  </p>
 
       
     </div>
@@ -700,7 +698,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#��װ"><span class="nav-number">1.</span> <span class="nav-text">��װ</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li></ol></div>
             
           </div>
         </section>
