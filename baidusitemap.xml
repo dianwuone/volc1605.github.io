@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://volc1605.github.io/2016/12/12/linux%E6%93%8D%E4%BD%9Cmysql/</loc>
+    <lastmod>2016-12-12T08:30:26.288Z</lastmod>
+    <data>
+        <display>
+        <title>linux操作mysql</title>
+        <pubTime>2016-12-12T02:48:23.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="MySQL" url="https://volc1605.github.io/categories/MySQL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://volc1605.github.io/2016/11/23/linux/</loc>
     <lastmod>2016-12-12T08:21:11.215Z</lastmod>
     <data>
@@ -38,21 +58,6 @@
              
               <breadCrumb title="Nginx" url="https://volc1605.github.io/categories/Nginx/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://volc1605.github.io/2016/12/12/linux%E6%93%8D%E4%BD%9Cmysql/</loc>
-    <lastmod>2016-12-12T08:04:35.208Z</lastmod>
-    <data>
-        <display>
-        <title>linux操作mysql</title>
-        <pubTime>2016-12-12T02:48:23.000Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
