@@ -676,6 +676,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
 <div class="copyright" style="margin-right: 14px">
     
     &copy; 
@@ -701,7 +702,19 @@
     <span>您是第</span>
     <span id="busuanzi_value_site_uv"></span>
     <span>个小伙伴</span>
+
+
+	<span id="showDays"></span>
+	
   </div>
+ 	
+<script>
+	var birthDay = new Date('09/1/2016');
+	var now = new Date();
+	var duration = now.getTime() - birthDay.getTime();
+	var total= Math.floor(duration / (1000 * 60 * 60 * 24));
+	document.getElementById('showDays').innerHTML='本站已运行' + total + '天';
+</script>
 
         
 
