@@ -93,7 +93,7 @@
 <meta property="og:image" content="https://volc1605.github.io/images/linux操作mysql/1.png">
 <meta property="og:image" content="https://volc1605.github.io/images/linux操作mysql/2.png">
 <meta property="og:image" content="https://volc1605.github.io/images/linux操作mysql/3.png">
-<meta property="og:updated_time" content="2016-12-12T08:37:05.105Z">
+<meta property="og:updated_time" content="2016-12-17T12:24:07.921Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux操作mysql">
 <meta name="twitter:description" content="linux安装mysql1.查看服务器中是否已经安装了mysql">
@@ -443,7 +443,10 @@
 <p>解决方法：<br>properties配置数据库properties配置数据库：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">master</span>.name=csp</div><div class="line"><span class="attribute">master</span>.url=jdbc:mysql://116.62.29.200:3306/bg?characterEncoding=utf-8&amp;allowMultiQueries=true</div><div class="line"><span class="attribute">master</span>.driverClassName=com.mysql.jdbc.Driver</div><div class="line"></div><div class="line"><span class="comment"># \u5f00\u53d1\u73af\u5883</span></div><div class="line"><span class="attribute">master</span>.username=root           # 名称是root，不是bg</div><div class="line"><span class="attribute">master</span>.password=bmx84185858</div></pre></td></tr></table></figure></p>
 <p>参考资源：<a href="http://www.cnblogs.com/gaojupeng/p/5727069.html" target="_blank" rel="external">http://www.cnblogs.com/gaojupeng/p/5727069.html</a></p>
 <h1 id="登录mysql"><a href="#登录mysql" class="headerlink" title="登录mysql"></a>登录mysql</h1><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">mysql</span> -u root -p  	# 登录</div><div class="line"><span class="attribute">quit</span>;  				# 退出</div></pre></td></tr></table></figure>
-<h1 id="查看开启日志"><a href="#查看开启日志" class="headerlink" title="查看开启日志"></a>查看开启日志</h1><figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">show</span> variables like 'log_%';</div><div class="line"><span class="attribute">show</span> master status;</div></pre></td></tr></table></figure>
+<h1 id="查看开启日志"><a href="#查看开启日志" class="headerlink" title="查看开启日志"></a>查看开启日志</h1><pre><code class="apache"><span class="attribute">show</span> variables like 'log_%';
+<span class="attribute">show</span> master status;
+</code></pre>
+
       
     </div>
 
