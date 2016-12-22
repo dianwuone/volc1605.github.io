@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="关于mysql关键字between and，&amp;gt;=&amp;lt;，in，or性能关于IN关键字的效率问题查询表1234567mysql&amp;gt; select count(1) from tk_plan_wait;+----------+| count(1) |+----------+|    20312 |+----------+1 row in set (0.00 sec)
-这个表的总记录数为20">
+<meta name="description" content="关于mysql关键字between and，&amp;gt;=&amp;lt;，in，or性能关于IN关键字的效率问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于mysql关键字between and，>=<，in，or性能及优化">
 <meta property="og:url" content="https://volc1605.github.io/2016/12/22/关于mysql关键字between-and，-，in，or性能及优化/index.html">
 <meta property="og:site_name" content="VOLC">
-<meta property="og:description" content="关于mysql关键字between and，&amp;gt;=&amp;lt;，in，or性能关于IN关键字的效率问题查询表1234567mysql&amp;gt; select count(1) from tk_plan_wait;+----------+| count(1) |+----------+|    20312 |+----------+1 row in set (0.00 sec)
-这个表的总记录数为20">
-<meta property="og:updated_time" content="2016-12-22T05:56:14.163Z">
+<meta property="og:description" content="关于mysql关键字between and，&amp;gt;=&amp;lt;，in，or性能关于IN关键字的效率问题">
+<meta property="og:updated_time" content="2016-12-22T05:56:56.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于mysql关键字between and，>=<，in，or性能及优化">
-<meta name="twitter:description" content="关于mysql关键字between and，&amp;gt;=&amp;lt;，in，or性能关于IN关键字的效率问题查询表1234567mysql&amp;gt; select count(1) from tk_plan_wait;+----------+| count(1) |+----------+|    20312 |+----------+1 row in set (0.00 sec)
-这个表的总记录数为20">
+<meta name="twitter:description" content="关于mysql关键字between and，&amp;gt;=&amp;lt;，in，or性能关于IN关键字的效率问题">
 
 
 
@@ -405,7 +402,8 @@
       
 
       
-        <h1 id="关于mysql关键字between-and，-gt-lt-，in，or性能"><a href="#关于mysql关键字between-and，-gt-lt-，in，or性能" class="headerlink" title="关于mysql关键字between and，&gt;=&lt;，in，or性能"></a>关于mysql关键字between and，&gt;=&lt;，in，or性能</h1><h2 id="关于IN关键字的效率问题"><a href="#关于IN关键字的效率问题" class="headerlink" title="关于IN关键字的效率问题"></a>关于IN关键字的效率问题</h2><p>查询表<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select count(1) from tk_plan_wait;</div><div class="line">+----------+</div><div class="line">| count(1) |</div><div class="line">+----------+</div><div class="line">|    20312 |</div><div class="line">+----------+</div><div class="line">1 row in set (0.00 sec)</div></pre></td></tr></table></figure></p>
+        <h1 id="关于mysql关键字between-and，-gt-lt-，in，or性能"><a href="#关于mysql关键字between-and，-gt-lt-，in，or性能" class="headerlink" title="关于mysql关键字between and，&gt;=&lt;，in，or性能"></a>关于mysql关键字between and，&gt;=&lt;，in，or性能</h1><h2 id="关于IN关键字的效率问题"><a href="#关于IN关键字的效率问题" class="headerlink" title="关于IN关键字的效率问题"></a>关于IN关键字的效率问题</h2><a id="more"></a>
+<p>查询表<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select count(1) from tk_plan_wait;</div><div class="line">+----------+</div><div class="line">| count(1) |</div><div class="line">+----------+</div><div class="line">|    20312 |</div><div class="line">+----------+</div><div class="line">1 row in set (0.00 sec)</div></pre></td></tr></table></figure></p>
 <p>这个表的总记录数为20312行</p>
 <p>查询表索引<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mysql&gt; show index from tk_plan_wait;</div><div class="line">+--------------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+</div><div class="line">| Table        | Non_unique | Key_name        | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |</div><div class="line">+--------------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+</div><div class="line">| tk_plan_wait |          0 | PRIMARY         |            1 | idx         | A         |       20703 |     NULL | NULL   |      | BTREE      |         |               |</div><div class="line">| tk_plan_wait |          0 | tk_plan_wait_pk |            1 | PLAN_NUM    | A         |       20703 |     NULL | NULL   |      | BTREE      |         |               |</div><div class="line">+--------------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+</div><div class="line">2 rows in set (0.00 sec)</div></pre></td></tr></table></figure></p>
 <blockquote>
