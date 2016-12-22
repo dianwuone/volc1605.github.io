@@ -90,7 +90,7 @@
 <meta property="og:url" content="https://volc1605.github.io/2016/11/01/JS/index.html">
 <meta property="og:site_name" content="VOLC">
 <meta property="og:description" content="1.windows对象setTimeOut()用于发送验证码倒计时123456789101112131415//短信验证码倒计时var wait = 30;function time(o) &amp;#123;    if (wait == 0) &amp;#123;        o.removeAttribute(&amp;quot;disabled&amp;quot;);        o.innerHTML = &amp;quo">
-<meta property="og:updated_time" content="2016-12-12T08:37:44.025Z">
+<meta property="og:updated_time" content="2016-12-22T02:41:30.958Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS">
 <meta name="twitter:description" content="1.windows对象setTimeOut()用于发送验证码倒计时123456789101112131415//短信验证码倒计时var wait = 30;function time(o) &amp;#123;    if (wait == 0) &amp;#123;        o.removeAttribute(&amp;quot;disabled&amp;quot;);        o.innerHTML = &amp;quo">
@@ -408,6 +408,9 @@
 <h1 id="js传数组给html"><a href="#js传数组给html" class="headerlink" title="js传数组给html"></a>js传数组给html</h1><p>JS<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> servicePlanList = <span class="built_in">JSON</span>.stringify(canFee);  <span class="comment">// canFee数组</span></div><div class="line"><span class="keyword">this</span>.assign(<span class="string">'servicePlanList'</span>, servicePlanList);</div></pre></td></tr></table></figure></p>
 <p>html</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">INPUT</span> <span class="attr">ID</span>=<span class="string">"servicePlanList"</span> <span class="attr">NAME</span>=<span class="string">"servicePlanListName"</span> <span class="attr">TYPE</span>=<span class="string">"hidden"</span></span></div><div class="line">  <span class="attr">VALUE</span>=<span class="string">"&lt;?=servicePlanList?&gt;"</span>&gt;<span class="tag">&lt;/<span class="name">INPUT</span>&gt;</span> value的值” [</div><div class="line">&#123;"fState":"1","managerId":123,"serviceFeeId":"5b7627c5ec8d4b96abae3996255f1034","serviceFeeMin":34,"serviceFeeName":"KGKGKA134","serviceFeePer":"12","serviceFeeStart":23,"type":1&#125;,</div><div class="line">&#123;"fState":"1","managerId":123,"serviceFeeId":"5a1248caf9334d77ab04f6a1df68b542","serviceFeeMin":20,"serviceFeeName":"KGKGKA13","serviceFeePer":"12","serviceFeeStart":23,"type":1&#125;]</div><div class="line">”</div><div class="line"><span class="tag">&lt;<span class="name">SCRIPT</span>&gt;</span><span class="javascript"></span></div><div class="line">                        <span class="keyword">var</span> servicePlanList = $(<span class="string">'#servicePlanList'</span>).val();</div><div class="line">servicePlanList = <span class="built_in">eval</span>(<span class="string">"("</span> + servicePlanList +<span class="string">")"</span>); <span class="comment">// eval()语言</span></div><div class="line"><span class="tag">&lt;/<span class="name">SCRIPT</span>&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="解决服务器上容器传参到jsp页面出现乱码问题"><a href="#解决服务器上容器传参到jsp页面出现乱码问题" class="headerlink" title="解决服务器上容器传参到jsp页面出现乱码问题"></a>解决服务器上容器传参到jsp页面出现乱码问题</h1><blockquote>
+<p>jsp页面需要使用两次encodeURI进行编码处理<br>encodeURI(encodeURI(‘中文’));</p>
+</blockquote>
 
       
     </div>
@@ -663,7 +666,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-windows对象setTimeOut-用于发送验证码倒计时"><span class="nav-number">1.</span> <span class="nav-text">1.windows对象setTimeOut()用于发送验证码倒计时</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-bind-this-用法"><span class="nav-number">2.</span> <span class="nav-text">2.bind(this)用法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#js传数组给html"><span class="nav-number">3.</span> <span class="nav-text">js传数组给html</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-windows对象setTimeOut-用于发送验证码倒计时"><span class="nav-number">1.</span> <span class="nav-text">1.windows对象setTimeOut()用于发送验证码倒计时</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-bind-this-用法"><span class="nav-number">2.</span> <span class="nav-text">2.bind(this)用法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#js传数组给html"><span class="nav-number">3.</span> <span class="nav-text">js传数组给html</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决服务器上容器传参到jsp页面出现乱码问题"><span class="nav-number">4.</span> <span class="nav-text">解决服务器上容器传参到jsp页面出现乱码问题</span></a></li></ol></div>
             
           </div>
         </section>
