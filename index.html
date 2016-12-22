@@ -1352,6 +1352,9 @@
 <h1 id="项目启动报错"><a href="#项目启动报错" class="headerlink" title="项目启动报错"></a>项目启动报错</h1><p>原因jar包冲突<br>D:\java-tools\apache-maven-3.2.3\repo\org\apache\tomcat\servlet-api\6.0.28\servlet-api-6.0.28.jar</p>
 <h1 id="xsd文件找不到"><a href="#xsd文件找不到" class="headerlink" title="xsd文件找不到"></a>xsd文件找不到</h1><p>报错提示，要引入jar包。或者手动添加xsd文件或者手动指定(参考：<a href="http://www.ibm.com/developerworks/cn/xml/x-1008dubb/" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/xml/x-1008dubb/</a>)</p>
 <h2 id="解决pom文件报错和multiple-problems-have-occurred错误"><a href="#解决pom文件报错和multiple-problems-have-occurred错误" class="headerlink" title="解决pom文件报错和multiple problems have occurred错误"></a>解决pom文件报错和multiple problems have occurred错误</h2><p>错误实质上都是jar依赖的问题，只需两步就可解决<br>进入出问题的jar包所在的本地仓库目录<br>1、    删除所有以.lastUpdate结尾的文件<br>a)    1、切换到maven的本地仓库<br>b)    2、在当前目录打开cmd命令行<br>c)    3、执行命令：for /r %i in (*.lastUpdated) do del %i<br>2、    在项目上执行 Maven Update （Alt + F5）</p>
+<h2 id="如何避免jar下载不全导致项目报错"><a href="#如何避免jar下载不全导致项目报错" class="headerlink" title="如何避免jar下载不全导致项目报错"></a>如何避免jar下载不全导致项目报错</h2><p>使用相对稳定的私服下载地址：开源中国(<a href="http://maven.oschina.net/help.html" target="_blank" rel="external">http://maven.oschina.net/help.html</a>)<br>在maven指向的setting.xml文件中进行如下配置：</p>
+<pre><code class="xml">
+</code></pre>
 
           
         
