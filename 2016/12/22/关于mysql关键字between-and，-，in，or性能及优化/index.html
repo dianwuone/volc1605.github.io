@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="mysql," />
 
 
 
@@ -84,15 +84,19 @@
 
 
 
-<meta name="description" content="volc">
-<meta property="og:type" content="website">
-<meta property="og:title" content="VOLC">
-<meta property="og:url" content="https://volc1605.github.io/categories/LINUX/index.html">
+<meta name="description" content="关于mysql关键字between and，&amp;gt;=&amp;lt;，in，or性能关于IN关键字的效率问题查询表1234567mysql&amp;gt; select count(1) from tk_plan_wait;+----------+| count(1) |+----------+|    20312 |+----------+1 row in set (0.00 sec)
+这个表的总记录数为20">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于mysql关键字between and，>=<，in，or性能及优化">
+<meta property="og:url" content="https://volc1605.github.io/2016/12/22/关于mysql关键字between-and，-，in，or性能及优化/index.html">
 <meta property="og:site_name" content="VOLC">
-<meta property="og:description" content="volc">
+<meta property="og:description" content="关于mysql关键字between and，&amp;gt;=&amp;lt;，in，or性能关于IN关键字的效率问题查询表1234567mysql&amp;gt; select count(1) from tk_plan_wait;+----------+| count(1) |+----------+|    20312 |+----------+1 row in set (0.00 sec)
+这个表的总记录数为20">
+<meta property="og:updated_time" content="2016-12-22T05:46:18.063Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VOLC">
-<meta name="twitter:description" content="volc">
+<meta name="twitter:title" content="关于mysql关键字between and，>=<，in，or性能及优化">
+<meta name="twitter:description" content="关于mysql关键字between and，&amp;gt;=&amp;lt;，in，or性能关于IN关键字的效率问题查询表1234567mysql&amp;gt; select count(1) from tk_plan_wait;+----------+| count(1) |+----------+|    20312 |+----------+1 row in set (0.00 sec)
+这个表的总记录数为20">
 
 
 
@@ -113,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="https://volc1605.github.io/categories/LINUX/"/>
+  <link rel="canonical" href="https://volc1605.github.io/2016/12/22/关于mysql关键字between-and，-，in，or性能及优化/"/>
 
-  <title> 分类: LINUX | VOLC </title>
+  <title> 关于mysql关键字between and，>=<，in，or性能及优化 | VOLC </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -155,7 +159,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -286,54 +290,247 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        LINUX
-        <small>分类</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                关于mysql关键字between and，>=<，in，or性能及优化
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-22T13:37:32+08:00" content="2016-12-22">
+              2016-12-22
+            </time>
+          </span>
+
+
+
+
+
+              <span>
+                  |
+                <span>更新于</span>
+                <time>
+                  2016-12-22
+                  13:37:32
+                </time>
+              </span>
+
+
+
+
+
+
+
+          
+            <span class="post-category" >
+              |
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                |
+                <a href="/2016/12/22/关于mysql关键字between-and，-，in，or性能及优化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/22/关于mysql关键字between-and，-，in，or性能及优化/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+            
+               <span id="/2016/12/22/关于mysql关键字between-and，-，in，or性能及优化/" class="leancloud_visitors" data-flag-title="关于mysql关键字between and，>=<，in，or性能及优化">
+                 |
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 <span class="post-meta-item-text">阅读量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h1 id="关于mysql关键字between-and，-gt-lt-，in，or性能"><a href="#关于mysql关键字between-and，-gt-lt-，in，or性能" class="headerlink" title="关于mysql关键字between and，&gt;=&lt;，in，or性能"></a>关于mysql关键字between and，&gt;=&lt;，in，or性能</h1><h2 id="关于IN关键字的效率问题"><a href="#关于IN关键字的效率问题" class="headerlink" title="关于IN关键字的效率问题"></a>关于IN关键字的效率问题</h2><p>查询表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select count(1) from tk_plan_wait;</div><div class="line">+----------+</div><div class="line">| count(1) |</div><div class="line">+----------+</div><div class="line">|    20312 |</div><div class="line">+----------+</div><div class="line">1 row in set (0.00 sec)</div></pre></td></tr></table></figure></p>
+<p>这个表的总记录数为20312行</p>
+<p>查询表索引<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mysql&gt; show index from tk_plan_wait;</div><div class="line">+--------------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+</div><div class="line">| Table        | Non_unique | Key_name        | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |</div><div class="line">+--------------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+</div><div class="line">| tk_plan_wait |          0 | PRIMARY         |            1 | idx         | A         |       20703 |     NULL | NULL   |      | BTREE      |         |               |</div><div class="line">| tk_plan_wait |          0 | tk_plan_wait_pk |            1 | PLAN_NUM    | A         |       20703 |     NULL | NULL   |      | BTREE      |         |               |</div><div class="line">+--------------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+</div><div class="line">2 rows in set (0.00 sec)</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>使用in关键字根据有索引字段查询</p>
+</blockquote>
+<p>由于索引PLAN_NUM字段key_name是unique唯一类型，可以看到其散列程度（Cardinality）是非常高的，因此该索引是很有效的。<br>使用优化器EXPLAIN执行含有索引的sql请看执行情况<br><figure class="highlight plain"><figcaption><span>EXPLAIN SELECT * FROM `tk_plan_wait` WHERE PLAN_NUM in('367b069a-4f2c-4d6e-899a-9c9690760d19');</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">+----+-------------+--------------+------------+-------+-----------------+-----------------+---------+-------+------+----------+-------+</div><div class="line">| id | select_type | table        | partitions | type  | possible_keys   | key             | key_len | ref   | rows | filtered | Extra |</div><div class="line">+----+-------------+--------------+------------+-------+-----------------+-----------------+---------+-------+------+----------+-------+</div><div class="line">|  1 | SIMPLE      | tk_plan_wait | NULL       | const | tk_plan_wait_pk | tk_plan_wait_pk | 152     | const |    1 |   100.00 | NULL  |</div><div class="line">+----+-------------+--------------+------------+-------+-----------------+-----------------+---------+-------+------+----------+-------+</div><div class="line">1 row in set, 1 warning (0.00 sec)</div></pre></td></tr></table></figure></p>
+<p>其中字段rows为1，只扫描了一行，含有索引其执行效率很高</p>
+<blockquote>
+<p>使用in关键字根据无索引字段查询</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mysql&gt; EXPLAIN SELECT * FROM `tk_plan_wait` WHERE TASK_ARG1 in(&apos;t&apos;);</div><div class="line">+----+-------------+--------------+------------+------+---------------+------+---------+------+-------+----------+-------------+</div><div class="line">| id | select_type | table        | partitions | type | possible_keys | key  | key_len | ref  | rows  | filtered | Extra       |</div><div class="line">+----+-------------+--------------+------------+------+---------------+------+---------+------+-------+----------+-------------+</div><div class="line">|  1 | SIMPLE      | tk_plan_wait | NULL       | ALL  | NULL          | NULL | NULL    | NULL | 20703 |    10.00 | Using where |</div><div class="line">+----+-------------+--------------+------------+------+---------------+------+---------+------+-------+----------+-------------+</div><div class="line">1 row in set, 1 warning (0.00 sec)</div></pre></td></tr></table></figure>
+<p>其中字段rows为20703，进行了全表扫描</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/11/23/linux/" itemprop="url">
-              
-                <span itemprop="name">LINUX</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>如果文章对您有用请随意打赏，谢谢支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/w.png" alt="VOLC WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/z.jpg" alt="VOLC Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-23T16:11:36+08:00"
-              content="2016-11-23" >
-          11-23
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mysql/" rel="tag">#mysql</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/12/memcache/" rel="next" title="memcache">
+                <i class="fa fa-chevron-left"></i> memcache
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/12/22/关于mysql关键字between-and，-，in，or性能及优化/"
+     data-title="关于mysql关键字between and，>=<，in，or性能及优化"
+     data-content=""
+     data-url="https://volc1605.github.io/2016/12/22/关于mysql关键字between-and，-，in，or性能及优化/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
 
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
 
 
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/12/22/关于mysql关键字between-and，-，in，or性能及优化/"
+           data-title="关于mysql关键字between and，>=<，in，or性能及优化" data-url="https://volc1605.github.io/2016/12/22/关于mysql关键字between-and，-，in，or性能及优化/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -353,8 +550,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/0.png"
@@ -456,6 +662,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于mysql关键字between-and，-gt-lt-，in，or性能"><span class="nav-number">1.</span> <span class="nav-text">关于mysql关键字between and，>=<，in，or性能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于IN关键字的效率问题"><span class="nav-number">1.1.</span> <span class="nav-text">关于IN关键字的效率问题</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -570,6 +787,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
