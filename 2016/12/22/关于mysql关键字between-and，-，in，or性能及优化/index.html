@@ -90,7 +90,7 @@
 <meta property="og:url" content="https://volc1605.github.io/2016/12/22/关于mysql关键字between-and，-，in，or性能及优化/index.html">
 <meta property="og:site_name" content="VOLC">
 <meta property="og:description" content="关于IN关键字的效率问题">
-<meta property="og:updated_time" content="2016-12-22T06:16:45.136Z">
+<meta property="og:updated_time" content="2016-12-23T16:38:38.769Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于mysql关键字between and，>=<，in，or性能及优化">
 <meta name="twitter:description" content="关于IN关键字的效率问题">
@@ -402,7 +402,7 @@
       
 
       
-        <h1 id="关于IN关键字的效率问题"><a href="#关于IN关键字的效率问题" class="headerlink" title="关于IN关键字的效率问题"></a>关于IN关键字的效率问题</h1><a id="more"></a>
+        <h3 id="关于IN关键字的效率问题"><a href="#关于IN关键字的效率问题" class="headerlink" title="关于IN关键字的效率问题"></a>关于IN关键字的效率问题</h3><a id="more"></a>
 <p>查询表<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select count(1) from tk_plan_wait;</div><div class="line">+----------+</div><div class="line">| count(1) |</div><div class="line">+----------+</div><div class="line">|    20312 |</div><div class="line">+----------+</div><div class="line">1 row in set (0.00 sec)</div></pre></td></tr></table></figure></p>
 <p>这个表的总记录数为20312行</p>
 <p>查询表索引<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mysql&gt; show index from tk_plan_wait;</div><div class="line">+--------------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+</div><div class="line">| Table        | Non_unique | Key_name        | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |</div><div class="line">+--------------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+</div><div class="line">| tk_plan_wait |          0 | PRIMARY         |            1 | idx         | A         |       20703 |     NULL | NULL   |      | BTREE      |         |               |</div><div class="line">| tk_plan_wait |          0 | tk_plan_wait_pk |            1 | PLAN_NUM    | A         |       20703 |     NULL | NULL   |      | BTREE      |         |               |</div><div class="line">+--------------+------------+-----------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+</div><div class="line">2 rows in set (0.00 sec)</div></pre></td></tr></table></figure></p>
@@ -477,6 +477,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/24/java解析Excel导入数据库/" rel="prev" title="java解析Excel导入数据库">
+                java解析Excel导入数据库 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -571,7 +575,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -579,7 +583,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -588,7 +592,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -669,7 +673,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于IN关键字的效率问题"><span class="nav-number">1.</span> <span class="nav-text">关于IN关键字的效率问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于IN关键字的效率问题"><span class="nav-number">1.</span> <span class="nav-text">关于IN关键字的效率问题</span></a></li></ol></div>
             
           </div>
         </section>
