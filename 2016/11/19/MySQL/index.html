@@ -96,7 +96,7 @@
 建表
 
 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919">
-<meta property="og:updated_time" content="2016-12-22T05:37:53.360Z">
+<meta property="og:updated_time" content="2016-12-28T08:19:58.569Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL">
 <meta name="twitter:description" content="部门表dept和员工表empMySQL练习
@@ -430,6 +430,10 @@
 <p>总结    </p>
 </blockquote>
 <font color="#FF0000" face="Menlo">in是把外表和内表作hash连接，而exists是对外表作loop循环，每次loop循环再对内表进行查询，一直以来认为exists比in效率高的说法是不准确的。如果查询的两个表大小相当，那么用in和exists差别不大；如果两个表中一个较小一个较大，则子查询表大的用exists(大表)，子查询表小的用in(小表);<br>跟显示字段的多少没有太大区别。<br></font>
+
+<h3 id="分表"><a href="#分表" class="headerlink" title="分表"></a>分表</h3><p>参考地址：<a href="http://www.cnblogs.com/miketwais/articles/mysql_partition.html" target="_blank" rel="external">http://www.cnblogs.com/miketwais/articles/mysql_partition.html</a></p>
+<p>哪些引擎可以分表？</p>
+
       
     </div>
 
@@ -684,7 +688,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#部门表dept和员工表empMySQL练习"><span class="nav-number">1.</span> <span class="nav-text">部门表dept和员工表empMySQL练习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#EXISTS和IN"><span class="nav-number">2.</span> <span class="nav-text">EXISTS和IN</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#部门表dept和员工表empMySQL练习"><span class="nav-number">1.</span> <span class="nav-text">部门表dept和员工表empMySQL练习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#EXISTS和IN"><span class="nav-number">2.</span> <span class="nav-text">EXISTS和IN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分表"><span class="nav-number">2.0.1.</span> <span class="nav-text">分表</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
