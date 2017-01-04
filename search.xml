@@ -301,6 +301,7 @@
 </blockquote>
 <font color="#FF0000" face="Menlo">in是把外表和内表作hash连接，而exists是对外表作loop循环，每次loop循环再对内表进行查询，一直以来认为exists比in效率高的说法是不准确的。如果查询的两个表大小相当，那么用in和exists差别不大；如果两个表中一个较小一个较大，则子查询表大的用exists(大表)，子查询表小的用in(小表);<br>跟显示字段的多少没有太大区别。<br></font>
 
+<h3 id="类型长度"><a href="#类型长度" class="headerlink" title="类型长度"></a>类型长度</h3><p>int和bigint超限会改变值<br>char和varchar超限会截取值</p>
 <h3 id="分表"><a href="#分表" class="headerlink" title="分表"></a>分表</h3><p>参考地址：<br><a href="http://www.cnblogs.com/miketwais/articles/mysql_partition.html" target="_blank" rel="external">http://www.cnblogs.com/miketwais/articles/mysql_partition.html</a><br><a href="http://blog.csdn.net/shandalue/article/details/52035040" target="_blank" rel="external">http://blog.csdn.net/shandalue/article/details/52035040</a></p>
 <p>哪些引擎可以分表？</p>
 ]]></content>
