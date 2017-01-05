@@ -86,18 +86,18 @@
 
 <meta name="description" content="MySQL主从读写分离有两点需要注意的地方1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。2.不同服务器都要含有需要同步的指定数据库。3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL主从配置和读写分离">
+<meta property="og:title" content="MySQL主和读写分离">
 <meta property="og:url" content="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/index.html">
 <meta property="og:site_name" content="VOLC">
 <meta property="og:description" content="MySQL主从读写分离有两点需要注意的地方1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。2.不同服务器都要含有需要同步的指定数据库。3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。">
-<meta property="og:image" content="https://volc1605.github.io/images/MySQL主从读写分离/1.png">
-<meta property="og:image" content="https://volc1605.github.io/images/MySQL主从读写分离/2.png">
-<meta property="og:image" content="https://volc1605.github.io/images/MySQL主从读写分离/4.png">
-<meta property="og:updated_time" content="2017-01-05T08:26:12.900Z">
+<meta property="og:image" content="https://volc1605.github.io/images/MySQL主从配和读写分离/1.png">
+<meta property="og:image" content="https://volc1605.github.io/images/MySQL主从配和读写分离/2.png">
+<meta property="og:image" content="https://volc1605.github.io/images/MySQL主从配和读写分离/4.png">
+<meta property="og:updated_time" content="2017-01-05T08:30:22.549Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL主从配置和读写分离">
+<meta name="twitter:title" content="MySQL主和读写分离">
 <meta name="twitter:description" content="MySQL主从读写分离有两点需要注意的地方1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。2.不同服务器都要含有需要同步的指定数据库。3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。">
-<meta name="twitter:image" content="https://volc1605.github.io/images/MySQL主从读写分离/1.png">
+<meta name="twitter:image" content="https://volc1605.github.io/images/MySQL主从配和读写分离/1.png">
 
 
 
@@ -120,7 +120,7 @@
 
   <link rel="canonical" href="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/"/>
 
-  <title> MySQL主从配置和读写分离 | VOLC </title>
+  <title> MySQL主和读写分离 | VOLC </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -312,7 +312,7 @@
             
             
               
-                MySQL主从配置和读写分离
+                MySQL主和读写分离
               
             
           </h1>
@@ -384,7 +384,7 @@
 
           
             
-               <span id="/2017/01/05/MySQL主从配置和读写分离/" class="leancloud_visitors" data-flag-title="MySQL主从配置和读写分离">
+               <span id="/2017/01/05/MySQL主从配置和读写分离/" class="leancloud_visitors" data-flag-title="MySQL主和读写分离">
                  |
                  <span class="post-meta-item-icon">
                    <i class="fa fa-eye"></i>
@@ -408,7 +408,7 @@
       
         <h3 id="MySQL主从读写分离"><a href="#MySQL主从读写分离" class="headerlink" title="MySQL主从读写分离"></a>MySQL主从读写分离</h3><p>有两点需要注意的地方<br>1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。<br>2.不同服务器都要含有需要同步的指定数据库。<br>3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。<br><a id="more"></a></p>
 <h4 id="开启log-bin"><a href="#开启log-bin" class="headerlink" title="开启log_bin"></a>开启log_bin</h4><p>安装服务<br>C:\mysql\mysql-5.5.47-win32\bin&gt;mysql -install<br>参考：<a href="https://volc1605.github.io/2016/11/19/MySQL/">win配置mysql</a></p>
-<p>查看log_bin是否开启<br><img src="https://volc1605.github.io/images/MySQL主从读写分离/1.png" alt="查看log_bin是否开启"><br>如果log_bin的值OFF需要在配置文件中开启<br>找到mysql安装目录下的配置文件my.ini，在[mysqld]追加<br>[mysqld]</p>
+<p>查看log_bin是否开启<br><img src="https://volc1605.github.io/images/MySQL主从配和读写分离/1.png" alt="查看log_bin是否开启"><br>如果log_bin的值OFF需要在配置文件中开启<br>找到mysql安装目录下的配置文件my.ini，在[mysqld]追加<br>[mysqld]</p>
 <h1 id="开启log-bin-1"><a href="#开启log-bin-1" class="headerlink" title="开启log_bin"></a>开启log_bin</h1><p>log_bin</p>
 <h4 id="配置master-主数据库-my-ini"><a href="#配置master-主数据库-my-ini" class="headerlink" title="配置master(主数据库)my.ini"></a>配置master(主数据库)my.ini</h4><p>追加[mysqld]配置</p>
 <h1 id="读写"><a href="#读写" class="headerlink" title="=============读写==========="></a>=============读写===========</h1><p>log-bin = mysql-bin</p>
@@ -420,11 +420,11 @@
 <p>binlog-ignore-db = mysql</p>
 <p>binlog-ignore-db = performance_schema</p>
 <p>binlog-ignore-db = information_schema</p>
-<h1 id="结束"><a href="#结束" class="headerlink" title="=============结束==========="></a>=============结束===========</h1><h4 id="关联从数据库，并给予全部权限"><a href="#关联从数据库，并给予全部权限" class="headerlink" title="关联从数据库，并给予全部权限"></a>关联从数据库，并给予全部权限</h4><p>mysql&gt; grant all privileges on <em>.</em> to ‘root’@’192.168.1.200’ identified by ‘root’ with grant option;<br><img src="https://volc1605.github.io/images/MySQL主从读写分离/2.png" alt="关联从数据库并给予权限"></p>
+<h1 id="结束"><a href="#结束" class="headerlink" title="=============结束==========="></a>=============结束===========</h1><h4 id="关联从数据库，并给予全部权限"><a href="#关联从数据库，并给予全部权限" class="headerlink" title="关联从数据库，并给予全部权限"></a>关联从数据库，并给予全部权限</h4><p>mysql&gt; grant all privileges on <em>.</em> to ‘root’@’192.168.1.200’ identified by ‘root’ with grant option;<br><img src="https://volc1605.github.io/images/MySQL主从配和读写分离/2.png" alt="关联从数据库并给予权限"></p>
 <p>‘root’                     slave从数据库账户<br>‘192.168.1.200’            slaveIP<br>‘root’                    slave登录密码</p>
 <p>刷新权限<br>mysql&gt; flush privileges;</p>
-<p>在从服务器上链接主服务器mysql<br>![链接master数据库]ttps://volc1605.github.io/images/MySQL主从读写分离/3.png)</p>
-<h4 id="获取master状态信息"><a href="#获取master状态信息" class="headerlink" title="获取master状态信息"></a>获取master状态信息</h4><p><img src="https://volc1605.github.io/images/MySQL主从读写分离/4.png" alt="获取master状态信息"></p>
+<p>在从服务器上链接主服务器mysql<br>![链接master数据库]ttps://volc1605.github.io/images/MySQL主从配和读写分离/3.png)</p>
+<h4 id="获取master状态信息"><a href="#获取master状态信息" class="headerlink" title="获取master状态信息"></a>获取master状态信息</h4><p><img src="https://volc1605.github.io/images/MySQL主从配和读写分离/4.png" alt="获取master状态信息"></p>
 <p>记录以下两个字段值，从服务器上mysql配置需要用到<br>File: mysql-bin.000015<br>Position: 107</p>
 <h4 id="配置slave数据库"><a href="#配置slave数据库" class="headerlink" title="配置slave数据库"></a>配置slave数据库</h4><p>配置my.ini<br>[mysqld]</p>
 <p>#=========新增=====</p>
@@ -512,7 +512,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2017/01/05/MySQL主从配置和读写分离/"
-     data-title="MySQL主从配置和读写分离"
+     data-title="MySQL主和读写分离"
      data-content=""
      data-url="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/">
   <div class="ds-share-inline">
@@ -546,7 +546,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/01/05/MySQL主从配置和读写分离/"
-           data-title="MySQL主从配置和读写分离" data-url="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/">
+           data-title="MySQL主和读写分离" data-url="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/">
       </div>
     
   </div>
