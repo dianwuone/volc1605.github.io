@@ -4,21 +4,39 @@
 
     
   <url>
-    <loc>https://volc1605.github.io/2016/10/18/MyBatis/</loc>
-    <lastmod>2017-01-04T17:16:16.192Z</lastmod>
+    <loc>https://volc1605.github.io/2017/01/05/win%E9%85%8D%E7%BD%AEMySQL/</loc>
+    <lastmod>2017-01-05T07:08:20.300Z</lastmod>
     <data>
         <display>
-        <title>MyBatis</title>
-        <pubTime>2016-10-18T13:41:21.000Z</pubTime>
+        <title>win配置MySQL</title>
+        <pubTime>2017-01-05T07:07:09.000Z</pubTime>
         
-        <tag>mybatis</tag>
-         
         <tag>mysql</tag>
          
          
            
              
-              <breadCrumb title="work" url="https://volc1605.github.io/categories/work/"/>
+              <breadCrumb title="MYSQL" url="https://volc1605.github.io/categories/MYSQL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://volc1605.github.io/2017/01/05/MySQL%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE%E5%92%8C%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/</loc>
+    <lastmod>2017-01-05T07:08:17.369Z</lastmod>
+    <data>
+        <display>
+        <title>MySQL主从配置和读写分离</title>
+        <pubTime>2017-01-05T05:46:28.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="MySQL" url="https://volc1605.github.io/categories/MySQL/"/>
           
         </display>
     </data>
@@ -27,7 +45,7 @@
     
   <url>
     <loc>https://volc1605.github.io/2016/11/19/MySQL/</loc>
-    <lastmod>2017-01-04T16:57:31.272Z</lastmod>
+    <lastmod>2017-01-05T07:08:13.213Z</lastmod>
     <data>
         <display>
         <title>MySQL</title>
@@ -39,6 +57,28 @@
            
              
               <breadCrumb title="MySQL" url="https://volc1605.github.io/categories/MySQL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://volc1605.github.io/2016/10/18/MyBatis/</loc>
+    <lastmod>2017-01-04T17:16:16.192Z</lastmod>
+    <data>
+        <display>
+        <title>MyBatis</title>
+        <pubTime>2016-10-18T13:41:21.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+        <tag>mybatis</tag>
+         
+         
+           
+             
+              <breadCrumb title="work" url="https://volc1605.github.io/categories/work/"/>
           
         </display>
     </data>

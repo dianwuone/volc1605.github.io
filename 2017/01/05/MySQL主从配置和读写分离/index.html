@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="mysql," />
 
 
 
@@ -84,15 +84,24 @@
 
 
 
-<meta name="description" content="volc">
-<meta property="og:type" content="website">
-<meta property="og:title" content="VOLC">
-<meta property="og:url" content="https://volc1605.github.io/tags/mybatis/index.html">
+<meta name="description" content="开启log_bin查看log_bin是否开启如果log_bin值为OF需要配置开启log_bin直接在mysql安装目录中找到        [mysqld]
+# 开启log_bin
+log_bin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL主从配置和读写分离">
+<meta property="og:url" content="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/index.html">
 <meta property="og:site_name" content="VOLC">
-<meta property="og:description" content="volc">
+<meta property="og:description" content="开启log_bin查看log_bin是否开启如果log_bin值为OF需要配置开启log_bin直接在mysql安装目录中找到        [mysqld]
+# 开启log_bin
+log_bin">
+<meta property="og:image" content="https://volc1605.github.io/images/MySQL主从配置和读写分离/1.png">
+<meta property="og:updated_time" content="2017-01-05T07:08:17.369Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VOLC">
-<meta name="twitter:description" content="volc">
+<meta name="twitter:title" content="MySQL主从配置和读写分离">
+<meta name="twitter:description" content="开启log_bin查看log_bin是否开启如果log_bin值为OF需要配置开启log_bin直接在mysql安装目录中找到        [mysqld]
+# 开启log_bin
+log_bin">
+<meta name="twitter:image" content="https://volc1605.github.io/images/MySQL主从配置和读写分离/1.png">
 
 
 
@@ -113,9 +122,9 @@
 
 
 
-  <link rel="canonical" href="https://volc1605.github.io/tags/mybatis/"/>
+  <link rel="canonical" href="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/"/>
 
-  <title> 标签: mybatis | VOLC </title>
+  <title> MySQL主从配置和读写分离 | VOLC </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -155,7 +164,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -286,53 +295,241 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        mybatis
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                MySQL主从配置和读写分离
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-05T13:46:28+08:00" content="2017-01-05">
+              2017-01-05
+            </time>
+          </span>
+
+
+
+
+
+              <span>
+                  |
+                <span>更新于</span>
+                <time>
+                  2017-01-05
+                  13:46:28
+                </time>
+              </span>
+
+
+
+
+
+
+
+          
+            <span class="post-category" >
+              |
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                |
+                <a href="/2017/01/05/MySQL主从配置和读写分离/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/05/MySQL主从配置和读写分离/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+            
+               <span id="/2017/01/05/MySQL主从配置和读写分离/" class="leancloud_visitors" data-flag-title="MySQL主从配置和读写分离">
+                 |
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 <span class="post-meta-item-text">阅读量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h3 id="开启log-bin"><a href="#开启log-bin" class="headerlink" title="开启log_bin"></a>开启log_bin</h3><p>查看log_bin是否开启<br><img src="https://volc1605.github.io/images/MySQL主从配置和读写分离/1.png" alt="查看日志是否开启"><br>如果log_bin值为OF需要配置开启log_bin<br>直接在mysql安装目录中找到<br>        [mysqld]</p>
+<pre><code># 开启log_bin
+log_bin
+</code></pre>
+      
+    </div>
 
-      <h1 class="post-title">
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/10/18/MyBatis/" itemprop="url">
-              
-                <span itemprop="name">MyBatis</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>如果文章对您有用请随意打赏，谢谢支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/w.png" alt="VOLC WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/z.jpg" alt="VOLC Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-18T21:41:21+08:00"
-              content="2016-10-18" >
-          10-18
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mysql/" rel="tag">#mysql</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/24/java解析Excel导入数据库/" rel="next" title="java操作Excel">
+                <i class="fa fa-chevron-left"></i> java操作Excel
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/05/win配置MySQL/" rel="prev" title="win配置MySQL">
+                win配置MySQL <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2017/01/05/MySQL主从配置和读写分离/"
+     data-title="MySQL主从配置和读写分离"
+     data-content=""
+     data-url="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
 
 
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/05/MySQL主从配置和读写分离/"
+           data-title="MySQL主从配置和读写分离" data-url="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -352,8 +549,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/0.png"
@@ -455,6 +661,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#开启log-bin"><span class="nav-number">1.</span> <span class="nav-text">开启log_bin</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -569,6 +786,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
