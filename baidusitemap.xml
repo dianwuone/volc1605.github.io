@@ -4,11 +4,11 @@
 
     
   <url>
-    <loc>https://volc1605.github.io/2017/01/05/test/</loc>
-    <lastmod>2017-01-05T08:45:15.457Z</lastmod>
+    <loc>https://volc1605.github.io/2017/01/05/MySQL%E4%B8%BB%E4%BB%8E%E5%92%8C%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/</loc>
+    <lastmod>2017-01-05T08:48:34.784Z</lastmod>
     <data>
         <display>
-        <title>test</title>
+        <title>MySQL主从和读写分离</title>
         <pubTime>2017-01-05T08:45:15.000Z</pubTime>
         
          
@@ -66,9 +66,9 @@
         <title>MyBatis</title>
         <pubTime>2016-10-18T13:41:21.000Z</pubTime>
         
-        <tag>mysql</tag>
-         
         <tag>mybatis</tag>
+         
+        <tag>mysql</tag>
          
          
            
