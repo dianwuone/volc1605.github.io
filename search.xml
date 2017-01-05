@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title><![CDATA[MySQL主和读写分离]]></title>
+      <title><![CDATA[MySQL主从和读写分离]]></title>
       <url>https://volc1605.github.io/2017/01/05/MySQL%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE%E5%92%8C%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/</url>
-      <content type="html"><![CDATA[<h3 id="MySQL主从读写分离"><a href="#MySQL主从读写分离" class="headerlink" title="MySQL主从读写分离"></a>MySQL主从读写分离</h3><p>有两点需要注意的地方<br>1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。<br>2.不同服务器都要含有需要同步的指定数据库。<br>3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。<br><a id="more"></a></p>
+      <content type="html"><![CDATA[<h3 id="MySQL主从和读写分离"><a href="#MySQL主从和读写分离" class="headerlink" title="MySQL主从和读写分离"></a>MySQL主从和读写分离</h3><p>有两点需要注意的地方<br>1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。<br>2.不同服务器都要含有需要同步的指定数据库。<br>3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。<br><a id="more"></a></p>
 <h4 id="开启log-bin"><a href="#开启log-bin" class="headerlink" title="开启log_bin"></a>开启log_bin</h4><p>安装服务<br>C:\mysql\mysql-5.5.47-win32\bin&gt;mysql -install<br>参考：<a href="https://volc1605.github.io/2016/11/19/MySQL/">win配置mysql</a></p>
 <p>查看log_bin是否开启<br><img src="https://volc1605.github.io/images/MySQL主从配和读写分离/1.png" alt="查看log_bin是否开启"><br>如果log_bin的值OFF需要在配置文件中开启<br>找到mysql安装目录下的配置文件my.ini，在[mysqld]追加<br>[mysqld]</p>
 <h1 id="开启log-bin-1"><a href="#开启log-bin-1" class="headerlink" title="开启log_bin"></a>开启log_bin</h1><p>log_bin</p>

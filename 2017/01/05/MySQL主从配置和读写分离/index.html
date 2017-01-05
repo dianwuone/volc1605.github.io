@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="MySQL主从读写分离有两点需要注意的地方1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。2.不同服务器都要含有需要同步的指定数据库。3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。">
+<meta name="description" content="MySQL主从和读写分离有两点需要注意的地方1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。2.不同服务器都要含有需要同步的指定数据库。3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL主和读写分离">
+<meta property="og:title" content="MySQL主从和读写分离">
 <meta property="og:url" content="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/index.html">
 <meta property="og:site_name" content="VOLC">
-<meta property="og:description" content="MySQL主从读写分离有两点需要注意的地方1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。2.不同服务器都要含有需要同步的指定数据库。3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。">
+<meta property="og:description" content="MySQL主从和读写分离有两点需要注意的地方1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。2.不同服务器都要含有需要同步的指定数据库。3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。">
 <meta property="og:image" content="https://volc1605.github.io/images/MySQL主从配和读写分离/1.png">
 <meta property="og:image" content="https://volc1605.github.io/images/MySQL主从配和读写分离/2.png">
 <meta property="og:image" content="https://volc1605.github.io/images/MySQL主从配和读写分离/4.png">
-<meta property="og:updated_time" content="2017-01-05T08:30:22.549Z">
+<meta property="og:updated_time" content="2017-01-05T08:31:35.929Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL主和读写分离">
-<meta name="twitter:description" content="MySQL主从读写分离有两点需要注意的地方1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。2.不同服务器都要含有需要同步的指定数据库。3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。">
+<meta name="twitter:title" content="MySQL主从和读写分离">
+<meta name="twitter:description" content="MySQL主从和读写分离有两点需要注意的地方1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。2.不同服务器都要含有需要同步的指定数据库。3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。">
 <meta name="twitter:image" content="https://volc1605.github.io/images/MySQL主从配和读写分离/1.png">
 
 
@@ -120,7 +120,7 @@
 
   <link rel="canonical" href="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/"/>
 
-  <title> MySQL主和读写分离 | VOLC </title>
+  <title> MySQL主从和读写分离 | VOLC </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -312,7 +312,7 @@
             
             
               
-                MySQL主和读写分离
+                MySQL主从和读写分离
               
             
           </h1>
@@ -384,7 +384,7 @@
 
           
             
-               <span id="/2017/01/05/MySQL主从配置和读写分离/" class="leancloud_visitors" data-flag-title="MySQL主和读写分离">
+               <span id="/2017/01/05/MySQL主从配置和读写分离/" class="leancloud_visitors" data-flag-title="MySQL主从和读写分离">
                  |
                  <span class="post-meta-item-icon">
                    <i class="fa fa-eye"></i>
@@ -406,7 +406,7 @@
       
 
       
-        <h3 id="MySQL主从读写分离"><a href="#MySQL主从读写分离" class="headerlink" title="MySQL主从读写分离"></a>MySQL主从读写分离</h3><p>有两点需要注意的地方<br>1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。<br>2.不同服务器都要含有需要同步的指定数据库。<br>3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。<br><a id="more"></a></p>
+        <h3 id="MySQL主从和读写分离"><a href="#MySQL主从和读写分离" class="headerlink" title="MySQL主从和读写分离"></a>MySQL主从和读写分离</h3><p>有两点需要注意的地方<br>1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。<br>2.不同服务器都要含有需要同步的指定数据库。<br>3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。<br><a id="more"></a></p>
 <h4 id="开启log-bin"><a href="#开启log-bin" class="headerlink" title="开启log_bin"></a>开启log_bin</h4><p>安装服务<br>C:\mysql\mysql-5.5.47-win32\bin&gt;mysql -install<br>参考：<a href="https://volc1605.github.io/2016/11/19/MySQL/">win配置mysql</a></p>
 <p>查看log_bin是否开启<br><img src="https://volc1605.github.io/images/MySQL主从配和读写分离/1.png" alt="查看log_bin是否开启"><br>如果log_bin的值OFF需要在配置文件中开启<br>找到mysql安装目录下的配置文件my.ini，在[mysqld]追加<br>[mysqld]</p>
 <h1 id="开启log-bin-1"><a href="#开启log-bin-1" class="headerlink" title="开启log_bin"></a>开启log_bin</h1><p>log_bin</p>
@@ -512,7 +512,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2017/01/05/MySQL主从配置和读写分离/"
-     data-title="MySQL主和读写分离"
+     data-title="MySQL主从和读写分离"
      data-content=""
      data-url="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/">
   <div class="ds-share-inline">
@@ -546,7 +546,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/01/05/MySQL主从配置和读写分离/"
-           data-title="MySQL主和读写分离" data-url="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/">
+           data-title="MySQL主从和读写分离" data-url="https://volc1605.github.io/2017/01/05/MySQL主从配置和读写分离/">
       </div>
     
   </div>
@@ -689,7 +689,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL主从读写分离"><span class="nav-number">1.</span> <span class="nav-text">MySQL主从读写分离</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开启log-bin"><span class="nav-number">1.1.</span> <span class="nav-text">开启log_bin</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开启log-bin-1"><span class="nav-number"></span> <span class="nav-text">开启log_bin</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#配置master-主数据库-my-ini"><span class="nav-number">0.1.</span> <span class="nav-text">配置master(主数据库)my.ini</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#读写"><span class="nav-number"></span> <span class="nav-text">=============读写===========</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务Id，和slave-的server-id不一样，一般取ip最后一节"><span class="nav-number"></span> <span class="nav-text">服务Id，和slave 的server-id不一样，一般取ip最后一节</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#做主从同步的数据库名"><span class="nav-number"></span> <span class="nav-text">做主从同步的数据库名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束"><span class="nav-number"></span> <span class="nav-text">=============结束===========</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关联从数据库，并给予全部权限"><span class="nav-number">0.1.</span> <span class="nav-text">关联从数据库，并给予全部权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取master状态信息"><span class="nav-number">0.2.</span> <span class="nav-text">获取master状态信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置slave数据库"><span class="nav-number">0.3.</span> <span class="nav-text">配置slave数据库</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务Id，和master-的server-id不一样"><span class="nav-number"></span> <span class="nav-text">服务Id，和master 的server-id不一样</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#测试主从"><span class="nav-number">0.1.</span> <span class="nav-text">测试主从</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#master与slave数据恢复"><span class="nav-number">0.2.</span> <span class="nav-text">master与slave数据恢复</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#应用切换到slave"><span class="nav-number">0.2.1.</span> <span class="nav-text">应用切换到slave</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL主从和读写分离"><span class="nav-number">1.</span> <span class="nav-text">MySQL主从和读写分离</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#开启log-bin"><span class="nav-number">1.1.</span> <span class="nav-text">开启log_bin</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开启log-bin-1"><span class="nav-number"></span> <span class="nav-text">开启log_bin</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#配置master-主数据库-my-ini"><span class="nav-number">0.1.</span> <span class="nav-text">配置master(主数据库)my.ini</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#读写"><span class="nav-number"></span> <span class="nav-text">=============读写===========</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务Id，和slave-的server-id不一样，一般取ip最后一节"><span class="nav-number"></span> <span class="nav-text">服务Id，和slave 的server-id不一样，一般取ip最后一节</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#做主从同步的数据库名"><span class="nav-number"></span> <span class="nav-text">做主从同步的数据库名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束"><span class="nav-number"></span> <span class="nav-text">=============结束===========</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关联从数据库，并给予全部权限"><span class="nav-number">0.1.</span> <span class="nav-text">关联从数据库，并给予全部权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取master状态信息"><span class="nav-number">0.2.</span> <span class="nav-text">获取master状态信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置slave数据库"><span class="nav-number">0.3.</span> <span class="nav-text">配置slave数据库</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务Id，和master-的server-id不一样"><span class="nav-number"></span> <span class="nav-text">服务Id，和master 的server-id不一样</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#测试主从"><span class="nav-number">0.1.</span> <span class="nav-text">测试主从</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#master与slave数据恢复"><span class="nav-number">0.2.</span> <span class="nav-text">master与slave数据恢复</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#应用切换到slave"><span class="nav-number">0.2.1.</span> <span class="nav-text">应用切换到slave</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
