@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://volc1605.github.io/2017/01/05/test/</loc>
+    <lastmod>2017-01-05T08:45:15.457Z</lastmod>
+    <data>
+        <display>
+        <title>test</title>
+        <pubTime>2017-01-05T08:45:15.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://volc1605.github.io/2017/01/05/win%E9%85%8D%E7%BD%AEMySQL/</loc>
     <lastmod>2017-01-05T08:25:59.191Z</lastmod>
     <data>
@@ -51,9 +66,9 @@
         <title>MyBatis</title>
         <pubTime>2016-10-18T13:41:21.000Z</pubTime>
         
-        <tag>mybatis</tag>
-         
         <tag>mysql</tag>
+         
+        <tag>mybatis</tag>
          
          
            
