@@ -98,7 +98,7 @@
 <meta property="og:image" content="https://volc1605.github.io/images/MySQL主从配置和读写分离/4.png">
 <meta property="og:image" content="https://volc1605.github.io/images/MySQL主从配置和读写分离/9.png">
 <meta property="og:image" content="https://volc1605.github.io/images/MySQL主从配置和读写分离/10.png">
-<meta property="og:updated_time" content="2017-01-06T08:25:30.200Z">
+<meta property="og:updated_time" content="2017-01-06T08:33:33.252Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL主从读写分离">
 <meta name="twitter:description" content="MySQL主从master(IP:192.168.1.15)主服务器mysqlslave(IP:192.168.1.200)从服务器mysql需要注意的地方1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。2.不同服务器都要含有需要同步的指定数据库。3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。
@@ -446,6 +446,7 @@
 <p>在主库查询<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select * from liu;</div><div class="line">+------+----------------+</div><div class="line">| id   | text           |</div><div class="line">+------+----------------+</div><div class="line">|  1   | this_is_master |</div><div class="line">|  3   | this_is_master |</div><div class="line">|  4   | this_is_master |</div><div class="line">+------+----------------+</div><div class="line">3 rows in set (0.00 sec)</div></pre></td></tr></table></figure></p>
 <p>在从库查询<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mysql&gt; select * from liu;</div><div class="line">+------+---------------+</div><div class="line">| id   |   text        |</div><div class="line">+------+---------------+</div><div class="line">|  2   | this_is_slave |</div><div class="line">+------+---------------+</div><div class="line">1 row in set (0.00 sec)</div></pre></td></tr></table></figure></p>
 <p>可见数据插入到了主库上，因为配置了主库可读写、从库为只读，且主从同步中从库的同步进程已被停用。</p>
+<p>配置参考：<a href="http://docs.hexnova.com/amoeba/single-dbserver.html#example.dbServer.abstractServer.port" target="_blank" rel="external">http://docs.hexnova.com/amoeba/single-dbserver.html#example.dbServer.abstractServer.port</a></p>
 
       
     </div>
