@@ -412,7 +412,7 @@
 
       
         
-          <h2 id="MySQL主从和读写分离"><a href="#MySQL主从和读写分离" class="headerlink" title="MySQL主从和读写分离"></a>MySQL主从和读写分离</h2><p>master(IP:192.168.1.15)主服务器mysql<br>slave(IP:192.168.1.200)从服务器mysql<br>需要注意的地方<br>1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。<br>2.不同服务器都要含有需要同步的指定数据库。<br>3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。</p>
+          <h2 id="MySQL主从"><a href="#MySQL主从" class="headerlink" title="MySQL主从"></a>MySQL主从</h2><p>master(IP:192.168.1.15)主服务器mysql<br>slave(IP:192.168.1.200)从服务器mysql<br>需要注意的地方<br>1.数据库主从和读写分离不同服务器上mysql版本尽量保持一致，以免造成不必要的麻烦。<br>2.不同服务器都要含有需要同步的指定数据库。<br>3.数据库中已存在的表在同步成功后从数据库中也不会同步，只能同步成功配置同步以后创建的表。</p>
 <h4 id="开启log-bin"><a href="#开启log-bin" class="headerlink" title="开启log_bin"></a>开启log_bin</h4><p>安装服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\mysql\mysql-5.5.47-win32\bin&gt;mysql -install</div></pre></td></tr></table></figure></p>
 <p>参考：<a href="https://volc1605.github.io/2017/01/05/win%E9%85%8D%E7%BD%AEMySQL/">win配置mysql</a><br>
           <div class="post-more-link text-center">
