@@ -322,6 +322,159 @@
             
               
                 
+                <a class="post-title-link" href="/2017/01/13/PHP请求/" itemprop="url">
+                  PHP请求
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-13T22:38:15+08:00" content="2017-01-13">
+              2017-01-13
+            </time>
+          </span>
+
+
+
+
+
+              <span>
+                  |
+                <span>更新于</span>
+                <time>
+                  2017-01-13
+                  22:38:15
+                </time>
+              </span>
+
+
+
+
+
+
+
+          
+            <span class="post-category" >
+              |
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                |
+                <a href="/2017/01/13/PHP请求/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/13/PHP请求/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+            
+               <span id="/2017/01/13/PHP请求/" class="leancloud_visitors" data-flag-title="PHP请求">
+                 |
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 <span class="post-meta-item-text">阅读量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                
+                  |
+                  <span class="post-meta-item-text">最近 </span>
+                  <span class="leancloud-updated-at"></span>
+                  </span>
+                
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="php外部请求"><a href="#php外部请求" class="headerlink" title="php外部请求"></a>php外部请求</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">UOPStorage</span><span class="params">($dataList)</span> </span>&#123;</div><div class="line">    <span class="comment">// 构造参数</span></div><div class="line">    $param = <span class="keyword">Array</span>();</div><div class="line">    <span class="comment">// receivePush</span></div><div class="line">    $receivePush = <span class="keyword">Array</span>();</div><div class="line">    $trace = <span class="keyword">Array</span>();</div><div class="line">    $parcelDat = <span class="keyword">Array</span>();</div><div class="line">    <span class="keyword">foreach</span> ($dataList <span class="keyword">as</span> $data) &#123;</div><div class="line">        $times = date(<span class="string">'Y-m-d H:i:s'</span>);</div><div class="line">        $parcelDat[<span class="string">'scanTime'</span>] = $times;</div><div class="line">        $parcelDat[<span class="string">'context'</span>] = $data[<span class="string">'f_station_name'</span>];</div><div class="line">        <span class="keyword">if</span> ($data[<span class="string">'f_type'</span>] == <span class="number">1</span>) &#123;</div><div class="line">            $reqType = <span class="keyword">array</span>(<span class="string">'f_storage_status'</span> =&gt; <span class="string">'0'</span>);</div><div class="line">            $parcelDat[<span class="string">'scanType'</span>] = <span class="string">"0"</span>;<span class="comment">// 请求类型 在途</span></div><div class="line">        &#125; <span class="keyword">elseif</span> ($data[<span class="string">'f_type'</span>] == <span class="number">2</span>) &#123;</div><div class="line">            $reqType = <span class="keyword">array</span>(<span class="string">'f_arrive_status'</span> =&gt; <span class="string">'0'</span>);</div><div class="line">            $parcelDat[<span class="string">'scanType'</span>] = <span class="string">"15"</span>;<span class="comment">// 请求类型 签收</span></div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            $reqType = <span class="keyword">array</span>(<span class="string">'f_rejection_status'</span> =&gt; <span class="string">'0'</span>);</div><div class="line">            $parcelDat[<span class="string">'scanType'</span>] = <span class="string">"0"</span>;<span class="comment">// 请求类型 在途</span></div><div class="line">        &#125;</div><div class="line">        $parcelDat[<span class="string">'siteName'</span>] = $data[<span class="string">'f_station_name'</span>];</div><div class="line">        $parcelDat[<span class="string">'mobile'</span>] = $data[<span class="string">'f_tel'</span>];</div><div class="line">        $trace[<span class="string">'trace'</span>] = $parcelDat;</div><div class="line">        $receivePush[<span class="string">'billCode'</span>] = $data[<span class="string">'f_mail_no'</span>];</div><div class="line">        $receivePush[<span class="string">'traces'</span>] = $trace;</div><div class="line">        $param[<span class="string">'receivePush'</span>] = $receivePush;</div><div class="line">        <span class="keyword">$this</span>-&gt;doPostUOP($data[<span class="string">'f_parcel_id'</span>], json_encode($param), $reqType);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 请求UOP</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">doPostUOP</span><span class="params">($parcelId, $param, $reqType)</span> </span>&#123;</div><div class="line">    var_dump(<span class="string">"请求参数"</span>);</div><div class="line">    var_dump($param);</div><div class="line">    var_dump(<span class="string">"请求类型"</span>);</div><div class="line">    var_dump($reqType);</div><div class="line">    $UOPeceiveUrl = <span class="string">"http://uop.uc56.com"</span>;</div><div class="line">    $secretKey = <span class="string">"640ceab0d3b38b96c13fd139379"</span>;</div><div class="line">    $partner = <span class="string">"804113"</span>;</div><div class="line">    $serviceName = <span class="string">"receive_track"</span>;</div><div class="line">    $dataType = <span class="string">"json"</span>;</div><div class="line">    <span class="comment">// 拼接加密字符串</span></div><div class="line">    $data = <span class="keyword">Array</span>();</div><div class="line">    $data[<span class="number">0</span>] = <span class="string">"dataType"</span> . <span class="string">"="</span> . $dataType;</div><div class="line">    $data[<span class="number">1</span>] = <span class="string">"param"</span> . <span class="string">"="</span> . $param;</div><div class="line">    $data[<span class="number">2</span>] = <span class="string">"partner"</span> . <span class="string">"="</span> . $partner;</div><div class="line">    $data[<span class="number">3</span>] = <span class="string">"serviceName"</span> . <span class="string">"="</span> . $serviceName;</div><div class="line">    $comma_separated = implode(<span class="string">"&amp;"</span>, $data);</div><div class="line">    var_dump(<span class="string">"加密字符串 ："</span>);</div><div class="line">    var_dump($comma_separated . $secretKey);</div><div class="line">    <span class="comment">// 加密最后结果</span></div><div class="line">    $dataSign = md5($comma_separated . $secretKey);</div><div class="line">    var_dump(<span class="string">"加密结果 ："</span> .$dataSign);</div><div class="line">    $Request_Data[<span class="string">'dataSign'</span>] = $dataSign;</div><div class="line">    $Request_Data[<span class="string">'partner'</span>] = $partner;</div><div class="line">    $Request_Data[<span class="string">'serviceName'</span>] = $serviceName;</div><div class="line">    $Request_Data[<span class="string">'dataType'</span>] = $dataType;</div><div class="line">    $Request_Data[<span class="string">'param'</span>] = $param;</div><div class="line">    <span class="comment">// 请求UOP平台</span></div><div class="line">    $postdata = http_build_query($Request_Data);</div><div class="line">    $options = <span class="keyword">array</span>(</div><div class="line">        <span class="string">'http'</span> =&gt; <span class="keyword">array</span>(</div><div class="line">            <span class="string">'method'</span> =&gt; <span class="string">'POST'</span>,</div><div class="line">            <span class="string">'header'</span> =&gt; <span class="string">'Content-type:application/x-www-form-urlencoded'</span>,</div><div class="line">            <span class="string">'content'</span> =&gt; $postdata,</div><div class="line">            <span class="string">'timeout'</span> =&gt; <span class="number">5</span> * <span class="number">60</span> <span class="comment">// 超时时间（单位:s）</span></div><div class="line">        )</div><div class="line">    );</div><div class="line">    $context = stream_context_create($options);</div><div class="line">    var_dump(<span class="string">"请求参数 :"</span>);</div><div class="line">    var_dump($context);</div><div class="line">    $result = file_get_contents($UOPeceiveUrl, <span class="keyword">true</span>, $context);</div><div class="line">    $xml = simplexml_load_string(<span class="string">'&lt;?xml version="1.0" encoding="gbk"?&gt;'</span> . $result);</div><div class="line">    var_dump(<span class="string">"返回状态"</span>.(string)$xml-&gt;returnCode);</div><div class="line">    $re = (string)$xml-&gt;returnCode;</div><div class="line">    <span class="comment">// 请求成功更新包裹状态</span></div><div class="line">    <span class="keyword">if</span> ($re == <span class="string">"SUCCESSFUL"</span>) &#123;</div><div class="line">        <span class="comment">// 更新包裹状态</span></div><div class="line">        <span class="keyword">foreach</span> ($reqType <span class="keyword">as</span> $key =&gt; $val) &#123;</div><div class="line">            $reqType[$key] = <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">foreach</span> ($reqType <span class="keyword">as</span> $key =&gt; $val) &#123;</div><div class="line">            $reqType[$key] = <span class="number">2</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    $parcelInfo = <span class="keyword">new</span> \Home\Model\StationAbutmentLogModel();</div><div class="line">    $parcelInfo-&gt;updateExpressData($parcelId, $reqType);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/01/05/MySQL主从读写分离/" itemprop="url">
                   MySQL主从读写分离
                 </a>
@@ -1699,168 +1852,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/26/Maven/" itemprop="url">
-                  Maven
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-26T11:38:25+08:00" content="2016-11-26">
-              2016-11-26
-            </time>
-          </span>
-
-
-
-
-
-              <span>
-                  |
-                <span>更新于</span>
-                <time>
-                  2016-11-26
-                  11:38:25
-                </time>
-              </span>
-
-
-
-
-
-
-
-          
-            <span class="post-category" >
-              |
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Maven/" itemprop="url" rel="index">
-                    <span itemprop="name">Maven</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                |
-                <a href="/2016/11/26/Maven/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/26/Maven/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-            
-               <span id="/2016/11/26/Maven/" class="leancloud_visitors" data-flag-title="Maven">
-                 |
-                 <span class="post-meta-item-icon">
-                   <i class="fa fa-eye"></i>
-                 </span>
-                 <span class="post-meta-item-text">阅读量 </span>
-                 <span class="leancloud-visitors-count"></span>
-                
-                  |
-                  <span class="post-meta-item-text">最近 </span>
-                  <span class="leancloud-updated-at"></span>
-                  </span>
-                
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Maven项目不显示-Maven-Dependencies"><a href="#Maven项目不显示-Maven-Dependencies" class="headerlink" title="Maven项目不显示 Maven Dependencies"></a>Maven项目不显示 Maven Dependencies</h1><p>从别目录结构正确的项目中复制.classpath文件，覆盖不显示Maven Dependencies的项目目录中的.classpath</p>
-<h1 id="去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构"><a href="#去掉dynamic-web-module勾选后，每次更新maven项目都会出现以下结构" class="headerlink" title="去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构"></a>去掉dynamic web module勾选后，每次更新maven项目都会出现以下结构</h1><p><img src="https://volc1605.github.io/images/Maven/mavenConstruction2.png" alt="maven"></p>
-<p>解决方法：<br>项目properties中maven-&gt;javaee integration去掉勾选<br>去除maven项目中javascript resources引用jar包<br>properties中project facets只选择java，去掉javascript<br>去除maven项目结构目录中含有web app 2.3<br>properties中project facets只选择java 去掉dynamic web module</p>
-<h1 id="解决maven项目名称出现个红叉报错"><a href="#解决maven项目名称出现个红叉报错" class="headerlink" title="解决maven项目名称出现个红叉报错"></a>解决maven项目名称出现个红叉报错</h1><p>properties中project facets的java版本号选择不当</p>
-<h1 id="目录下的创建普通文件夹"><a href="#目录下的创建普通文件夹" class="headerlink" title="目录下的创建普通文件夹"></a>目录下的创建普通文件夹</h1><p>properties中的javabuild path resource-&gt;excluded **</p>
-<h1 id="pom文件war报错"><a href="#pom文件war报错" class="headerlink" title="pom文件war报错"></a>pom文件war报错</h1><p>1.加上webapp中的web.xml文件<br>2.properties中maven deployment assembly(用来配置添加根目录文件夹)不显示<br>    需要在project facets中修改</p>
-<h1 id="项目启动报错"><a href="#项目启动报错" class="headerlink" title="项目启动报错"></a>项目启动报错</h1><p>原因jar包冲突<br>D:\java-tools\apache-maven-3.2.3\repo\org\apache\tomcat\servlet-api\6.0.28\servlet-api-6.0.28.jar</p>
-<h1 id="xsd文件找不到"><a href="#xsd文件找不到" class="headerlink" title="xsd文件找不到"></a>xsd文件找不到</h1><p>报错提示，要引入jar包。或者手动添加xsd文件或者手动指定(参考：<a href="http://www.ibm.com/developerworks/cn/xml/x-1008dubb/" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/xml/x-1008dubb/</a>)</p>
-<h2 id="解决pom文件报错和multiple-problems-have-occurred错误"><a href="#解决pom文件报错和multiple-problems-have-occurred错误" class="headerlink" title="解决pom文件报错和multiple problems have occurred错误"></a>解决pom文件报错和multiple problems have occurred错误</h2><p>错误实质上都是jar依赖的问题，只需两步就可解决<br>进入出问题的jar包所在的本地仓库目录<br>1、    删除所有以.lastUpdate结尾的文件<br>a)    1、切换到maven的本地仓库<br>b)    2、在当前目录打开cmd命令行<br>c)    3、执行命令：for /r %i in (*.lastUpdated) do del %i<br>2、    在项目上执行 Maven Update （Alt + F5）</p>
-<h2 id="如何避免jar下载不全导致项目报错"><a href="#如何避免jar下载不全导致项目报错" class="headerlink" title="如何避免jar下载不全导致项目报错"></a>如何避免jar下载不全导致项目报错</h2><p>使用相对稳定的私服下载地址：开源中国(<a href="http://maven.oschina.net/help.html" target="_blank" rel="external">http://maven.oschina.net/help.html</a>)<br>在maven指向的setting.xml文件中进行改变私服URL配置。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1906,7 +1897,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1914,7 +1905,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1923,7 +1914,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
