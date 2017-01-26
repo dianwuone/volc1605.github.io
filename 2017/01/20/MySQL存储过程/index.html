@@ -77,16 +77,16 @@
 
 
 
-<meta name="description" content="参考：testhttp://blog.csdn.net/evankaka/article/details/47276339">
+<meta name="description" content="参考：http://blog.csdn.net/evankaka/article/details/47276339">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL存储过程">
 <meta property="og:url" content="https://volc1605.github.io/2017/01/20/MySQL存储过程/index.html">
 <meta property="og:site_name" content="VOLC">
-<meta property="og:description" content="参考：testhttp://blog.csdn.net/evankaka/article/details/47276339">
-<meta property="og:updated_time" content="2017-01-26T15:25:19.587Z">
+<meta property="og:description" content="参考：http://blog.csdn.net/evankaka/article/details/47276339">
+<meta property="og:updated_time" content="2017-01-26T15:26:54.244Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL存储过程">
-<meta name="twitter:description" content="参考：testhttp://blog.csdn.net/evankaka/article/details/47276339">
+<meta name="twitter:description" content="参考：http://blog.csdn.net/evankaka/article/details/47276339">
 
 
 
@@ -395,7 +395,7 @@
       
 
       
-        <p>参考：<br>test<br><a href="http://blog.csdn.net/evankaka/article/details/47276339" target="_blank" rel="external">http://blog.csdn.net/evankaka/article/details/47276339</a><br><a id="more"></a></p>
+        <p>参考：<br><a href="http://blog.csdn.net/evankaka/article/details/47276339" target="_blank" rel="external">http://blog.csdn.net/evankaka/article/details/47276339</a><br><a id="more"></a></p>
 <h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><h4 id="创建表："><a href="#创建表：" class="headerlink" title="创建表："></a>创建表：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">DROP TABLE IF EXISTS `t_user`;</div><div class="line">CREATE TABLE `t_user` (</div><div class="line">  `USER_ID` int(11) NOT NULL AUTO_INCREMENT,</div><div class="line">  `USER_NAME` char(30) NOT NULL,</div><div class="line">  `USER_PASSWORD` char(10) NOT NULL,</div><div class="line">  `USER_EMAIL` char(30) NOT NULL,</div><div class="line">  PRIMARY KEY (`USER_ID`),</div><div class="line">  KEY `IDX_NAME` (`USER_NAME`)</div><div class="line">) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;</div><div class="line"></div><div class="line">-- ----------------------------</div><div class="line">-- Records of t_user</div><div class="line">-- ----------------------------</div><div class="line">INSERT INTO `t_user` VALUES (&apos;1&apos;, &apos;王小二&apos;, &apos;123&apos;, &apos;123@qq.com&apos;);</div><div class="line">INSERT INTO `t_user` VALUES (&apos;2&apos;, &apos;葫芦娃&apos;, &apos;123&apos;, &apos;123@qq.com&apos;);</div><div class="line">INSERT INTO `t_user` VALUES (&apos;3&apos;, &apos;红孩儿&apos;, &apos;123&apos;, &apos;123@qq.com&apos;);</div><div class="line">INSERT INTO `t_user` VALUES (&apos;4&apos;, &apos;哪儿托&apos;, &apos;123&apos;, &apos;123@qq.com&apos;);</div><div class="line">INSERT INTO `t_user` VALUES (&apos;5&apos;, &apos;丹童&apos;, &apos;123&apos;, &apos;123@qq.com&apos;);</div><div class="line">INSERT INTO `t_user` VALUES (&apos;6&apos;, &apos;清风&apos;, &apos;123&apos;, &apos;123@qq.com&apos;);</div><div class="line">INSERT INTO `t_user` VALUES (&apos;7&apos;, &apos;明月&apos;, &apos;123&apos;, &apos;123@qq.com&apos;);</div><div class="line">INSERT INTO `t_user` VALUES (&apos;8&apos;, &apos;药童&apos;, &apos;123&apos;, &apos;123@qq.com&apos;);</div><div class="line">INSERT INTO `t_user` VALUES (&apos;9&apos;, &apos;郓哥&apos;, &apos;123&apos;, &apos;123@qq.com&apos;);</div><div class="line">INSERT INTO `t_user` VALUES (&apos;10&apos;, &apos;高峰&apos;, &apos;123&apos;, &apos;123@qq.com&apos;);</div></pre></td></tr></table></figure>
 <h4 id="带IN的存储过程"><a href="#带IN的存储过程" class="headerlink" title="带IN的存储过程"></a>带IN的存储过程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CREATE  PROCEDURE  SP_SEARCH(IN p_name CHAR(20))  </div><div class="line">BEGIN  </div><div class="line">IF p_name is null or p_name=&apos;&apos; THEN  </div><div class="line">SELECT * FROM t_user;  </div><div class="line">ELSE  </div><div class="line">SELECT * FROM t_user WHERE USER_NAME LIKE p_name;  </div><div class="line">END IF;  </div><div class="line">END</div></pre></td></tr></table></figure>
 <p>调用存储过程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CALL SP_SEARCH(&apos;王小二&apos;);</div></pre></td></tr></table></figure></p>
