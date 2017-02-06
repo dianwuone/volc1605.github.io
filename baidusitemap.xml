@@ -4,6 +4,90 @@
 
     
   <url>
+    <loc>https://volc1605.github.io/2017/01/13/PHP%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2017-02-06T01:39:08.149Z</lastmod>
+    <data>
+        <display>
+        <title>PHP外部请求</title>
+        <pubTime>2017-01-13T14:38:15.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="https://volc1605.github.io/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://volc1605.github.io/2017/02/06/%E8%A7%86%E5%9B%BE/</loc>
+    <lastmod>2017-02-06T01:33:10.656Z</lastmod>
+    <data>
+        <display>
+        <title>视图</title>
+        <pubTime>2017-02-06T01:30:46.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+        <tag>视图</tag>
+         
+         
+           
+             
+              <breadCrumb title="MYSQL" url="https://volc1605.github.io/categories/MYSQL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://volc1605.github.io/2017/02/06/%E8%A7%A6%E5%8F%91%E5%99%A8/</loc>
+    <lastmod>2017-02-06T01:33:00.045Z</lastmod>
+    <data>
+        <display>
+        <title>触发器</title>
+        <pubTime>2017-02-06T01:27:22.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+        <tag>触发器</tag>
+         
+         
+           
+             
+              <breadCrumb title="MYSQL" url="https://volc1605.github.io/categories/MYSQL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://volc1605.github.io/2017/02/06/Jdbc%E5%A4%8D%E4%B9%A0/</loc>
+    <lastmod>2017-02-06T01:26:00.108Z</lastmod>
+    <data>
+        <display>
+        <title>JDBC</title>
+        <pubTime>2017-02-06T01:18:52.000Z</pubTime>
+        
+        <tag>jdbc</tag>
+         
+         
+           
+             
+              <breadCrumb title="JDBC" url="https://volc1605.github.io/categories/JDBC/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://volc1605.github.io/2017/01/20/MySQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/</loc>
     <lastmod>2017-01-27T07:09:50.770Z</lastmod>
     <data>
@@ -85,26 +169,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>https://volc1605.github.io/2017/01/13/PHP%E8%AF%B7%E6%B1%82/</loc>
-    <lastmod>2017-01-13T14:44:39.219Z</lastmod>
-    <data>
-        <display>
-        <title>PHP请求</title>
-        <pubTime>2017-01-13T14:38:15.000Z</pubTime>
-        
-        <tag>php</tag>
-         
-         
-           
-             
-              <breadCrumb title="PHP" url="https://volc1605.github.io/categories/PHP/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://volc1605.github.io/2016/12/24/java%E8%A7%A3%E6%9E%90Excel%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
