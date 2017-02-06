@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://volc1605.github.io/2017/01/20/MySQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/</loc>
-    <lastmod>2017-01-26T15:26:54.244Z</lastmod>
+    <lastmod>2017-01-27T07:09:50.770Z</lastmod>
     <data>
         <display>
         <title>MySQL存储过程</title>
@@ -288,9 +288,9 @@
         <title>MyBatis</title>
         <pubTime>2016-10-18T13:41:21.000Z</pubTime>
         
-        <tag>mysql</tag>
-         
         <tag>mybatis</tag>
+         
+        <tag>mysql</tag>
          
          
            
