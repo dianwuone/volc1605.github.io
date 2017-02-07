@@ -863,13 +863,35 @@
 
 </body>
 </html>
-et('time');   // 获取阅读量
-            var updatedT = item.updatedAt; // 新增代码 获取最近浏览时间 需要注意的是updateT是对象并不是字符串
-            var element = document.getElementById(url);
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-            // 新增代码 转换日期格式
-            if(updatedT != null && updatedT != '') {
-              var a = [updatedT.getFullYear(), updatedT.getMonth() + 1, updatedT.getDate(), updatedT.getHours(), updatedT.getMinutes(), updatedT.getSeconds()];
+tion(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
+tSeconds()];
               for(var j = 0,len = a.length; j < len; j++) {
                   if(a[j] < 10) {
                       a[j] = '0' + a[j];
