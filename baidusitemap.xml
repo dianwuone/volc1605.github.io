@@ -4,6 +4,56 @@
 
     
   <url>
+    <loc>https://volc1605.github.io/2016/12/12/linux%E5%AE%89%E8%A3%85JDK/</loc>
+    <lastmod>2017-02-14T13:48:43.205Z</lastmod>
+    <data>
+        <display>
+        <title>linux安装JDK</title>
+        <pubTime>2016-12-12T03:46:46.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>tomcat</tag>
+         
+        <tag>jdk</tag>
+         
+         
+           
+             
+              <breadCrumb title="JDK" url="https://volc1605.github.io/categories/JDK/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://volc1605.github.io/2016/12/12/DUBBO+ZOOKEEPER/</loc>
+    <lastmod>2017-02-14T13:48:13.310Z</lastmod>
+    <data>
+        <display>
+        <title>Dubbo+zookeeper</title>
+        <pubTime>2016-12-12T03:19:29.000Z</pubTime>
+        
+        <tag>dubbo</tag>
+         
+        <tag>zookeeper</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>tomcat</tag>
+         
+         
+           
+             
+              <breadCrumb title="DUBBO" url="https://volc1605.github.io/categories/DUBBO/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://volc1605.github.io/2017/02/06/%E8%A7%A6%E5%8F%91%E5%99%A8/</loc>
     <lastmod>2017-02-06T14:03:38.533Z</lastmod>
     <data>
@@ -272,52 +322,6 @@
            
              
               <breadCrumb title="MySQL" url="https://volc1605.github.io/categories/MySQL/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://volc1605.github.io/2016/12/12/linux%E5%AE%89%E8%A3%85JDK/</loc>
-    <lastmod>2017-01-06T15:11:13.529Z</lastmod>
-    <data>
-        <display>
-        <title>linux安装JDK</title>
-        <pubTime>2016-12-12T03:46:46.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>jdk</tag>
-         
-         
-           
-             
-              <breadCrumb title="JDK" url="https://volc1605.github.io/categories/JDK/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://volc1605.github.io/2016/12/12/DUBBO+ZOOKEEPER/</loc>
-    <lastmod>2017-01-06T15:10:58.034Z</lastmod>
-    <data>
-        <display>
-        <title>Dubbo+zookeeper</title>
-        <pubTime>2016-12-12T03:19:29.000Z</pubTime>
-        
-        <tag>dubbo</tag>
-         
-        <tag>zookeeper</tag>
-         
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="DUBBO" url="https://volc1605.github.io/categories/DUBBO/"/>
           
         </display>
     </data>
