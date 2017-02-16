@@ -83,7 +83,7 @@
 <meta property="og:url" content="https://volc1605.github.io/2017/01/20/MySQL存储过程/index.html">
 <meta property="og:site_name" content="VOLC">
 <meta property="og:description" content="参考：http://blog.csdn.net/evankaka/article/details/47276339">
-<meta property="og:updated_time" content="2017-01-27T07:09:50.770Z">
+<meta property="og:updated_time" content="2017-02-16T12:00:33.839Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL存储过程">
 <meta name="twitter:description" content="参考：http://blog.csdn.net/evankaka/article/details/47276339">
@@ -428,7 +428,7 @@ End if
 <p>Repeat语句首先执行statement_list中的语句，然后判断条件search_condition是否为真，倘若为真，则结束循环，若不为真，继续循环。<br>Repeat先执行后判断，while先判断后执行。<br>使用范例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">CREATE PROCEDURE sp_cal2(IN p_num INT,OUT p_result INT)  </div><div class="line">BEGIN  </div><div class="line">  SET p_result=1;  </div><div class="line">  REPEAT  </div><div class="line">    SET p_result = p_num * p_result;  </div><div class="line">    SET p_num = p_num-1;  </div><div class="line">    UNTIL p_num&lt;=1  </div><div class="line">  END REPEAT;  </div><div class="line">END  </div><div class="line">//调用并输出结果  </div><div class="line">CALL sp_cal2(5,@result);  </div><div class="line">SELECT @result;</div></pre></td></tr></table></figure></p>
 <h4 id="调用存储过程"><a href="#调用存储过程" class="headerlink" title="调用存储过程"></a>调用存储过程</h4><p>Call sp_name([parameter[,…]]);<br>Sp_name被调用存储过程的名称<br>Parameter:指定调用存储过程所要使用的参数。</p>
 <h4 id="修改存储过程"><a href="#修改存储过程" class="headerlink" title="修改存储过程"></a>修改存储过程</h4><p>Alter procedure proc_name[characteristic…]<br>只能修改存储过程的特征，如果要修改存储过程的内容，可以先删除该存储过程，然后再重新创建</p>
-<h3 id="删除存储过程"><a href="#删除存储过程" class="headerlink" title="删除存储过程"></a>删除存储过程</h3><p>Drop procedure [if exists] sp_name; </p>
+<h3 id="删除存储过程"><a href="#删除存储过程" class="headerlink" title="删除存储过程"></a>删除存储过程</h3><p>Drop procedure if exists sp_name; </p>
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>MySQL中，创建存储函数的基本形式如下：</p>
 <p>CREATE FUNCTION sp_name([func_parameter[,…]])<br>RETURNS type<br>[characteristic …] routine_body<br>Return  </p>
 <p>子句用于声明存储函数返回值的数据类型。存储过程是用户定义的一系列sql语句的集合，涉及特定表或其它对象的任务，用户可以调用存储过程，而函数通常是数据库已定义的方法，它接收参数并返回某种类型的值并且不涉及特定用户表。<br>调用存储函数<br>Select sp_name([func_parameter…])<br>Select fn_search(2);<br>删除存储函数drop<br>修改存储函数alter 修改存储函数的某些相关特征。</p>
