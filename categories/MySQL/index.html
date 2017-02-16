@@ -80,7 +80,7 @@
 <meta name="description" content="volc">
 <meta property="og:type" content="website">
 <meta property="og:title" content="VOLC">
-<meta property="og:url" content="https://volc1605.github.io/categories/MySQL/index.html">
+<meta property="og:url" content="https://volc1605.github.io/categories/mysql/index.html">
 <meta property="og:site_name" content="VOLC">
 <meta property="og:description" content="volc">
 <meta name="twitter:card" content="summary">
@@ -106,9 +106,9 @@
 
 
 
-  <link rel="canonical" href="https://volc1605.github.io/categories/MySQL/"/>
+  <link rel="canonical" href="https://volc1605.github.io/categories/mysql/"/>
 
-  <title> 分类: MySQL | VOLC </title>
+  <title> 分类: mysql | VOLC </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -282,7 +282,7 @@
   <section id="posts" class="posts-collapse">
     <div class="collection-title">
       <h2 >
-        MySQL
+        mysql
         <small>分类</small>
       </h2>
     </div>
@@ -295,37 +295,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2016/12/12/linux操作mysql/" itemprop="url">
+            <a class="post-title-link" href="/2016/12/22/关于mysql关键字between-and，-，in，or性能及优化/" itemprop="url">
               
-                <span itemprop="name">linux操作mysql</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-12-12T10:48:23+08:00"
-              content="2016-12-12" >
-          12-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/11/19/MySQL/" itemprop="url">
-              
-                <span itemprop="name">MySQL</span>
+                <span itemprop="name">关于mysql关键字between and，>=<，in，or性能及优化</span>
               
             </a>
         
@@ -333,9 +305,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-19T10:50:02+08:00"
-              content="2016-11-19" >
-          11-19
+              datetime="2016-12-22T13:37:32+08:00"
+              content="2016-12-22" >
+          12-22
         </time>
       </div>
 
@@ -386,7 +358,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-count">27</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -895,7 +867,44 @@
 
 </body>
 </html>
-tSeconds()];
+tion(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
+or(var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');   // 获取阅读量
+            var updatedT = item.updatedAt; // 新增代码 获取最近浏览时间 需要注意的是updateT是对象并不是字符串
+            var element = document.getElementById(url);
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+            // 新增代码 转换日期格式
+            if(updatedT != null && updatedT != '') {
+              var a = [updatedT.getFullYear(), updatedT.getMonth() + 1, updatedT.getDate(), updatedT.getHours(), updatedT.getMinutes(), updatedT.getSeconds()];
               for(var j = 0,len = a.length; j < len; j++) {
                   if(a[j] < 10) {
                       a[j] = '0' + a[j];

@@ -61,7 +61,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="mysql," />
 
 
 
@@ -77,15 +77,16 @@
 
 
 
-<meta name="description" content="volc">
-<meta property="og:type" content="website">
-<meta property="og:title" content="VOLC">
-<meta property="og:url" content="https://volc1605.github.io/tags/nginx/index.html">
+<meta name="description" content="1.查询含有两个及以上的圆通包裹的所有站点信息，并获取最近的两个包裹运单号运单的站点信息">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql分组按条件获取数据">
+<meta property="og:url" content="https://volc1605.github.io/2017/02/16/mysql分组按条件获取数据/index.html">
 <meta property="og:site_name" content="VOLC">
-<meta property="og:description" content="volc">
+<meta property="og:description" content="1.查询含有两个及以上的圆通包裹的所有站点信息，并获取最近的两个包裹运单号运单的站点信息">
+<meta property="og:updated_time" content="2017-02-16T12:14:55.076Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VOLC">
-<meta name="twitter:description" content="volc">
+<meta name="twitter:title" content="mysql分组按条件获取数据">
+<meta name="twitter:description" content="1.查询含有两个及以上的圆通包裹的所有站点信息，并获取最近的两个包裹运单号运单的站点信息">
 
 
 
@@ -106,9 +107,9 @@
 
 
 
-  <link rel="canonical" href="https://volc1605.github.io/tags/nginx/"/>
+  <link rel="canonical" href="https://volc1605.github.io/2017/02/16/mysql分组按条件获取数据/"/>
 
-  <title> 标签: nginx | VOLC </title>
+  <title> mysql分组按条件获取数据 | VOLC </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -148,7 +149,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -279,53 +280,237 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        nginx
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                mysql分组按条件获取数据
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-16T20:11:34+08:00" content="2017-02-16">
+              2017-02-16
+            </time>
+          </span>
+
+
+
+
+
+              <span>
+                  |
+                <span>更新于</span>
+                <time>
+                  2017-02-16
+                  20:11:34
+                </time>
+              </span>
+
+
+
+
+
+
+
+          
+            <span class="post-category" >
+              |
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/MYSQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MYSQL</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                |
+                <a href="/2017/02/16/mysql分组按条件获取数据/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/16/mysql分组按条件获取数据/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+            
+               <span id="/2017/02/16/mysql分组按条件获取数据/" class="leancloud_visitors" data-flag-title="mysql分组按条件获取数据">
+                 |
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 <span class="post-meta-item-text">阅读量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>1.查询含有两个及以上的圆通包裹的所有站点信息，并获取最近的两个包裹运单号运单的站点信息</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">SELECT ttt.f_station_id,</div><div class="line">       ttt.f_station_name,</div><div class="line">       group_concat(ttt.f_mail_no) 运单</div><div class="line">FROM</div><div class="line">  (SELECT tt.f_station_id,</div><div class="line">          tt.f_mail_no,</div><div class="line">          u.f_station_name</div><div class="line">   FROM</div><div class="line">     (SELECT a.f_station_id,</div><div class="line">             a.f_mail_no,</div><div class="line">             a.f_arrive_time</div><div class="line">      FROM</div><div class="line">        (SELECT i2.f_parcel_id,</div><div class="line">                i2.f_station_id,</div><div class="line">                i2.f_arrive_time,</div><div class="line">                i2.f_mail_no</div><div class="line">         FROM tp_parcel_info_201608 i2</div><div class="line">         WHERE i2.f_company_id = &apos;108&apos; ) a</div><div class="line">      WHERE 2 &gt;=</div><div class="line">          (SELECT count(1)</div><div class="line">           FROM</div><div class="line">             (SELECT i2.f_parcel_id,</div><div class="line">                     i2.f_station_id,</div><div class="line">                     i2.f_arrive_time,</div><div class="line">                     i2.f_mail_no</div><div class="line">              FROM tp_parcel_info_201608 i2</div><div class="line">              WHERE i2.f_company_id = &apos;108&apos; ) b</div><div class="line">           WHERE a.f_station_id = b.f_station_id</div><div class="line">             AND a.f_arrive_time &lt;= b.f_arrive_time )</div><div class="line">      ORDER BY a.f_station_id,</div><div class="line">               a.f_arrive_time DESC) tt</div><div class="line">   LEFT JOIN tp_user u ON u.f_user_id = tt.f_station_id</div><div class="line">   WHERE tt.f_station_id IN</div><div class="line">       (SELECT t.f_station_id</div><div class="line">        FROM</div><div class="line">          (SELECT count(1) c,</div><div class="line">                  pi.f_station_id</div><div class="line">           FROM tp_parcel_info_201608 pi</div><div class="line">           WHERE pi.f_company_id = &apos;108&apos;</div><div class="line">           GROUP BY pi.f_station_id) t</div><div class="line">        WHERE t.c &gt; 2 ) ) ttt</div><div class="line">GROUP BY ttt.f_station_id</div></pre></td></tr></table></figure>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/12/12/Nginx/" itemprop="url">
-              
-                <span itemprop="name">Nginx</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>如果文章对您有用请随意打赏，谢谢支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/w.png" alt="VOLC WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/z.jpg" alt="VOLC Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-12-12T11:08:48+08:00"
-              content="2016-12-12" >
-          12-12
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mysql/" rel="tag">#mysql</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/06/视图/" rel="next" title="视图">
+                <i class="fa fa-chevron-left"></i> 视图
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2017/02/16/mysql分组按条件获取数据/"
+     data-title="mysql分组按条件获取数据"
+     data-content=""
+     data-url="https://volc1605.github.io/2017/02/16/mysql分组按条件获取数据/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
 
 
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/16/mysql分组按条件获取数据/"
+           data-title="mysql分组按条件获取数据" data-url="https://volc1605.github.io/2017/02/16/mysql分组按条件获取数据/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -345,8 +530,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/0.png"
@@ -452,6 +646,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -566,6 +771,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
