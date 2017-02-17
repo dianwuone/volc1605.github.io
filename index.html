@@ -303,6 +303,162 @@
             
               
                 
+                <a class="post-title-link" href="/2017/02/17/触发器调用存储过程/" itemprop="url">
+                  触发器调用存储过程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-17T17:31:34+08:00" content="2017-02-17">
+              2017-02-17
+            </time>
+          </span>
+
+
+
+
+
+              <span>
+                  |
+                <span>更新于</span>
+                <time>
+                  2017-02-17
+                  17:31:34
+                </time>
+              </span>
+
+
+
+
+
+
+
+          
+            <span class="post-category" >
+              |
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/MYSQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MYSQL</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                |
+                <a href="/2017/02/17/触发器调用存储过程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/17/触发器调用存储过程/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+            
+               <span id="/2017/02/17/触发器调用存储过程/" class="leancloud_visitors" data-flag-title="触发器调用存储过程">
+                 |
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 <span class="post-meta-item-text">阅读量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                
+                  |
+                  <span class="post-meta-item-text">最近 </span>
+                  <span class="leancloud-updated-at"></span>
+                  </span>
+                
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1.存储过程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">DROP PROCEDURE IF EXISTS updateParcelStatu_1;</div><div class="line">CREATE PROCEDURE updateParcelStatu_1() </div><div class="line">BEGIN </div><div class="line">DECLARE sql_1 VARCHAR(1000);</div><div class="line">DECLARE d char(6);</div><div class="line"># 构建表名 获取前两个日期 格式201701</div><div class="line">select DATE_FORMAT(DATE_SUB(CURDATE(),INTERVAL 2 MONTH),&apos;%Y%m&apos;) into d;</div><div class="line"># 两个以前包裹状态为已到站更新为已提货</div><div class="line">SET sql_1:=CONCAT(&quot;update tp_parcel_info_&quot;,d,&quot; pi SET pi.f_parcel_status = &apos;1&apos; where pi.f_parcel_status = &apos;0&apos; and pi.f_arrive_time &lt; DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 2 MONTH),&apos;%Y%m%d%H%i%s&apos;);&quot;); </div><div class="line">#执行sql_1SQL语句;</div><div class="line">SET @sqlStr:=sql_1;</div><div class="line">PREPARE stmt FROM @sqlStr;</div><div class="line">EXECUTE stmt;</div><div class="line">END</div></pre></td></tr></table></figure></p>
+<p>2.创建事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">begin</div><div class="line">	call updateParcelStatu_1();</div><div class="line">end</div></pre></td></tr></table></figure>
+<p><img src="https://volc1605.github.io/images/触发器调用存储过程/trigger.png" alt="trigger"><br><img src="https://volc1605.github.io/images/触发器调用存储过程/set.png" alt="set"> </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/02/16/mysql分组按条件获取数据/" itemprop="url">
                   mysql分组按条件获取数据
                 </a>
@@ -1681,162 +1837,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/05/win配置MySQL/" itemprop="url">
-                  win配置MySQL
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-05T12:07:09+08:00" content="2017-01-05">
-              2017-01-05
-            </time>
-          </span>
-
-
-
-
-
-              <span>
-                  |
-                <span>更新于</span>
-                <time>
-                  2017-01-05
-                  15:07:09
-                </time>
-              </span>
-
-
-
-
-
-
-
-          
-            <span class="post-category" >
-              |
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/MYSQL/" itemprop="url" rel="index">
-                    <span itemprop="name">MYSQL</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                |
-                <a href="/2017/01/05/win配置MySQL/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/05/win配置MySQL/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-            
-               <span id="/2017/01/05/win配置MySQL/" class="leancloud_visitors" data-flag-title="win配置MySQL">
-                 |
-                 <span class="post-meta-item-icon">
-                   <i class="fa fa-eye"></i>
-                 </span>
-                 <span class="post-meta-item-text">阅读量 </span>
-                 <span class="leancloud-visitors-count"></span>
-                
-                  |
-                  <span class="post-meta-item-text">最近 </span>
-                  <span class="leancloud-updated-at"></span>
-                  </span>
-                
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="类型长度"><a href="#类型长度" class="headerlink" title="类型长度"></a>类型长度</h3><p>下载：<a href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a></p>
-<p>int和bigint超限会改变值<br>char和varchar超限会截取值<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/01/05/win配置MySQL/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1882,7 +1882,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
