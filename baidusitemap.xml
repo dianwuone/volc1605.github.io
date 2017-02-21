@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://volc1605.github.io/2017/02/21/MyBatis%E6%89%B9%E9%87%8F/</loc>
+    <lastmod>2017-02-21T02:35:30.073Z</lastmod>
+    <data>
+        <display>
+        <title>MyBatis批量</title>
+        <pubTime>2017-02-21T02:35:04.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>mybatis</tag>
+         
+         
+           
+             
+              <breadCrumb title="MyBatis" url="https://volc1605.github.io/categories/MyBatis/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://volc1605.github.io/2017/02/21/MyBatis%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2017-02-21T02:32:13.677Z</lastmod>
     <data>
@@ -367,9 +389,9 @@
         <title>JDBC</title>
         <pubTime>2017-02-06T01:18:52.000Z</pubTime>
         
-        <tag>jdbc</tag>
-         
         <tag>java</tag>
+         
+        <tag>jdbc</tag>
          
          
            

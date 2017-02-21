@@ -61,7 +61,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java,mybatis," />
 
 
 
@@ -77,15 +77,16 @@
 
 
 
-<meta name="description" content="volc">
-<meta property="og:type" content="website">
-<meta property="og:title" content="VOLC">
-<meta property="og:url" content="https://volc1605.github.io/categories/DUBBO/index.html">
+<meta name="description" content="1.Mybatis批量更新出现的问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MyBatis批量">
+<meta property="og:url" content="https://volc1605.github.io/2017/02/21/MyBatis批量/index.html">
 <meta property="og:site_name" content="VOLC">
-<meta property="og:description" content="volc">
+<meta property="og:description" content="1.Mybatis批量更新出现的问题">
+<meta property="og:updated_time" content="2017-02-21T02:35:30.073Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VOLC">
-<meta name="twitter:description" content="volc">
+<meta name="twitter:title" content="MyBatis批量">
+<meta name="twitter:description" content="1.Mybatis批量更新出现的问题">
 
 
 
@@ -106,9 +107,9 @@
 
 
 
-  <link rel="canonical" href="https://volc1605.github.io/categories/DUBBO/"/>
+  <link rel="canonical" href="https://volc1605.github.io/2017/02/21/MyBatis批量/"/>
 
-  <title> 分类: DUBBO | VOLC </title>
+  <title> MyBatis批量 | VOLC </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -148,7 +149,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -279,54 +280,240 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        DUBBO
-        <small>分类</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                MyBatis批量
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-21T10:35:04+08:00" content="2017-02-21">
+              2017-02-21
+            </time>
+          </span>
+
+
+
+
+
+              <span>
+                  |
+                <span>更新于</span>
+                <time>
+                  2017-02-21
+                  10:35:04
+                </time>
+              </span>
+
+
+
+
+
+
+
+          
+            <span class="post-category" >
+              |
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/MyBatis/" itemprop="url" rel="index">
+                    <span itemprop="name">MyBatis</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                |
+                <a href="/2017/02/21/MyBatis批量/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/21/MyBatis批量/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+            
+               <span id="/2017/02/21/MyBatis批量/" class="leancloud_visitors" data-flag-title="MyBatis批量">
+                 |
+                 <span class="post-meta-item-icon">
+                   <i class="fa fa-eye"></i>
+                 </span>
+                 <span class="post-meta-item-text">阅读量 </span>
+                 <span class="leancloud-visitors-count"></span>
+                
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h3 id="1-Mybatis批量更新出现的问题"><a href="#1-Mybatis批量更新出现的问题" class="headerlink" title="1.Mybatis批量更新出现的问题"></a>1.Mybatis批量更新出现的问题</h3><a id="more"></a>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"importStationDataFromExcel"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"list"</span> <span class="attr">item</span>=<span class="string">"item"</span> <span class="attr">index</span>=<span class="string">"index"</span> <span class="attr">open</span>=<span class="string">""</span></span></div><div class="line">			<span class="attr">close</span>=<span class="string">""</span> <span class="attr">separator</span>=<span class="string">";"</span>&gt;</div><div class="line">			update tp_user u set u.f_station_name = #&#123;item.fStationName&#125; where u.f_user_id = #&#123;item.fUserId&#125;</div><div class="line">		<span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>组织sql语句，在赋值时报错，sql语句错误<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">### SQL: update tp_user     SET f_station_name = ?      WHERE f_user_id = ?     ;     update tp_user     SET f_station_name = ?      WHERE f_user_id = ?     ;     update tp_user     SET f_station_name = ?      WHERE f_user_id = ?</div><div class="line">### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Erreur de syntaxe près de 'update tp_user</div><div class="line">			 SET f_station_name = 'nanjing' </div><div class="line">			 WHERE f_use' à la ligne 5</div></pre></td></tr></table></figure></p>
+<p>原因：<br>配置的 MySQL jdbc 链接字符串 默认不支持一次性执行多个sql 语句，<br>我们可以在配置文件中链接数据库的url添加一个参数allowMultiQueries=true，代表支持执行多个条sql，问题解决。<br>jdbc.url=jdbc:mysql://192.168.1.233:3306/xmbg170204?characterEncoding=utf-8&amp;allowMultiQueries=true</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/12/12/DUBBO+ZOOKEEPER/" itemprop="url">
-              
-                <span itemprop="name">Dubbo+zookeeper</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>如果文章对您有用请随意打赏，谢谢支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/w.png" alt="VOLC WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/z.jpg" alt="VOLC Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-12-12T11:19:29+08:00"
-              content="2016-12-12" >
-          12-12
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag">#java</a>
+          
+            <a href="/tags/mybatis/" rel="tag">#mybatis</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/21/MyBatis批量操作/" rel="next" title="MyBatis批量操作">
+                <i class="fa fa-chevron-left"></i> MyBatis批量操作
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2017/02/21/MyBatis批量/"
+     data-title="MyBatis批量"
+     data-content=""
+     data-url="https://volc1605.github.io/2017/02/21/MyBatis批量/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
 
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
 
 
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/21/MyBatis批量/"
+           data-title="MyBatis批量" data-url="https://volc1605.github.io/2017/02/21/MyBatis批量/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -346,8 +533,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/0.png"
@@ -453,6 +649,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Mybatis批量更新出现的问题"><span class="nav-number">1.</span> <span class="nav-text">1.Mybatis批量更新出现的问题</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -567,6 +774,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
