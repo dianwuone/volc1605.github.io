@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>https://volc1605.github.io/2017/02/21/MyBatis%E6%89%B9%E9%87%8F/</loc>
+    <lastmod>2017-02-21T14:27:01.573Z</lastmod>
+    <data>
+        <display>
+        <title>MyBatis批量</title>
+        <pubTime>2017-02-21T02:35:04.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>mybatis</tag>
+         
+         
+           
+             
+              <breadCrumb title="MyBatis" url="https://volc1605.github.io/categories/MyBatis/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://volc1605.github.io/2016/10/03/Hexo%E4%B9%8BNexT%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E8%BF%87%E7%A8%8B/</loc>
-    <lastmod>2017-02-21T14:10:12.739Z</lastmod>
+    <lastmod>2017-02-21T14:25:55.157Z</lastmod>
     <data>
         <display>
         <title>Hexo之NexT主题搭建博客详细过程</title>
@@ -63,28 +85,6 @@
            
              
               <breadCrumb title="MySQL" url="https://volc1605.github.io/categories/MySQL/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://volc1605.github.io/2017/02/21/MyBatis%E6%89%B9%E9%87%8F/</loc>
-    <lastmod>2017-02-21T02:35:30.073Z</lastmod>
-    <data>
-        <display>
-        <title>MyBatis批量</title>
-        <pubTime>2017-02-21T02:35:04.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>mybatis</tag>
-         
-         
-           
-             
-              <breadCrumb title="MyBatis" url="https://volc1605.github.io/categories/MyBatis/"/>
           
         </display>
     </data>
