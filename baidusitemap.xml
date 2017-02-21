@@ -5,11 +5,11 @@
     
   <url>
     <loc>https://volc1605.github.io/2017/02/21/MyBatis%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2017-02-21T02:27:47.409Z</lastmod>
+    <lastmod>2017-02-21T02:32:13.677Z</lastmod>
     <data>
         <display>
         <title>MyBatis批量操作</title>
-        <pubTime>2017-02-21T02:11:42.000Z</pubTime>
+        <pubTime>2017-02-21T02:31:45.000Z</pubTime>
         
         <tag>java</tag>
          
@@ -367,9 +367,9 @@
         <title>JDBC</title>
         <pubTime>2017-02-06T01:18:52.000Z</pubTime>
         
-        <tag>java</tag>
-         
         <tag>jdbc</tag>
+         
+        <tag>java</tag>
          
          
            
