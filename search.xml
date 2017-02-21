@@ -4,8 +4,8 @@
   
     
     <entry>
-      <title><![CDATA[Mybatis批量操作]]></title>
-      <url>https://volc1605.github.io/2017/02/21/Mybatis%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/</url>
+      <title><![CDATA[MyBatis批量操作]]></title>
+      <url>https://volc1605.github.io/2017/02/21/MyBatis%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/</url>
       <content type="html"><![CDATA[<p>1.Mybatis批量更新出现的问题<br><a id="more"></a><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;update id="importStationDataFromExcel"&gt;</div><div class="line">		&lt;foreach collection="list" item="item" index="index" open=""</div><div class="line">			close="" separator=";"&gt;</div><div class="line">			update tp_user u set u.f_station_name = #&#123;item.fStationName&#125; where u.f_user_id = #&#123;item.fUserId&#125;</div><div class="line">		&lt;/foreach&gt;</div><div class="line">&lt;/update&gt;</div></pre></td></tr></table></figure></p>
 <p>组织sql语句，在赋值时报错，sql语句错误<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">### SQL: update tp_user     SET f_station_name = ?      WHERE f_user_id = ?     ;     update tp_user     SET f_station_name = ?      WHERE f_user_id = ?     ;     update tp_user     SET f_station_name = ?      WHERE f_user_id = ?</div><div class="line">### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Erreur de syntaxe près de 'update tp_user</div><div class="line">			 SET f_station_name = 'nanjing' </div><div class="line">			 WHERE f_use' à la ligne 5</div></pre></td></tr></table></figure></p>
 <p>原因：<br>配置的 MySQL jdbc 链接字符串 默认不支持一次性执行多个sql 语句，<br>我们可以在配置文件中链接数据库的url添加一个参数allowMultiQueries=true，代表支持执行多个条sql，问题解决。<br>jdbc.url=jdbc:mysql://192.168.1.233:3306/xmbg170204?characterEncoding=utf-8&amp;allowMultiQueries=true</p>
