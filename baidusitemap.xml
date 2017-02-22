@@ -4,34 +4,16 @@
 
     
   <url>
-    <loc>https://volc1605.github.io/2017/02/21/%E7%94%B5%E8%A7%86%E5%89%A7/</loc>
-    <lastmod>2017-02-21T15:04:15.591Z</lastmod>
-    <data>
-        <display>
-        <title>电视剧</title>
-        <pubTime>2017-02-21T14:43:36.000Z</pubTime>
-        
-        <tag>电视剧</tag>
-         
-         
-           
-             
-              <breadCrumb title="VOLC" url="https://volc1605.github.io/categories/VOLC/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://volc1605.github.io/2017/02/21/%E7%94%B5%E5%BD%B1/</loc>
-    <lastmod>2017-02-21T14:56:56.056Z</lastmod>
+    <lastmod>2017-02-22T13:57:40.020Z</lastmod>
     <data>
         <display>
         <title>电影</title>
         <pubTime>2017-02-21T14:37:44.000Z</pubTime>
         
         <tag>电影</tag>
+         
+        <tag>VOLC</tag>
          
          
            
@@ -45,13 +27,37 @@
     
   <url>
     <loc>https://volc1605.github.io/2017/02/21/%E9%9F%B3%E4%B9%90/</loc>
-    <lastmod>2017-02-21T14:56:51.495Z</lastmod>
+    <lastmod>2017-02-22T13:57:34.846Z</lastmod>
     <data>
         <display>
         <title>音乐</title>
         <pubTime>2017-02-21T14:36:18.000Z</pubTime>
         
+        <tag>VOLC</tag>
+         
         <tag>音乐</tag>
+         
+         
+           
+             
+              <breadCrumb title="VOLC" url="https://volc1605.github.io/categories/VOLC/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://volc1605.github.io/2017/02/21/%E7%94%B5%E8%A7%86%E5%89%A7/</loc>
+    <lastmod>2017-02-22T13:57:26.036Z</lastmod>
+    <data>
+        <display>
+        <title>电视剧</title>
+        <pubTime>2017-02-21T14:43:36.000Z</pubTime>
+        
+        <tag>VOLC</tag>
+         
+        <tag>电视剧</tag>
          
          
            
