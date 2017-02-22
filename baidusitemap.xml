@@ -5,12 +5,14 @@
     
   <url>
     <loc>https://volc1605.github.io/2017/01/20/MySQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/</loc>
-    <lastmod>2017-02-22T15:36:21.625Z</lastmod>
+    <lastmod>2017-02-22T15:41:02.138Z</lastmod>
     <data>
         <display>
         <title>MySQL存储过程</title>
         <pubTime>2017-01-20T11:13:26.000Z</pubTime>
         
+        <tag>java</tag>
+         
         <tag>mysql</tag>
          
         <tag>存储过程</tag>
@@ -479,9 +481,9 @@
         <title>JDBC</title>
         <pubTime>2017-02-06T01:18:52.000Z</pubTime>
         
-        <tag>java</tag>
-         
         <tag>jdbc</tag>
+         
+        <tag>java</tag>
          
          
            
